@@ -80,6 +80,9 @@ func main() {
 	defer topicId.Destroy()
 
 	ephemeralStream, err := node.EphemeralStream(topicId, ephemeralStreamHandler{})
+	if err != nil {
+		panic(err
+	}
 	defer ephemeralStream.Destroy()
 
 	slog.Info("🐼 stream is up 🐼")
