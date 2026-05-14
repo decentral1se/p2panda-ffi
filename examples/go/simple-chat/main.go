@@ -81,7 +81,7 @@ func main() {
 
 	ephemeralStream, err := node.EphemeralStream(topicId, ephemeralStreamHandler{})
 	if err != nil {
-		panic(err
+		panic(err)
 	}
 	defer ephemeralStream.Destroy()
 
