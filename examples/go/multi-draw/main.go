@@ -16,8 +16,7 @@ import (
 )
 
 var (
-	isInitialMsg = true
-	colors       = map[int]color.Color{
+	colors = map[int]color.Color{
 		0:  color.LawnGreen,
 		1:  color.LemonChiffon,
 		2:  color.LightBlue,
@@ -65,11 +64,6 @@ func (h ephemeralStreamHandler) OnMessage(e *p2panda.EphemeralMessage) {
 	if err != nil {
 		h.screen.Fini()
 		panic(err)
-	}
-
-	if isInitialMsg && cursorPosX == 0 && cursorPosY == 0 {
-		isInitialMsg = false
-		return
 	}
 
 	cursorColorIdx, err := strconv.Atoi(cursor[2])
