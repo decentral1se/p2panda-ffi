@@ -29,6 +29,15 @@ func New(options ...Option) (*p2panda.Node, error) {
 	return node, err
 }
 
+func WithPrivateKey(privateKey *p2panda.PrivateKey) Option {
+	return func(n *p2panda.NodeBuilder) error {
+		if err := n.PrivateKey(privateKey); err != nil {
+			return err
+		}
+		return nil
+	}
+}
+
 func WithDatabaseUrl(databaseUrl string) Option {
 	return func(n *p2panda.NodeBuilder) error {
 		if err := n.DatabaseUrl(databaseUrl); err != nil {
