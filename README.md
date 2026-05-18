@@ -1,65 +1,78 @@
 # FFI bindings for p2panda
 
-> [!IMPORTANT]
-> This is highly experimental and things can break & change at any point.
+Experimental FFI bindings of p2panda's [Node API](https://crates.io/crates/p2panda) for Python, Go
+and Node.js.
+
+Next to these bindings you'll find GObject bindings (GLib/GObject introspection) for p2panda in
+[`p2panda-gobject`](https://github.com/p2panda/p2panda-gobject).
+
+> 🚧 This library is under active development and the APIs are not yet considered stable for
+> production use. Core data types and user-facing APIs may still undergo breaking changes. Stability
+> guarantees will improve with the release of v1.0.0.
 
 ## Good to know
 
-- We're using [UniFFI](https://mozilla.github.io/uniffi-rs/latest/index.html).
-  UniFFI is a tool that automatically generates foreign-language bindings
-  targeting Rust libraries.
-- Make sure you have [Rust](https://rust-lang.org/learn/get-started/) ready on
-  your machine. We've tested this with `v1.95.0`.
+- We're using [UniFFI](https://mozilla.github.io/uniffi-rs/latest/index.html). UniFFI is a tool that
+  automatically generates foreign-language bindings targeting Rust libraries.
+- Make sure you have [Rust](https://rust-lang.org/learn/get-started/) ready on your machine. We've
+  tested this with `v1.95.0`.
 - We're using [proc
-  macros](https://mozilla.github.io/uniffi-rs/latest/tutorial/Rust_scaffolding.html)
-  to "scaffold" everything for UniFFI from Rust, so there's no need to create
-  an additional UDL file.
-- `uniffi-bindgen` is the UniFFI CLI tool we need to generate p2panda FFI
-  bindings for various languages. This tool can be compiled from this project.
-- Next to these bindings you'll find GObject bindings (GLib/GObject introspection) for p2panda in [`p2panda-gobject`](https://github.com/p2panda/p2panda-gobject)
+  macros](https://mozilla.github.io/uniffi-rs/latest/tutorial/Rust_scaffolding.html) to "scaffold"
+  everything for UniFFI from Rust, so there's no need to create an additional UDL file.
+- `uniffi-bindgen` is the UniFFI CLI tool we need to generate p2panda FFI bindings for various
+  languages. This tool can be compiled from this project.
 
 ## Usage
 
-1. First compile `uniffi-bindgen` and the p2panda library by running `cargo
-   build --release`. The binary and library lands in the `target` folder. Don't
-   forget to repeat this step whenever you change the Rust code.
-2. From now on we can use the tool `uniffi-bindgen` via `cargo run --bin
-   uniffi-bindgen --release`.
-3. The p2panda library is compiled as well and ready to be used for FFI into
-   other languages (Python, Go, etc.). Follow the next steps below for
-   generating FFI bindings for specific languages.
-4. Make sure the library is available by linking it into the right path: `ln -s
-   ./target/release/libp2panda.so ./python/p2panda` or similar.
+```bash
+# First compile `uniffi-bindgen` and the p2panda library. The binary and library lands in the `target`
+# folder. Don't forget to repeat this step whenever you change the Rust code.
+make build
+
+# From now on we can use the tool `uniffi-bindgen`.
+cargo run --bin uniffi-bindgen --release
+
+# The p2panda library is compiled as well and ready to be used for FFI into other languages (Python,
+# Go, etc.). Follow the next steps below for generating FFI bindings for specific languages.
+#
+# Make sure the library is available by linking it into the right path:
+ln -s ./target/release/libp2panda_ffi.so ./python/p2panda_ffi
+```
 
 ### Python
 
-1. Run `cargo run --bin uniffi-bindgen generate ./target/release/libp2panda.so
-   --language python --out-dir ./python/p2panda`.
+```bash
+# Generate FFI bindings for Python
+make ffi-python
+
+# Run example
+python ./python/example.py
+```
 
 ### Go
 
-`libp2panda` is currently built for the `x86_64-unknown-linux-musl` target.
-Other targets can be added on request.
+`libp2panda` is currently built for the `x86_64-unknown-linux-musl` target. Other targets can be
+added on request.
 
-1. Make sure you have
-   [uniffi-bindgen-go](https://github.com/NordSecurity/uniffi-bindgen-go)
-   installed in your Rust toolbelt.
-2. Run `./scripts/generate-go-uniffi.sh`
-
-#### Examples
+Make sure you have [uniffi-bindgen-go](https://github.com/NordSecurity/uniffi-bindgen-go) installed
+in your Rust toolbelt.
 
 See the examples in [`./examples/go`](./examples/go).
 
-#### Test bindings
+```bash
+# Generate FFI bindings for Go
+make ffi-go
 
-```
+# Run test bindings
 ./scripts/test-go-uniffi.sh
 ```
 
 ### Node.js
 
-1. Make sure you have
-   [uniffi-bindgen-node-js](https://github.com/criccomini/uniffi-bindgen-node-js)
-   installed in your Rust toolbelt.
-2. Run `uniffi-bindgen-node-js generate ./target/release/libp2panda.so
-   --out-dir ./nodejs/p2panda`.
+Make sure you have [uniffi-bindgen-node-js](https://github.com/criccomini/uniffi-bindgen-node-js)
+installed in your Rust toolbelt.
+
+```bash
+# Generate FFI bindings for Node.js
+make ffi-node
+```
