@@ -6,7 +6,7 @@ use futures_util::StreamExt;
 use thiserror::Error;
 use tokio::task::JoinHandle;
 
-use crate::core::{PublicKey, TopicId};
+use crate::core::{Topic, VerifyingKey};
 use crate::node::EphemeralStreamCallback;
 
 #[derive(uniffi::Object)]
@@ -39,7 +39,7 @@ impl Drop for EphemeralStream {
 
 #[uniffi::export(async_runtime = "tokio")]
 impl EphemeralStream {
-    pub fn topic(&self) -> TopicId {
+    pub fn topic(&self) -> Topic {
         self.tx.topic().into()
     }
 
@@ -61,11 +61,11 @@ pub struct EphemeralMessage(p2panda::streams::EphemeralMessage<Vec<u8>>);
 
 #[uniffi::export]
 impl EphemeralMessage {
-    pub fn topic(&self) -> TopicId {
+    pub fn topic(&self) -> Topic {
         self.0.topic().into()
     }
 
-    pub fn author(&self) -> PublicKey {
+    pub fn author(&self) -> VerifyingKey {
         self.0.author().into()
     }
 

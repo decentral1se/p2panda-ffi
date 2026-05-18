@@ -7,7 +7,7 @@ use thiserror::Error;
 use tokio::sync::{mpsc, oneshot};
 use tokio::task::JoinHandle;
 
-use crate::core::{Hash, Header, PublicKey, TopicId};
+use crate::core::{Hash, Header, Topic, VerifyingKey};
 use crate::node::TopicStreamCallback;
 
 #[derive(uniffi::Object)]
@@ -91,6 +91,12 @@ impl TopicStream {
                                     error: error.map(|error| error.into()),
                                 });
                             }
+                            p2panda::streams::StreamEvent::ImportStarted { session_id } => {
+                                callback.on_event(StreamEvent::ImportStarted { session_id });
+                            },
+                            p2panda::streams::StreamEvent::ImportEnded { session_id } => {
+                                callback.on_event(StreamEvent::ImportEnded { session_id });
+                            },
                             p2panda::streams::StreamEvent::ProcessingFailed { event, error, .. } => {
                                 callback.on_error(StreamError::ProcessingFailed {
                                     event: Arc::new((&event).into()),
@@ -136,7 +142,7 @@ impl Drop for TopicStream {
 
 #[uniffi::export(async_runtime = "tokio")]
 impl TopicStream {
-    pub fn topic(&self) -> TopicId {
+    pub fn topic(&self) -> Topic {
         self.tx.topic().into()
     }
 
@@ -186,7 +192,7 @@ pub struct ProcessedOperation(p2panda::streams::ProcessedOperation<Vec<u8>>);
 
 #[uniffi::export]
 impl ProcessedOperation {
-    pub fn topic(&self) -> TopicId {
+    pub fn topic(&self) -> Topic {
         self.0.topic().into()
     }
 
@@ -194,7 +200,7 @@ impl ProcessedOperation {
         self.0.id().into()
     }
 
-    pub fn author(&self) -> PublicKey {
+    pub fn author(&self) -> VerifyingKey {
         self.0.author().into()
     }
 
@@ -292,7 +298,7 @@ impl From<p2panda::streams::SessionPhase> for SessionPhase {
 pub enum Source {
     SyncSession {
         /// Id of the remote sending node.
-        remote_node_id: Arc<PublicKey>,
+        remote_node_id: Arc<VerifyingKey>,
 
         /// Id of the sync session.
         session_id: u64,
@@ -319,6 +325,9 @@ pub enum Source {
         phase: SessionPhase,
     },
     LocalStore,
+    ExternalStream {
+        session_id: u64,
+    },
 }
 
 impl From<p2panda::streams::Source> for Source {
@@ -346,6 +355,9 @@ impl From<p2panda::streams::Source> for Source {
                 phase: phase.into(),
             },
             p2panda::streams::Source::LocalStore => Self::LocalStore,
+            p2panda::streams::Source::ExternalStream { session_id } => {
+                Self::ExternalStream { session_id }
+            }
         }
     }
 }
@@ -354,7 +366,7 @@ impl From<p2panda::streams::Source> for Source {
 pub enum StreamEvent {
     SyncStarted {
         /// Id of the remote sending node.
-        remote_node_id: Arc<PublicKey>,
+        remote_node_id: Arc<VerifyingKey>,
 
         /// Id of the sync session.
         session_id: u64,
@@ -376,7 +388,7 @@ pub enum StreamEvent {
     },
     SyncEnded {
         /// Id of the remote sending node.
-        remote_node_id: Arc<PublicKey>,
+        remote_node_id: Arc<VerifyingKey>,
 
         /// Id of the sync session.
         session_id: u64,
@@ -401,6 +413,12 @@ pub enum StreamEvent {
 
         /// If the sync session ended with an error the reason is included here.
         error: Option<SyncError>,
+    },
+    ImportStarted {
+        session_id: u64,
+    },
+    ImportEnded {
+        session_id: u64,
     },
 }
 

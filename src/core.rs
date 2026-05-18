@@ -7,11 +7,11 @@ use thiserror::Error;
 
 /// Internally used type representing a (random) 32-byte string.
 #[derive(Debug)]
-struct ByteString(p2panda::node::Topic);
+struct ByteString(p2panda_core::Topic);
 
 impl ByteString {
     pub fn random() -> Self {
-        Self(p2panda_core::Topic::new())
+        Self(p2panda_core::Topic::random())
     }
 
     pub fn from_bytes(value: &[u8]) -> Result<Self, ConversionError> {
@@ -107,7 +107,7 @@ impl From<p2panda_core::identity::IdentityError> for ConversionError {
 pub struct NetworkId(ByteString);
 
 impl NetworkId {
-    pub(crate) fn to_inner(&self) -> p2panda::node::NetworkId {
+    pub(crate) fn to_inner(&self) -> p2panda::NetworkId {
         (&self.0).into()
     }
 }
@@ -143,23 +143,23 @@ impl NetworkId {
     }
 }
 
-impl From<p2panda::node::NetworkId> for NetworkId {
-    fn from(value: p2panda::node::NetworkId) -> Self {
+impl From<p2panda::NetworkId> for NetworkId {
+    fn from(value: p2panda::NetworkId) -> Self {
         Self(ByteString(value.into()))
     }
 }
 
 #[derive(uniffi::Object)]
-pub struct TopicId(ByteString);
+pub struct Topic(ByteString);
 
-impl TopicId {
+impl Topic {
     pub(crate) fn to_inner(&self) -> p2panda_core::Topic {
         self.0.0
     }
 }
 
 #[uniffi::export]
-impl TopicId {
+impl Topic {
     #[uniffi::constructor]
     pub fn random() -> Self {
         Self(ByteString::random())
@@ -189,31 +189,31 @@ impl TopicId {
     }
 }
 
-impl From<p2panda_core::Topic> for TopicId {
+impl From<p2panda_core::Topic> for Topic {
     fn from(value: p2panda_core::Topic) -> Self {
         Self(ByteString::from(value))
     }
 }
 
 #[derive(Debug, uniffi::Object)]
-pub struct PublicKey(p2panda_core::PublicKey);
+pub struct VerifyingKey(p2panda_core::VerifyingKey);
 
-impl PublicKey {
-    pub(crate) fn to_inner(&self) -> p2panda_core::PublicKey {
+impl VerifyingKey {
+    pub(crate) fn to_inner(&self) -> p2panda_core::VerifyingKey {
         self.0
     }
 }
 
 #[uniffi::export]
-impl PublicKey {
+impl VerifyingKey {
     #[uniffi::constructor]
     pub fn from_bytes(value: &[u8]) -> Result<Self, ConversionError> {
-        Ok(Self(p2panda_core::PublicKey::try_from(value)?))
+        Ok(Self(p2panda_core::VerifyingKey::try_from(value)?))
     }
 
     #[uniffi::constructor]
     pub fn from_hex(value: &str) -> Result<Self, ConversionError> {
-        Ok(Self(p2panda_core::PublicKey::from_str(value)?))
+        Ok(Self(p2panda_core::VerifyingKey::from_str(value)?))
     }
 
     pub fn to_bytes(&self) -> Vec<u8> {
@@ -229,37 +229,37 @@ impl PublicKey {
     }
 }
 
-impl From<p2panda_core::PublicKey> for PublicKey {
-    fn from(value: p2panda_core::PublicKey) -> Self {
+impl From<p2panda_core::VerifyingKey> for VerifyingKey {
+    fn from(value: p2panda_core::VerifyingKey) -> Self {
         Self(value)
     }
 }
 
 #[derive(uniffi::Object)]
-pub struct PrivateKey(p2panda_core::PrivateKey);
+pub struct SigningKey(p2panda_core::SigningKey);
 
-impl PrivateKey {
-    pub(crate) fn to_inner(&self) -> p2panda_core::PrivateKey {
+impl SigningKey {
+    pub(crate) fn to_inner(&self) -> p2panda_core::SigningKey {
         self.0.clone()
     }
 }
 
 #[uniffi::export]
-impl PrivateKey {
+impl SigningKey {
     #[uniffi::constructor]
     pub fn generate() -> Self {
-        Self(p2panda_core::PrivateKey::new())
+        Self(p2panda_core::SigningKey::generate())
     }
 
     #[uniffi::constructor]
     pub fn from_bytes(value: &[u8]) -> Result<Self, ConversionError> {
-        Ok(Self(p2panda_core::PrivateKey::try_from(value)?))
+        Ok(Self(p2panda_core::SigningKey::try_from(value)?))
     }
 
     #[uniffi::constructor]
     pub fn from_hex(value: &str) -> Result<Self, ConversionError> {
         let bytes = ByteString::from_hex(value)?.to_bytes();
-        Ok(Self(p2panda_core::PrivateKey::try_from(&bytes[..])?))
+        Ok(Self(p2panda_core::SigningKey::try_from(&bytes[..])?))
     }
 
     pub fn to_bytes(&self) -> Vec<u8> {
@@ -270,8 +270,8 @@ impl PrivateKey {
         self.0.to_hex()
     }
 
-    pub fn public_key(&self) -> PublicKey {
-        PublicKey(self.0.public_key())
+    pub fn verifying_key(&self) -> VerifyingKey {
+        VerifyingKey(self.0.verifying_key())
     }
 
     pub fn sign(&self, bytes: &[u8]) -> Signature {
@@ -317,7 +317,7 @@ impl Hash {
 impl Hash {
     #[uniffi::constructor]
     pub fn digest(value: &[u8]) -> Self {
-        Self(p2panda_core::Hash::new(value))
+        Self(p2panda_core::Hash::digest(value))
     }
 
     #[uniffi::constructor]
@@ -346,10 +346,10 @@ impl From<p2panda_core::Hash> for Hash {
 }
 
 #[derive(uniffi::Object)]
-pub struct RelayUrl(p2panda::node::RelayUrl);
+pub struct RelayUrl(p2panda::RelayUrl);
 
 impl RelayUrl {
-    pub(crate) fn to_inner(&self) -> p2panda::node::RelayUrl {
+    pub(crate) fn to_inner(&self) -> p2panda::RelayUrl {
         self.0.clone()
     }
 }
@@ -359,9 +359,9 @@ impl RelayUrl {
     #[uniffi::constructor]
     #[allow(clippy::should_implement_trait)]
     pub fn from_str(value: &str) -> Result<Self, RelayUrlParseError> {
-        Ok(Self(p2panda::node::RelayUrl::from_str(value).map_err(
-            |err| RelayUrlParseError::Invalid(err.to_string()),
-        )?))
+        Ok(Self(p2panda::RelayUrl::from_str(value).map_err(|err| {
+            RelayUrlParseError::Invalid(err.to_string())
+        })?))
     }
 
     pub fn to_str(&self) -> String {
@@ -389,8 +389,8 @@ impl Header {
         Arc::new(self.0.hash().into())
     }
 
-    pub fn public_key(&self) -> Arc<PublicKey> {
-        Arc::new(self.0.public_key.into())
+    pub fn verifying_key(&self) -> Arc<VerifyingKey> {
+        Arc::new(self.0.verifying_key.into())
     }
 
     pub fn signature(&self) -> Arc<Signature> {
@@ -442,13 +442,13 @@ impl From<&p2panda::operation::Header> for Header {
 
 #[derive(uniffi::Object)]
 pub struct Cursor(
-    p2panda_core::cursor::Cursor<p2panda_core::identity::PublicKey, p2panda::operation::LogId>,
+    p2panda_core::cursor::Cursor<p2panda_core::identity::VerifyingKey, p2panda::operation::LogId>,
 );
 
 impl Cursor {
     pub(crate) fn to_inner(
         &self,
-    ) -> p2panda_core::Cursor<p2panda_core::PublicKey, p2panda::operation::LogId> {
+    ) -> p2panda_core::Cursor<p2panda_core::VerifyingKey, p2panda::operation::LogId> {
         self.0.clone()
     }
 }
@@ -462,12 +462,15 @@ impl Cursor {
 
 impl
     From<
-        &p2panda_core::cursor::Cursor<p2panda_core::identity::PublicKey, p2panda::operation::LogId>,
+        &p2panda_core::cursor::Cursor<
+            p2panda_core::identity::VerifyingKey,
+            p2panda::operation::LogId,
+        >,
     > for Cursor
 {
     fn from(
         value: &p2panda_core::cursor::Cursor<
-            p2panda_core::identity::PublicKey,
+            p2panda_core::identity::VerifyingKey,
             p2panda::operation::LogId,
         >,
     ) -> Self {

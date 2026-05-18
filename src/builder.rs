@@ -5,7 +5,7 @@ use std::sync::{Arc, Mutex};
 
 use thiserror::Error;
 
-use crate::core::{NetworkId, PrivateKey, PublicKey, RelayUrl};
+use crate::core::{NetworkId, RelayUrl, SigningKey, VerifyingKey};
 use crate::node::{Node, SpawnError};
 
 #[derive(uniffi::Enum)]
@@ -90,8 +90,8 @@ impl NodeBuilder {
         Self(Mutex::new(Some(inner)))
     }
 
-    pub fn private_key(&self, private_key: Arc<PrivateKey>) -> Result<(), NodeBuilderError> {
-        self.update(|builder| builder.private_key(private_key.to_inner()))
+    pub fn signing_key(&self, signing_key: Arc<SigningKey>) -> Result<(), NodeBuilderError> {
+        self.update(|builder| builder.signing_key(signing_key.to_inner()))
     }
 
     pub fn database_url(&self, url: &str) -> Result<(), NodeBuilderError> {
@@ -112,7 +112,7 @@ impl NodeBuilder {
 
     pub fn bootstrap(
         &self,
-        node_id: Arc<PublicKey>,
+        node_id: Arc<VerifyingKey>,
         relay_url: Arc<RelayUrl>,
     ) -> Result<(), NodeBuilderError> {
         self.update(|builder| builder.bootstrap(node_id.to_inner(), relay_url.to_inner()))

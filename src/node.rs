@@ -5,7 +5,7 @@ use std::sync::Arc;
 use thiserror::Error;
 
 use crate::builder::NodeBuilderError;
-use crate::core::{Cursor, NetworkId, PublicKey, RelayUrl, TopicId};
+use crate::core::{Cursor, NetworkId, RelayUrl, Topic, VerifyingKey};
 use crate::ephemeral_stream::{EphemeralMessage, EphemeralStream};
 use crate::topic_stream::{ProcessedOperation, Source, StreamError, StreamEvent, TopicStream};
 
@@ -20,7 +20,7 @@ impl Node {
         Ok(Self(inner))
     }
 
-    pub fn id(&self) -> PublicKey {
+    pub fn id(&self) -> VerifyingKey {
         self.0.id().into()
     }
 
@@ -30,7 +30,7 @@ impl Node {
 
     pub async fn insert_bootstrap(
         &self,
-        node_id: Arc<PublicKey>,
+        node_id: Arc<VerifyingKey>,
         relay_url: Arc<RelayUrl>,
     ) -> Result<(), NetworkError> {
         self.0
@@ -41,7 +41,7 @@ impl Node {
 
     pub async fn stream(
         &self,
-        topic: Arc<TopicId>,
+        topic: Arc<Topic>,
         callback: Arc<dyn TopicStreamCallback>,
     ) -> Result<TopicStream, CreateStreamError> {
         let (tx, rx) = self.0.stream::<Vec<u8>>(topic.to_inner()).await?;
@@ -50,7 +50,7 @@ impl Node {
 
     pub async fn stream_from(
         &self,
-        topic: Arc<TopicId>,
+        topic: Arc<Topic>,
         from: StreamFrom,
         callback: Arc<dyn TopicStreamCallback>,
     ) -> Result<TopicStream, CreateStreamError> {
@@ -63,7 +63,7 @@ impl Node {
 
     pub async fn ephemeral_stream(
         &self,
-        topic: Arc<TopicId>,
+        topic: Arc<Topic>,
         on_message: Arc<dyn EphemeralStreamCallback>,
     ) -> Result<EphemeralStream, CreateStreamError> {
         let (tx, rx) = self.0.ephemeral_stream::<Vec<u8>>(topic.to_inner()).await?;
