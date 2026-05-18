@@ -1,16 +1,16 @@
-import { PrivateKey, NodeBuilder, TopicId } from "p2panda";
+import { SigningKey, NodeBuilder, Topic } from "p2panda";
 
 async function main() {
-  const privateKey = new PrivateKey();
-  console.log(privateKey.publicKey());
+  const signingKey = new SigningKey();
+  console.log(signingKey.verifyingKey());
 
   const builder = new NodeBuilder();
-  builder.privateKey(privateKey);
+  builder.signingKey(signingKey);
 
   const node = await builder.spawn();
   console.log("my node id", node.id());
 
-  const topic = new TopicId();
+  const topic = new Topic();
   console.log("topic", topic.toString());
 
   const handler = await node.stream(topic, {

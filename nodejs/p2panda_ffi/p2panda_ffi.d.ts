@@ -60,7 +60,7 @@ export interface SourceSyncSession {
   /**
    * Id of the remote sending node.
    */
-  "remote_node_id": PublicKey;
+  "remote_node_id": VerifyingKey;
   /**
    * Id of the sync session.
    */
@@ -99,10 +99,16 @@ export interface SourceLocalStore {
   tag: "LocalStore";
 }
 
-export type Source = SourceSyncSession | SourceLocalStore;
+export interface SourceExternalStream {
+  tag: "ExternalStream";
+  "session_id": bigint | number;
+}
+
+export type Source = SourceSyncSession | SourceLocalStore | SourceExternalStream;
 export declare const Source: Readonly<{
-  SyncSession(remote_node_id: PublicKey, session_id: bigint | number, sent_operations: bigint | number, received_operations: bigint | number, sent_bytes: bigint | number, received_bytes: bigint | number, sent_bytes_topic_total: bigint | number, received_bytes_topic_total: bigint | number, phase: SessionPhase): SourceSyncSession;
+  SyncSession(remote_node_id: VerifyingKey, session_id: bigint | number, sent_operations: bigint | number, received_operations: bigint | number, sent_bytes: bigint | number, received_bytes: bigint | number, sent_bytes_topic_total: bigint | number, received_bytes_topic_total: bigint | number, phase: SessionPhase): SourceSyncSession;
   LocalStore(): SourceLocalStore;
+  ExternalStream(session_id: bigint | number): SourceExternalStream;
 }>;
 
 export interface StreamEventSyncStarted {
@@ -110,7 +116,7 @@ export interface StreamEventSyncStarted {
   /**
    * Id of the remote sending node.
    */
-  "remote_node_id": PublicKey;
+  "remote_node_id": VerifyingKey;
   /**
    * Id of the sync session.
    */
@@ -142,7 +148,7 @@ export interface StreamEventSyncEnded {
   /**
    * Id of the remote sending node.
    */
-  "remote_node_id": PublicKey;
+  "remote_node_id": VerifyingKey;
   /**
    * Id of the sync session.
    */
@@ -177,10 +183,22 @@ export interface StreamEventSyncEnded {
   "error": SyncError | undefined;
 }
 
-export type StreamEvent = StreamEventSyncStarted | StreamEventSyncEnded;
+export interface StreamEventImportStarted {
+  tag: "ImportStarted";
+  "session_id": bigint | number;
+}
+
+export interface StreamEventImportEnded {
+  tag: "ImportEnded";
+  "session_id": bigint | number;
+}
+
+export type StreamEvent = StreamEventSyncStarted | StreamEventSyncEnded | StreamEventImportStarted | StreamEventImportEnded;
 export declare const StreamEvent: Readonly<{
-  SyncStarted(remote_node_id: PublicKey, session_id: bigint | number, incoming_operations: bigint | number, outgoing_operations: bigint | number, incoming_bytes: bigint | number, outgoing_bytes: bigint | number, topic_sessions: bigint | number): StreamEventSyncStarted;
-  SyncEnded(remote_node_id: PublicKey, session_id: bigint | number, sent_operations: bigint | number, received_operations: bigint | number, sent_bytes: bigint | number, received_bytes: bigint | number, sent_bytes_topic_total: bigint | number, received_bytes_topic_total: bigint | number, error: SyncError | undefined): StreamEventSyncEnded;
+  SyncStarted(remote_node_id: VerifyingKey, session_id: bigint | number, incoming_operations: bigint | number, outgoing_operations: bigint | number, incoming_bytes: bigint | number, outgoing_bytes: bigint | number, topic_sessions: bigint | number): StreamEventSyncStarted;
+  SyncEnded(remote_node_id: VerifyingKey, session_id: bigint | number, sent_operations: bigint | number, received_operations: bigint | number, sent_bytes: bigint | number, received_bytes: bigint | number, sent_bytes_topic_total: bigint | number, received_bytes_topic_total: bigint | number, error: SyncError | undefined): StreamEventSyncEnded;
+  ImportStarted(session_id: bigint | number): StreamEventImportStarted;
+  ImportEnded(session_id: bigint | number): StreamEventImportEnded;
 }>;
 
 export declare class IpAddrError extends globalThis.Error {
@@ -366,12 +384,12 @@ export declare class NodeBuilder extends UniffiObjectBase {
   bind_ip_v6(ip_address: string): void;
   bind_port_v4(port: number): void;
   bind_port_v6(port: number): void;
-  bootstrap(node_id: PublicKey, relay_url: RelayUrl): void;
+  bootstrap(node_id: VerifyingKey, relay_url: RelayUrl): void;
   database_url(url: string): void;
   mdns_mode(mode: MdnsDiscoveryMode): void;
   network_id(network_id: NetworkId): void;
-  private_key(private_key: PrivateKey): void;
   relay_url(url: RelayUrl): void;
+  signing_key(signing_key: SigningKey): void;
   spawn(): Promise<Node>;
 }
 
@@ -397,10 +415,10 @@ export declare class Header extends UniffiObjectBase {
   payload_hash(): Hash;
   payload_size(): bigint | number;
   prune_flag(): boolean;
-  public_key(): PublicKey;
   seq_num(): bigint | number;
   signature(): Signature;
   timestamp(): bigint | number;
+  verifying_key(): VerifyingKey;
   version(): bigint | number;
 }
 
@@ -412,26 +430,6 @@ export declare class NetworkId extends UniffiObjectBase {
   static random(): NetworkId;
   to_bytes(): Uint8Array;
   to_hex(): string;
-}
-
-export declare class PrivateKey extends UniffiObjectBase {
-  protected constructor();
-  static from_bytes(value: Uint8Array): PrivateKey;
-  static from_hex(value: string): PrivateKey;
-  static generate(): PrivateKey;
-  public_key(): PublicKey;
-  sign(bytes: Uint8Array): Signature;
-  to_bytes(): Uint8Array;
-  to_hex(): string;
-}
-
-export declare class PublicKey extends UniffiObjectBase {
-  protected constructor();
-  static from_bytes(value: Uint8Array): PublicKey;
-  static from_hex(value: string): PublicKey;
-  to_bytes(): Uint8Array;
-  to_hex(): string;
-  verify(bytes: Uint8Array, signature: Signature): boolean;
 }
 
 export declare class RelayUrl extends UniffiObjectBase {
@@ -448,39 +446,59 @@ export declare class Signature extends UniffiObjectBase {
   to_hex(): string;
 }
 
-export declare class TopicId extends UniffiObjectBase {
+export declare class SigningKey extends UniffiObjectBase {
   protected constructor();
-  static from_bytes(value: Uint8Array): TopicId;
-  static from_hash(hash: Hash): TopicId;
-  static from_hex(value: string): TopicId;
-  static random(): TopicId;
+  static from_bytes(value: Uint8Array): SigningKey;
+  static from_hex(value: string): SigningKey;
+  static generate(): SigningKey;
+  sign(bytes: Uint8Array): Signature;
+  to_bytes(): Uint8Array;
+  to_hex(): string;
+  verifying_key(): VerifyingKey;
+}
+
+export declare class Topic extends UniffiObjectBase {
+  protected constructor();
+  static from_bytes(value: Uint8Array): Topic;
+  static from_hash(hash: Hash): Topic;
+  static from_hex(value: string): Topic;
+  static random(): Topic;
   to_bytes(): Uint8Array;
   to_hex(): string;
 }
 
+export declare class VerifyingKey extends UniffiObjectBase {
+  protected constructor();
+  static from_bytes(value: Uint8Array): VerifyingKey;
+  static from_hex(value: string): VerifyingKey;
+  to_bytes(): Uint8Array;
+  to_hex(): string;
+  verify(bytes: Uint8Array, signature: Signature): boolean;
+}
+
 export declare class EphemeralMessage extends UniffiObjectBase {
   protected constructor();
-  author(): PublicKey;
+  author(): VerifyingKey;
   body(): Uint8Array;
   timestamp(): bigint | number;
-  topic(): TopicId;
+  topic(): Topic;
 }
 
 export declare class EphemeralStream extends UniffiObjectBase {
   protected constructor();
   publish(message: Uint8Array): Promise<void>;
-  topic(): TopicId;
+  topic(): Topic;
 }
 
 export declare class Node extends UniffiObjectBase {
   protected constructor();
   static spawn(): Promise<Node>;
-  ephemeral_stream(topic: TopicId, on_message: EphemeralStreamCallback): Promise<EphemeralStream>;
-  id(): PublicKey;
-  insert_bootstrap(node_id: PublicKey, relay_url: RelayUrl): Promise<void>;
+  ephemeral_stream(topic: Topic, on_message: EphemeralStreamCallback): Promise<EphemeralStream>;
+  id(): VerifyingKey;
+  insert_bootstrap(node_id: VerifyingKey, relay_url: RelayUrl): Promise<void>;
   network_id(): NetworkId;
-  stream(topic: TopicId, callback: TopicStreamCallback): Promise<TopicStream>;
-  stream_from(topic: TopicId, from: StreamFrom, callback: TopicStreamCallback): Promise<TopicStream>;
+  stream(topic: Topic, callback: TopicStreamCallback): Promise<TopicStream>;
+  stream_from(topic: Topic, from: StreamFrom, callback: TopicStreamCallback): Promise<TopicStream>;
 }
 
 export declare class Event extends UniffiObjectBase {
@@ -494,12 +512,12 @@ export declare class Event extends UniffiObjectBase {
 export declare class ProcessedOperation extends UniffiObjectBase {
   protected constructor();
   ack(): Promise<void>;
-  author(): PublicKey;
+  author(): VerifyingKey;
   id(): Hash;
   message(): Uint8Array;
   processed(): Event;
   timestamp(): bigint | number;
-  topic(): TopicId;
+  topic(): Topic;
 }
 
 export declare class TopicStream extends UniffiObjectBase {
@@ -507,5 +525,5 @@ export declare class TopicStream extends UniffiObjectBase {
   ack(message_id: Hash): Promise<void>;
   prune(message: Uint8Array | undefined): Promise<Hash>;
   publish(message: Uint8Array): Promise<Hash>;
-  topic(): TopicId;
+  topic(): Topic;
 }

@@ -46,7 +46,7 @@ export const ffiIntegrity = Object.freeze({
 
     "uniffi_p2panda_ffi_checksum_method_nodebuilder_bind_port_v6": 43790,
 
-    "uniffi_p2panda_ffi_checksum_method_nodebuilder_bootstrap": 42251,
+    "uniffi_p2panda_ffi_checksum_method_nodebuilder_bootstrap": 4171,
 
     "uniffi_p2panda_ffi_checksum_method_nodebuilder_database_url": 57213,
 
@@ -54,9 +54,9 @@ export const ffiIntegrity = Object.freeze({
 
     "uniffi_p2panda_ffi_checksum_method_nodebuilder_network_id": 25341,
 
-    "uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key": 55001,
-
     "uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url": 60407,
+
+    "uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key": 10426,
 
     "uniffi_p2panda_ffi_checksum_method_nodebuilder_spawn": 44540,
 
@@ -78,13 +78,13 @@ export const ffiIntegrity = Object.freeze({
 
     "uniffi_p2panda_ffi_checksum_method_header_prune_flag": 18333,
 
-    "uniffi_p2panda_ffi_checksum_method_header_public_key": 13290,
-
     "uniffi_p2panda_ffi_checksum_method_header_seq_num": 41915,
 
     "uniffi_p2panda_ffi_checksum_method_header_signature": 51488,
 
     "uniffi_p2panda_ffi_checksum_method_header_timestamp": 468,
+
+    "uniffi_p2panda_ffi_checksum_method_header_verifying_key": 49825,
 
     "uniffi_p2panda_ffi_checksum_method_header_version": 39499,
 
@@ -92,55 +92,55 @@ export const ffiIntegrity = Object.freeze({
 
     "uniffi_p2panda_ffi_checksum_method_networkid_to_hex": 62120,
 
-    "uniffi_p2panda_ffi_checksum_method_privatekey_public_key": 36762,
-
-    "uniffi_p2panda_ffi_checksum_method_privatekey_sign": 16842,
-
-    "uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes": 28452,
-
-    "uniffi_p2panda_ffi_checksum_method_privatekey_to_hex": 34482,
-
-    "uniffi_p2panda_ffi_checksum_method_publickey_to_bytes": 23757,
-
-    "uniffi_p2panda_ffi_checksum_method_publickey_to_hex": 31307,
-
-    "uniffi_p2panda_ffi_checksum_method_publickey_verify": 27867,
-
     "uniffi_p2panda_ffi_checksum_method_relayurl_to_str": 47854,
 
     "uniffi_p2panda_ffi_checksum_method_signature_to_bytes": 50852,
 
     "uniffi_p2panda_ffi_checksum_method_signature_to_hex": 43786,
 
-    "uniffi_p2panda_ffi_checksum_method_topicid_to_bytes": 63194,
+    "uniffi_p2panda_ffi_checksum_method_signingkey_sign": 24276,
 
-    "uniffi_p2panda_ffi_checksum_method_topicid_to_hex": 29111,
+    "uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes": 8598,
 
-    "uniffi_p2panda_ffi_checksum_method_ephemeralmessage_author": 52355,
+    "uniffi_p2panda_ffi_checksum_method_signingkey_to_hex": 39900,
+
+    "uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key": 25493,
+
+    "uniffi_p2panda_ffi_checksum_method_topic_to_bytes": 64925,
+
+    "uniffi_p2panda_ffi_checksum_method_topic_to_hex": 10156,
+
+    "uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes": 19802,
+
+    "uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex": 56335,
+
+    "uniffi_p2panda_ffi_checksum_method_verifyingkey_verify": 13296,
+
+    "uniffi_p2panda_ffi_checksum_method_ephemeralmessage_author": 14882,
 
     "uniffi_p2panda_ffi_checksum_method_ephemeralmessage_body": 33930,
 
     "uniffi_p2panda_ffi_checksum_method_ephemeralmessage_timestamp": 55567,
 
-    "uniffi_p2panda_ffi_checksum_method_ephemeralmessage_topic": 61410,
+    "uniffi_p2panda_ffi_checksum_method_ephemeralmessage_topic": 38439,
 
     "uniffi_p2panda_ffi_checksum_method_ephemeralstream_publish": 48773,
 
-    "uniffi_p2panda_ffi_checksum_method_ephemeralstream_topic": 11085,
+    "uniffi_p2panda_ffi_checksum_method_ephemeralstream_topic": 59080,
 
     "uniffi_p2panda_ffi_checksum_method_ephemeralstreamcallback_on_message": 18635,
 
-    "uniffi_p2panda_ffi_checksum_method_node_ephemeral_stream": 19494,
+    "uniffi_p2panda_ffi_checksum_method_node_ephemeral_stream": 5042,
 
-    "uniffi_p2panda_ffi_checksum_method_node_id": 45319,
+    "uniffi_p2panda_ffi_checksum_method_node_id": 37166,
 
-    "uniffi_p2panda_ffi_checksum_method_node_insert_bootstrap": 19201,
+    "uniffi_p2panda_ffi_checksum_method_node_insert_bootstrap": 52055,
 
     "uniffi_p2panda_ffi_checksum_method_node_network_id": 50875,
 
-    "uniffi_p2panda_ffi_checksum_method_node_stream": 52148,
+    "uniffi_p2panda_ffi_checksum_method_node_stream": 64795,
 
-    "uniffi_p2panda_ffi_checksum_method_node_stream_from": 17067,
+    "uniffi_p2panda_ffi_checksum_method_node_stream_from": 43613,
 
     "uniffi_p2panda_ffi_checksum_method_topicstreamcallback_on_event": 30815,
 
@@ -158,7 +158,7 @@ export const ffiIntegrity = Object.freeze({
 
     "uniffi_p2panda_ffi_checksum_method_processedoperation_ack": 34154,
 
-    "uniffi_p2panda_ffi_checksum_method_processedoperation_author": 17427,
+    "uniffi_p2panda_ffi_checksum_method_processedoperation_author": 20224,
 
     "uniffi_p2panda_ffi_checksum_method_processedoperation_id": 16528,
 
@@ -168,7 +168,7 @@ export const ffiIntegrity = Object.freeze({
 
     "uniffi_p2panda_ffi_checksum_method_processedoperation_timestamp": 6001,
 
-    "uniffi_p2panda_ffi_checksum_method_processedoperation_topic": 8589,
+    "uniffi_p2panda_ffi_checksum_method_processedoperation_topic": 44447,
 
     "uniffi_p2panda_ffi_checksum_method_topicstream_ack": 2763,
 
@@ -176,7 +176,7 @@ export const ffiIntegrity = Object.freeze({
 
     "uniffi_p2panda_ffi_checksum_method_topicstream_publish": 12423,
 
-    "uniffi_p2panda_ffi_checksum_method_topicstream_topic": 54824,
+    "uniffi_p2panda_ffi_checksum_method_topicstream_topic": 26950,
 
     "uniffi_p2panda_ffi_checksum_constructor_nodebuilder_new": 50633,
 
@@ -194,29 +194,29 @@ export const ffiIntegrity = Object.freeze({
 
     "uniffi_p2panda_ffi_checksum_constructor_networkid_random": 20320,
 
-    "uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes": 9528,
-
-    "uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex": 18057,
-
-    "uniffi_p2panda_ffi_checksum_constructor_privatekey_generate": 31662,
-
-    "uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes": 34513,
-
-    "uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex": 51719,
-
     "uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str": 25654,
 
     "uniffi_p2panda_ffi_checksum_constructor_signature_from_bytes": 42530,
 
     "uniffi_p2panda_ffi_checksum_constructor_signature_from_hex": 59832,
 
-    "uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes": 16286,
+    "uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes": 6451,
 
-    "uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash": 34777,
+    "uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex": 43956,
 
-    "uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex": 27303,
+    "uniffi_p2panda_ffi_checksum_constructor_signingkey_generate": 39498,
 
-    "uniffi_p2panda_ffi_checksum_constructor_topicid_random": 8969,
+    "uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes": 12780,
+
+    "uniffi_p2panda_ffi_checksum_constructor_topic_from_hash": 7948,
+
+    "uniffi_p2panda_ffi_checksum_constructor_topic_from_hex": 15447,
+
+    "uniffi_p2panda_ffi_checksum_constructor_topic_random": 23664,
+
+    "uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes": 57326,
+
+    "uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex": 22727,
 
     "uniffi_p2panda_ffi_checksum_constructor_node_spawn": 35164,
 
@@ -660,14 +660,14 @@ function createBindingCore(libraryPath) {
     uniffi_p2panda_ffi_fn_method_nodebuilder_network_id_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_nodebuilder_network_id", "void", [ffiTypes.UniffiHandle, ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
-    uniffi_p2panda_ffi_fn_method_nodebuilder_private_key: library.func("uniffi_p2panda_ffi_fn_method_nodebuilder_private_key", "void", [ffiTypes.UniffiHandle, ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_method_nodebuilder_private_key_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_nodebuilder_private_key", "void", [ffiTypes.UniffiHandle, ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
     uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url: library.func("uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url", "void", [ffiTypes.UniffiHandle, ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
     uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url", "void", [ffiTypes.UniffiHandle, ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key: library.func("uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key", "void", [ffiTypes.UniffiHandle, ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key", "void", [ffiTypes.UniffiHandle, ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
     uniffi_p2panda_ffi_fn_method_nodebuilder_spawn: library.func("uniffi_p2panda_ffi_fn_method_nodebuilder_spawn", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle]),
@@ -759,11 +759,6 @@ function createBindingCore(libraryPath) {
     uniffi_p2panda_ffi_fn_method_header_prune_flag_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_header_prune_flag", "int8_t", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
-    uniffi_p2panda_ffi_fn_method_header_public_key: library.func("uniffi_p2panda_ffi_fn_method_header_public_key", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_method_header_public_key_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_header_public_key", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
     uniffi_p2panda_ffi_fn_method_header_seq_num: library.func("uniffi_p2panda_ffi_fn_method_header_seq_num", "uint64_t", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
     uniffi_p2panda_ffi_fn_method_header_seq_num_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_header_seq_num", "uint64_t", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
@@ -777,6 +772,11 @@ function createBindingCore(libraryPath) {
     uniffi_p2panda_ffi_fn_method_header_timestamp: library.func("uniffi_p2panda_ffi_fn_method_header_timestamp", "uint64_t", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
     uniffi_p2panda_ffi_fn_method_header_timestamp_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_header_timestamp", "uint64_t", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_method_header_verifying_key: library.func("uniffi_p2panda_ffi_fn_method_header_verifying_key", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_method_header_verifying_key_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_header_verifying_key", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
     uniffi_p2panda_ffi_fn_method_header_version: library.func("uniffi_p2panda_ffi_fn_method_header_version", "uint64_t", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
@@ -816,76 +816,6 @@ function createBindingCore(libraryPath) {
     uniffi_p2panda_ffi_fn_method_networkid_to_hex: library.func("uniffi_p2panda_ffi_fn_method_networkid_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
     uniffi_p2panda_ffi_fn_method_networkid_to_hex_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_networkid_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_clone_privatekey: library.func("uniffi_p2panda_ffi_fn_clone_privatekey", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_clone_privatekey_generic_abi: library.func("uniffi_p2panda_ffi_fn_clone_privatekey", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_free_privatekey: library.func("uniffi_p2panda_ffi_fn_free_privatekey", "void", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_free_privatekey_generic_abi: library.func("uniffi_p2panda_ffi_fn_free_privatekey", "void", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_constructor_privatekey_from_bytes: library.func("uniffi_p2panda_ffi_fn_constructor_privatekey_from_bytes", ffiTypes.UniffiHandle, [ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_constructor_privatekey_from_hex: library.func("uniffi_p2panda_ffi_fn_constructor_privatekey_from_hex", ffiTypes.UniffiHandle, [ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_constructor_privatekey_generate: library.func("uniffi_p2panda_ffi_fn_constructor_privatekey_generate", ffiTypes.UniffiHandle, [koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_method_privatekey_public_key: library.func("uniffi_p2panda_ffi_fn_method_privatekey_public_key", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_method_privatekey_public_key_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_privatekey_public_key", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_method_privatekey_sign: library.func("uniffi_p2panda_ffi_fn_method_privatekey_sign", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_method_privatekey_sign_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_privatekey_sign", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_method_privatekey_to_bytes: library.func("uniffi_p2panda_ffi_fn_method_privatekey_to_bytes", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_method_privatekey_to_bytes_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_privatekey_to_bytes", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_method_privatekey_to_hex: library.func("uniffi_p2panda_ffi_fn_method_privatekey_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_method_privatekey_to_hex_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_privatekey_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_clone_publickey: library.func("uniffi_p2panda_ffi_fn_clone_publickey", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_clone_publickey_generic_abi: library.func("uniffi_p2panda_ffi_fn_clone_publickey", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_free_publickey: library.func("uniffi_p2panda_ffi_fn_free_publickey", "void", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_free_publickey_generic_abi: library.func("uniffi_p2panda_ffi_fn_free_publickey", "void", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_constructor_publickey_from_bytes: library.func("uniffi_p2panda_ffi_fn_constructor_publickey_from_bytes", ffiTypes.UniffiHandle, [ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_constructor_publickey_from_hex: library.func("uniffi_p2panda_ffi_fn_constructor_publickey_from_hex", ffiTypes.UniffiHandle, [ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_method_publickey_to_bytes: library.func("uniffi_p2panda_ffi_fn_method_publickey_to_bytes", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_method_publickey_to_bytes_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_publickey_to_bytes", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_method_publickey_to_hex: library.func("uniffi_p2panda_ffi_fn_method_publickey_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_method_publickey_to_hex_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_publickey_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_method_publickey_verify: library.func("uniffi_p2panda_ffi_fn_method_publickey_verify", "int8_t", [ffiTypes.UniffiHandle, ffiTypes.RustBuffer, ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_method_publickey_verify_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_publickey_verify", "int8_t", [ffiTypes.UniffiHandle, ffiTypes.RustBuffer, ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
     uniffi_p2panda_ffi_fn_clone_relayurl: library.func("uniffi_p2panda_ffi_fn_clone_relayurl", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
@@ -932,38 +862,108 @@ function createBindingCore(libraryPath) {
     uniffi_p2panda_ffi_fn_method_signature_to_hex_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_signature_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
-    uniffi_p2panda_ffi_fn_clone_topicid: library.func("uniffi_p2panda_ffi_fn_clone_topicid", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+    uniffi_p2panda_ffi_fn_clone_signingkey: library.func("uniffi_p2panda_ffi_fn_clone_signingkey", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
-    uniffi_p2panda_ffi_fn_clone_topicid_generic_abi: library.func("uniffi_p2panda_ffi_fn_clone_topicid", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-
-    uniffi_p2panda_ffi_fn_free_topicid: library.func("uniffi_p2panda_ffi_fn_free_topicid", "void", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_free_topicid_generic_abi: library.func("uniffi_p2panda_ffi_fn_free_topicid", "void", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+    uniffi_p2panda_ffi_fn_clone_signingkey_generic_abi: library.func("uniffi_p2panda_ffi_fn_clone_signingkey", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
-    uniffi_p2panda_ffi_fn_constructor_topicid_from_bytes: library.func("uniffi_p2panda_ffi_fn_constructor_topicid_from_bytes", ffiTypes.UniffiHandle, [ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
+    uniffi_p2panda_ffi_fn_free_signingkey: library.func("uniffi_p2panda_ffi_fn_free_signingkey", "void", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_free_signingkey_generic_abi: library.func("uniffi_p2panda_ffi_fn_free_signingkey", "void", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
-    uniffi_p2panda_ffi_fn_constructor_topicid_from_hash: library.func("uniffi_p2panda_ffi_fn_constructor_topicid_from_hash", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
-
-    uniffi_p2panda_ffi_fn_constructor_topicid_from_hash_generic_abi: library.func("uniffi_p2panda_ffi_fn_constructor_topicid_from_hash", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+    uniffi_p2panda_ffi_fn_constructor_signingkey_from_bytes: library.func("uniffi_p2panda_ffi_fn_constructor_signingkey_from_bytes", ffiTypes.UniffiHandle, [ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
-    uniffi_p2panda_ffi_fn_constructor_topicid_from_hex: library.func("uniffi_p2panda_ffi_fn_constructor_topicid_from_hex", ffiTypes.UniffiHandle, [ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
+    uniffi_p2panda_ffi_fn_constructor_signingkey_from_hex: library.func("uniffi_p2panda_ffi_fn_constructor_signingkey_from_hex", ffiTypes.UniffiHandle, [ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
-    uniffi_p2panda_ffi_fn_constructor_topicid_random: library.func("uniffi_p2panda_ffi_fn_constructor_topicid_random", ffiTypes.UniffiHandle, [koffi.pointer(ffiTypes.RustCallStatus)]),
+    uniffi_p2panda_ffi_fn_constructor_signingkey_generate: library.func("uniffi_p2panda_ffi_fn_constructor_signingkey_generate", ffiTypes.UniffiHandle, [koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
-    uniffi_p2panda_ffi_fn_method_topicid_to_bytes: library.func("uniffi_p2panda_ffi_fn_method_topicid_to_bytes", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+    uniffi_p2panda_ffi_fn_method_signingkey_sign: library.func("uniffi_p2panda_ffi_fn_method_signingkey_sign", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
 
-    uniffi_p2panda_ffi_fn_method_topicid_to_bytes_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_topicid_to_bytes", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+    uniffi_p2panda_ffi_fn_method_signingkey_sign_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_signingkey_sign", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
-    uniffi_p2panda_ffi_fn_method_topicid_to_hex: library.func("uniffi_p2panda_ffi_fn_method_topicid_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+    uniffi_p2panda_ffi_fn_method_signingkey_to_bytes: library.func("uniffi_p2panda_ffi_fn_method_signingkey_to_bytes", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
-    uniffi_p2panda_ffi_fn_method_topicid_to_hex_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_topicid_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+    uniffi_p2panda_ffi_fn_method_signingkey_to_bytes_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_signingkey_to_bytes", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_method_signingkey_to_hex: library.func("uniffi_p2panda_ffi_fn_method_signingkey_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_method_signingkey_to_hex_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_signingkey_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_method_signingkey_verifying_key: library.func("uniffi_p2panda_ffi_fn_method_signingkey_verifying_key", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_method_signingkey_verifying_key_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_signingkey_verifying_key", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_clone_topic: library.func("uniffi_p2panda_ffi_fn_clone_topic", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_clone_topic_generic_abi: library.func("uniffi_p2panda_ffi_fn_clone_topic", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_free_topic: library.func("uniffi_p2panda_ffi_fn_free_topic", "void", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_free_topic_generic_abi: library.func("uniffi_p2panda_ffi_fn_free_topic", "void", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_constructor_topic_from_bytes: library.func("uniffi_p2panda_ffi_fn_constructor_topic_from_bytes", ffiTypes.UniffiHandle, [ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_constructor_topic_from_hash: library.func("uniffi_p2panda_ffi_fn_constructor_topic_from_hash", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_constructor_topic_from_hash_generic_abi: library.func("uniffi_p2panda_ffi_fn_constructor_topic_from_hash", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_constructor_topic_from_hex: library.func("uniffi_p2panda_ffi_fn_constructor_topic_from_hex", ffiTypes.UniffiHandle, [ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_constructor_topic_random: library.func("uniffi_p2panda_ffi_fn_constructor_topic_random", ffiTypes.UniffiHandle, [koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_method_topic_to_bytes: library.func("uniffi_p2panda_ffi_fn_method_topic_to_bytes", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_method_topic_to_bytes_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_topic_to_bytes", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_method_topic_to_hex: library.func("uniffi_p2panda_ffi_fn_method_topic_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_method_topic_to_hex_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_topic_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_clone_verifyingkey: library.func("uniffi_p2panda_ffi_fn_clone_verifyingkey", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_clone_verifyingkey_generic_abi: library.func("uniffi_p2panda_ffi_fn_clone_verifyingkey", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_free_verifyingkey: library.func("uniffi_p2panda_ffi_fn_free_verifyingkey", "void", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_free_verifyingkey_generic_abi: library.func("uniffi_p2panda_ffi_fn_free_verifyingkey", "void", [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_bytes: library.func("uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_bytes", ffiTypes.UniffiHandle, [ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_hex: library.func("uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_hex", ffiTypes.UniffiHandle, [ffiTypes.RustBuffer, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes: library.func("uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex: library.func("uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex", ffiTypes.RustBuffer, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+
+    uniffi_p2panda_ffi_fn_method_verifyingkey_verify: library.func("uniffi_p2panda_ffi_fn_method_verifyingkey_verify", "int8_t", [ffiTypes.UniffiHandle, ffiTypes.RustBuffer, ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
+
+    uniffi_p2panda_ffi_fn_method_verifyingkey_verify_generic_abi: library.func("uniffi_p2panda_ffi_fn_method_verifyingkey_verify", "int8_t", [ffiTypes.UniffiHandle, ffiTypes.RustBuffer, ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
 
 
     uniffi_p2panda_ffi_fn_clone_ephemeralmessage: library.func("uniffi_p2panda_ffi_fn_clone_ephemeralmessage", ffiTypes.UniffiHandle, [ffiTypes.UniffiHandle, koffi.pointer(ffiTypes.RustCallStatus)]),
@@ -1489,10 +1489,10 @@ function createBindingCore(libraryPath) {
     uniffi_p2panda_ffi_checksum_method_nodebuilder_network_id: library.func("uniffi_p2panda_ffi_checksum_method_nodebuilder_network_id", "uint16_t", []),
 
 
-    uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key: library.func("uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key", "uint16_t", []),
-
-
     uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url: library.func("uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key: library.func("uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key", "uint16_t", []),
 
 
     uniffi_p2panda_ffi_checksum_method_nodebuilder_spawn: library.func("uniffi_p2panda_ffi_checksum_method_nodebuilder_spawn", "uint16_t", []),
@@ -1525,9 +1525,6 @@ function createBindingCore(libraryPath) {
     uniffi_p2panda_ffi_checksum_method_header_prune_flag: library.func("uniffi_p2panda_ffi_checksum_method_header_prune_flag", "uint16_t", []),
 
 
-    uniffi_p2panda_ffi_checksum_method_header_public_key: library.func("uniffi_p2panda_ffi_checksum_method_header_public_key", "uint16_t", []),
-
-
     uniffi_p2panda_ffi_checksum_method_header_seq_num: library.func("uniffi_p2panda_ffi_checksum_method_header_seq_num", "uint16_t", []),
 
 
@@ -1535,6 +1532,9 @@ function createBindingCore(libraryPath) {
 
 
     uniffi_p2panda_ffi_checksum_method_header_timestamp: library.func("uniffi_p2panda_ffi_checksum_method_header_timestamp", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_method_header_verifying_key: library.func("uniffi_p2panda_ffi_checksum_method_header_verifying_key", "uint16_t", []),
 
 
     uniffi_p2panda_ffi_checksum_method_header_version: library.func("uniffi_p2panda_ffi_checksum_method_header_version", "uint16_t", []),
@@ -1546,27 +1546,6 @@ function createBindingCore(libraryPath) {
     uniffi_p2panda_ffi_checksum_method_networkid_to_hex: library.func("uniffi_p2panda_ffi_checksum_method_networkid_to_hex", "uint16_t", []),
 
 
-    uniffi_p2panda_ffi_checksum_method_privatekey_public_key: library.func("uniffi_p2panda_ffi_checksum_method_privatekey_public_key", "uint16_t", []),
-
-
-    uniffi_p2panda_ffi_checksum_method_privatekey_sign: library.func("uniffi_p2panda_ffi_checksum_method_privatekey_sign", "uint16_t", []),
-
-
-    uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes: library.func("uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes", "uint16_t", []),
-
-
-    uniffi_p2panda_ffi_checksum_method_privatekey_to_hex: library.func("uniffi_p2panda_ffi_checksum_method_privatekey_to_hex", "uint16_t", []),
-
-
-    uniffi_p2panda_ffi_checksum_method_publickey_to_bytes: library.func("uniffi_p2panda_ffi_checksum_method_publickey_to_bytes", "uint16_t", []),
-
-
-    uniffi_p2panda_ffi_checksum_method_publickey_to_hex: library.func("uniffi_p2panda_ffi_checksum_method_publickey_to_hex", "uint16_t", []),
-
-
-    uniffi_p2panda_ffi_checksum_method_publickey_verify: library.func("uniffi_p2panda_ffi_checksum_method_publickey_verify", "uint16_t", []),
-
-
     uniffi_p2panda_ffi_checksum_method_relayurl_to_str: library.func("uniffi_p2panda_ffi_checksum_method_relayurl_to_str", "uint16_t", []),
 
 
@@ -1576,10 +1555,31 @@ function createBindingCore(libraryPath) {
     uniffi_p2panda_ffi_checksum_method_signature_to_hex: library.func("uniffi_p2panda_ffi_checksum_method_signature_to_hex", "uint16_t", []),
 
 
-    uniffi_p2panda_ffi_checksum_method_topicid_to_bytes: library.func("uniffi_p2panda_ffi_checksum_method_topicid_to_bytes", "uint16_t", []),
+    uniffi_p2panda_ffi_checksum_method_signingkey_sign: library.func("uniffi_p2panda_ffi_checksum_method_signingkey_sign", "uint16_t", []),
 
 
-    uniffi_p2panda_ffi_checksum_method_topicid_to_hex: library.func("uniffi_p2panda_ffi_checksum_method_topicid_to_hex", "uint16_t", []),
+    uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes: library.func("uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_method_signingkey_to_hex: library.func("uniffi_p2panda_ffi_checksum_method_signingkey_to_hex", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key: library.func("uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_method_topic_to_bytes: library.func("uniffi_p2panda_ffi_checksum_method_topic_to_bytes", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_method_topic_to_hex: library.func("uniffi_p2panda_ffi_checksum_method_topic_to_hex", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes: library.func("uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex: library.func("uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_method_verifyingkey_verify: library.func("uniffi_p2panda_ffi_checksum_method_verifyingkey_verify", "uint16_t", []),
 
 
     uniffi_p2panda_ffi_checksum_method_ephemeralmessage_author: library.func("uniffi_p2panda_ffi_checksum_method_ephemeralmessage_author", "uint16_t", []),
@@ -1699,21 +1699,6 @@ function createBindingCore(libraryPath) {
     uniffi_p2panda_ffi_checksum_constructor_networkid_random: library.func("uniffi_p2panda_ffi_checksum_constructor_networkid_random", "uint16_t", []),
 
 
-    uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes: library.func("uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes", "uint16_t", []),
-
-
-    uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex: library.func("uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex", "uint16_t", []),
-
-
-    uniffi_p2panda_ffi_checksum_constructor_privatekey_generate: library.func("uniffi_p2panda_ffi_checksum_constructor_privatekey_generate", "uint16_t", []),
-
-
-    uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes: library.func("uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes", "uint16_t", []),
-
-
-    uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex: library.func("uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex", "uint16_t", []),
-
-
     uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str: library.func("uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str", "uint16_t", []),
 
 
@@ -1723,16 +1708,31 @@ function createBindingCore(libraryPath) {
     uniffi_p2panda_ffi_checksum_constructor_signature_from_hex: library.func("uniffi_p2panda_ffi_checksum_constructor_signature_from_hex", "uint16_t", []),
 
 
-    uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes: library.func("uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes", "uint16_t", []),
+    uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes: library.func("uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes", "uint16_t", []),
 
 
-    uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash: library.func("uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash", "uint16_t", []),
+    uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex: library.func("uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex", "uint16_t", []),
 
 
-    uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex: library.func("uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex", "uint16_t", []),
+    uniffi_p2panda_ffi_checksum_constructor_signingkey_generate: library.func("uniffi_p2panda_ffi_checksum_constructor_signingkey_generate", "uint16_t", []),
 
 
-    uniffi_p2panda_ffi_checksum_constructor_topicid_random: library.func("uniffi_p2panda_ffi_checksum_constructor_topicid_random", "uint16_t", []),
+    uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes: library.func("uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_constructor_topic_from_hash: library.func("uniffi_p2panda_ffi_checksum_constructor_topic_from_hash", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_constructor_topic_from_hex: library.func("uniffi_p2panda_ffi_checksum_constructor_topic_from_hex", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_constructor_topic_random: library.func("uniffi_p2panda_ffi_checksum_constructor_topic_random", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes: library.func("uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes", "uint16_t", []),
+
+
+    uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex: library.func("uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex", "uint16_t", []),
 
 
     uniffi_p2panda_ffi_checksum_constructor_node_spawn: library.func("uniffi_p2panda_ffi_checksum_constructor_node_spawn", "uint16_t", []),
@@ -1947,9 +1947,9 @@ export function getChecksums(bindings = getFfiBindings()) {
 
     "uniffi_p2panda_ffi_checksum_method_nodebuilder_network_id": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_nodebuilder_network_id(),
 
-    "uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key(),
-
     "uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url(),
+
+    "uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key(),
 
     "uniffi_p2panda_ffi_checksum_method_nodebuilder_spawn": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_nodebuilder_spawn(),
 
@@ -1971,13 +1971,13 @@ export function getChecksums(bindings = getFfiBindings()) {
 
     "uniffi_p2panda_ffi_checksum_method_header_prune_flag": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_header_prune_flag(),
 
-    "uniffi_p2panda_ffi_checksum_method_header_public_key": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_header_public_key(),
-
     "uniffi_p2panda_ffi_checksum_method_header_seq_num": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_header_seq_num(),
 
     "uniffi_p2panda_ffi_checksum_method_header_signature": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_header_signature(),
 
     "uniffi_p2panda_ffi_checksum_method_header_timestamp": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_header_timestamp(),
+
+    "uniffi_p2panda_ffi_checksum_method_header_verifying_key": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_header_verifying_key(),
 
     "uniffi_p2panda_ffi_checksum_method_header_version": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_header_version(),
 
@@ -1985,29 +1985,29 @@ export function getChecksums(bindings = getFfiBindings()) {
 
     "uniffi_p2panda_ffi_checksum_method_networkid_to_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_networkid_to_hex(),
 
-    "uniffi_p2panda_ffi_checksum_method_privatekey_public_key": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_privatekey_public_key(),
-
-    "uniffi_p2panda_ffi_checksum_method_privatekey_sign": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_privatekey_sign(),
-
-    "uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes(),
-
-    "uniffi_p2panda_ffi_checksum_method_privatekey_to_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_privatekey_to_hex(),
-
-    "uniffi_p2panda_ffi_checksum_method_publickey_to_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_publickey_to_bytes(),
-
-    "uniffi_p2panda_ffi_checksum_method_publickey_to_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_publickey_to_hex(),
-
-    "uniffi_p2panda_ffi_checksum_method_publickey_verify": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_publickey_verify(),
-
     "uniffi_p2panda_ffi_checksum_method_relayurl_to_str": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_relayurl_to_str(),
 
     "uniffi_p2panda_ffi_checksum_method_signature_to_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_signature_to_bytes(),
 
     "uniffi_p2panda_ffi_checksum_method_signature_to_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_signature_to_hex(),
 
-    "uniffi_p2panda_ffi_checksum_method_topicid_to_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_topicid_to_bytes(),
+    "uniffi_p2panda_ffi_checksum_method_signingkey_sign": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_signingkey_sign(),
 
-    "uniffi_p2panda_ffi_checksum_method_topicid_to_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_topicid_to_hex(),
+    "uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes(),
+
+    "uniffi_p2panda_ffi_checksum_method_signingkey_to_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_signingkey_to_hex(),
+
+    "uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key(),
+
+    "uniffi_p2panda_ffi_checksum_method_topic_to_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_topic_to_bytes(),
+
+    "uniffi_p2panda_ffi_checksum_method_topic_to_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_topic_to_hex(),
+
+    "uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes(),
+
+    "uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex(),
+
+    "uniffi_p2panda_ffi_checksum_method_verifyingkey_verify": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_verifyingkey_verify(),
 
     "uniffi_p2panda_ffi_checksum_method_ephemeralmessage_author": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_method_ephemeralmessage_author(),
 
@@ -2087,29 +2087,29 @@ export function getChecksums(bindings = getFfiBindings()) {
 
     "uniffi_p2panda_ffi_checksum_constructor_networkid_random": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_networkid_random(),
 
-    "uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes(),
-
-    "uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex(),
-
-    "uniffi_p2panda_ffi_checksum_constructor_privatekey_generate": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_privatekey_generate(),
-
-    "uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes(),
-
-    "uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex(),
-
     "uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str(),
 
     "uniffi_p2panda_ffi_checksum_constructor_signature_from_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_signature_from_bytes(),
 
     "uniffi_p2panda_ffi_checksum_constructor_signature_from_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_signature_from_hex(),
 
-    "uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes(),
+    "uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes(),
 
-    "uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash(),
+    "uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex(),
 
-    "uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex(),
+    "uniffi_p2panda_ffi_checksum_constructor_signingkey_generate": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_signingkey_generate(),
 
-    "uniffi_p2panda_ffi_checksum_constructor_topicid_random": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topicid_random(),
+    "uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes(),
+
+    "uniffi_p2panda_ffi_checksum_constructor_topic_from_hash": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topic_from_hash(),
+
+    "uniffi_p2panda_ffi_checksum_constructor_topic_from_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topic_from_hex(),
+
+    "uniffi_p2panda_ffi_checksum_constructor_topic_random": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topic_random(),
+
+    "uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes(),
+
+    "uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex(),
 
     "uniffi_p2panda_ffi_checksum_constructor_node_spawn": bindings.ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_node_spawn(),
 
@@ -2237,10 +2237,10 @@ export function validateChecksums(bindings = getFfiBindings()) {
   }
 
   {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key"];
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url"];
     if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key", expected, actual, {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url", expected, actual, {
         details: {
           libraryPath: bindings.libraryPath,
           packageRelativePath: bindings.packageRelativePath,
@@ -2250,10 +2250,10 @@ export function validateChecksums(bindings = getFfiBindings()) {
   }
 
   {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url"];
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key"];
     if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url", expected, actual, {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key", expected, actual, {
         details: {
           libraryPath: bindings.libraryPath,
           packageRelativePath: bindings.packageRelativePath,
@@ -2393,19 +2393,6 @@ export function validateChecksums(bindings = getFfiBindings()) {
   }
 
   {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_header_public_key"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_header_public_key"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_header_public_key", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
     const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_header_seq_num"];
     const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_header_seq_num"];
     if (actual !== expected) {
@@ -2436,6 +2423,19 @@ export function validateChecksums(bindings = getFfiBindings()) {
     const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_header_timestamp"];
     if (actual !== expected) {
       throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_header_timestamp", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_header_verifying_key"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_header_verifying_key"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_header_verifying_key", expected, actual, {
         details: {
           libraryPath: bindings.libraryPath,
           packageRelativePath: bindings.packageRelativePath,
@@ -2484,97 +2484,6 @@ export function validateChecksums(bindings = getFfiBindings()) {
   }
 
   {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_privatekey_public_key"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_privatekey_public_key"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_privatekey_public_key", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_privatekey_sign"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_privatekey_sign"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_privatekey_sign", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_privatekey_to_hex"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_privatekey_to_hex"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_privatekey_to_hex", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_publickey_to_bytes"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_publickey_to_bytes"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_publickey_to_bytes", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_publickey_to_hex"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_publickey_to_hex"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_publickey_to_hex", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_publickey_verify"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_publickey_verify"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_publickey_verify", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
     const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_relayurl_to_str"];
     const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_relayurl_to_str"];
     if (actual !== expected) {
@@ -2614,10 +2523,10 @@ export function validateChecksums(bindings = getFfiBindings()) {
   }
 
   {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_topicid_to_bytes"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_topicid_to_bytes"];
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_signingkey_sign"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_signingkey_sign"];
     if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_topicid_to_bytes", expected, actual, {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_signingkey_sign", expected, actual, {
         details: {
           libraryPath: bindings.libraryPath,
           packageRelativePath: bindings.packageRelativePath,
@@ -2627,10 +2536,101 @@ export function validateChecksums(bindings = getFfiBindings()) {
   }
 
   {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_topicid_to_hex"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_topicid_to_hex"];
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes"];
     if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_topicid_to_hex", expected, actual, {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_signingkey_to_hex"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_signingkey_to_hex"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_signingkey_to_hex", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_topic_to_bytes"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_topic_to_bytes"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_topic_to_bytes", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_topic_to_hex"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_topic_to_hex"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_topic_to_hex", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_method_verifyingkey_verify"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_method_verifyingkey_verify"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_method_verifyingkey_verify", expected, actual, {
         details: {
           libraryPath: bindings.libraryPath,
           packageRelativePath: bindings.packageRelativePath,
@@ -3147,71 +3147,6 @@ export function validateChecksums(bindings = getFfiBindings()) {
   }
 
   {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_privatekey_generate"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_privatekey_generate"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_privatekey_generate", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex"];
-    if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex", expected, actual, {
-        details: {
-          libraryPath: bindings.libraryPath,
-          packageRelativePath: bindings.packageRelativePath,
-        },
-      });
-    }
-  }
-
-  {
     const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str"];
     const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str"];
     if (actual !== expected) {
@@ -3251,10 +3186,10 @@ export function validateChecksums(bindings = getFfiBindings()) {
   }
 
   {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes"];
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes"];
     if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes", expected, actual, {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes", expected, actual, {
         details: {
           libraryPath: bindings.libraryPath,
           packageRelativePath: bindings.packageRelativePath,
@@ -3264,10 +3199,10 @@ export function validateChecksums(bindings = getFfiBindings()) {
   }
 
   {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash"];
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex"];
     if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash", expected, actual, {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex", expected, actual, {
         details: {
           libraryPath: bindings.libraryPath,
           packageRelativePath: bindings.packageRelativePath,
@@ -3277,10 +3212,10 @@ export function validateChecksums(bindings = getFfiBindings()) {
   }
 
   {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex"];
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_signingkey_generate"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_signingkey_generate"];
     if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex", expected, actual, {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_signingkey_generate", expected, actual, {
         details: {
           libraryPath: bindings.libraryPath,
           packageRelativePath: bindings.packageRelativePath,
@@ -3290,10 +3225,75 @@ export function validateChecksums(bindings = getFfiBindings()) {
   }
 
   {
-    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_topicid_random"];
-    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_topicid_random"];
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes"];
     if (actual !== expected) {
-      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_topicid_random", expected, actual, {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_topic_from_hash"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_topic_from_hash"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_topic_from_hash", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_topic_from_hex"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_topic_from_hex"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_topic_from_hex", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_topic_random"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_topic_random"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_topic_random", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes", expected, actual, {
+        details: {
+          libraryPath: bindings.libraryPath,
+          packageRelativePath: bindings.packageRelativePath,
+        },
+      });
+    }
+  }
+
+  {
+    const expected = ffiIntegrity.checksums["uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex"];
+    const actual = actualChecksums["uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex"];
+    if (actual !== expected) {
+      throw new ChecksumMismatchError("uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex", expected, actual, {
         details: {
           libraryPath: bindings.libraryPath,
           packageRelativePath: bindings.packageRelativePath,
@@ -3504,22 +3504,6 @@ export const ffiFunctions = Object.freeze({
   },
 
 
-  uniffi_p2panda_ffi_fn_method_nodebuilder_private_key(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_nodebuilder_private_key(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_nodebuilder_private_key_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_nodebuilder_private_key_generic_abi(...args);
-
-    return result;
-
-  },
-
-
   uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url(...args) {
     const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url(...args);
 
@@ -3530,6 +3514,22 @@ export const ffiFunctions = Object.freeze({
 
   uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url_generic_abi(...args) {
     const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url_generic_abi(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key_generic_abi(...args);
 
     return result;
 
@@ -3816,22 +3816,6 @@ export const ffiFunctions = Object.freeze({
   },
 
 
-  uniffi_p2panda_ffi_fn_method_header_public_key(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_header_public_key(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_header_public_key_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_header_public_key_generic_abi(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
   uniffi_p2panda_ffi_fn_method_header_seq_num(...args) {
     const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_header_seq_num(...args);
 
@@ -3876,6 +3860,22 @@ export const ffiFunctions = Object.freeze({
     const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_header_timestamp_generic_abi(...args);
 
     return normalizeUInt64(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_header_verifying_key(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_header_verifying_key(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_header_verifying_key_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_header_verifying_key_generic_abi(...args);
+
+    return normalizeHandle(result);
 
   },
 
@@ -3996,222 +3996,6 @@ export const ffiFunctions = Object.freeze({
     const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_networkid_to_hex_generic_abi(...args);
 
     return normalizeRustBuffer(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_clone_privatekey(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_clone_privatekey(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_clone_privatekey_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_clone_privatekey_generic_abi(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_free_privatekey(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_free_privatekey(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_free_privatekey_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_free_privatekey_generic_abi(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_constructor_privatekey_from_bytes(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_privatekey_from_bytes(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_constructor_privatekey_from_hex(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_privatekey_from_hex(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_constructor_privatekey_generate(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_privatekey_generate(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_privatekey_public_key(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_privatekey_public_key(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_privatekey_public_key_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_privatekey_public_key_generic_abi(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_privatekey_sign(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_privatekey_sign(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_privatekey_sign_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_privatekey_sign_generic_abi(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_privatekey_to_bytes(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_privatekey_to_bytes(...args);
-
-    return normalizeRustBuffer(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_privatekey_to_bytes_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_privatekey_to_bytes_generic_abi(...args);
-
-    return normalizeRustBuffer(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_privatekey_to_hex(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_privatekey_to_hex(...args);
-
-    return normalizeRustBuffer(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_privatekey_to_hex_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_privatekey_to_hex_generic_abi(...args);
-
-    return normalizeRustBuffer(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_clone_publickey(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_clone_publickey(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_clone_publickey_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_clone_publickey_generic_abi(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_free_publickey(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_free_publickey(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_free_publickey_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_free_publickey_generic_abi(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_constructor_publickey_from_bytes(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_publickey_from_bytes(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_constructor_publickey_from_hex(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_publickey_from_hex(...args);
-
-    return normalizeHandle(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_publickey_to_bytes(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_publickey_to_bytes(...args);
-
-    return normalizeRustBuffer(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_publickey_to_bytes_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_publickey_to_bytes_generic_abi(...args);
-
-    return normalizeRustBuffer(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_publickey_to_hex(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_publickey_to_hex(...args);
-
-    return normalizeRustBuffer(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_publickey_to_hex_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_publickey_to_hex_generic_abi(...args);
-
-    return normalizeRustBuffer(result);
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_publickey_verify(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_publickey_verify(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_fn_method_publickey_verify_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_publickey_verify_generic_abi(...args);
-
-    return result;
 
   },
 
@@ -4352,106 +4136,322 @@ export const ffiFunctions = Object.freeze({
   },
 
 
-  uniffi_p2panda_ffi_fn_clone_topicid(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_clone_topicid(...args);
+  uniffi_p2panda_ffi_fn_clone_signingkey(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_clone_signingkey(...args);
 
     return normalizeHandle(result);
 
   },
 
 
-  uniffi_p2panda_ffi_fn_clone_topicid_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_clone_topicid_generic_abi(...args);
+  uniffi_p2panda_ffi_fn_clone_signingkey_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_clone_signingkey_generic_abi(...args);
 
     return normalizeHandle(result);
 
   },
 
 
-  uniffi_p2panda_ffi_fn_free_topicid(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_free_topicid(...args);
+  uniffi_p2panda_ffi_fn_free_signingkey(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_free_signingkey(...args);
 
     return result;
 
   },
 
 
-  uniffi_p2panda_ffi_fn_free_topicid_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_free_topicid_generic_abi(...args);
+  uniffi_p2panda_ffi_fn_free_signingkey_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_free_signingkey_generic_abi(...args);
 
     return result;
 
   },
 
 
-  uniffi_p2panda_ffi_fn_constructor_topicid_from_bytes(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_topicid_from_bytes(...args);
+  uniffi_p2panda_ffi_fn_constructor_signingkey_from_bytes(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_signingkey_from_bytes(...args);
 
     return normalizeHandle(result);
 
   },
 
 
-  uniffi_p2panda_ffi_fn_constructor_topicid_from_hash(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_topicid_from_hash(...args);
+  uniffi_p2panda_ffi_fn_constructor_signingkey_from_hex(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_signingkey_from_hex(...args);
 
     return normalizeHandle(result);
 
   },
 
 
-  uniffi_p2panda_ffi_fn_constructor_topicid_from_hash_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_topicid_from_hash_generic_abi(...args);
+  uniffi_p2panda_ffi_fn_constructor_signingkey_generate(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_signingkey_generate(...args);
 
     return normalizeHandle(result);
 
   },
 
 
-  uniffi_p2panda_ffi_fn_constructor_topicid_from_hex(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_topicid_from_hex(...args);
+  uniffi_p2panda_ffi_fn_method_signingkey_sign(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_signingkey_sign(...args);
 
     return normalizeHandle(result);
 
   },
 
 
-  uniffi_p2panda_ffi_fn_constructor_topicid_random(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_topicid_random(...args);
+  uniffi_p2panda_ffi_fn_method_signingkey_sign_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_signingkey_sign_generic_abi(...args);
 
     return normalizeHandle(result);
 
   },
 
 
-  uniffi_p2panda_ffi_fn_method_topicid_to_bytes(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_topicid_to_bytes(...args);
+  uniffi_p2panda_ffi_fn_method_signingkey_to_bytes(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_signingkey_to_bytes(...args);
 
     return normalizeRustBuffer(result);
 
   },
 
 
-  uniffi_p2panda_ffi_fn_method_topicid_to_bytes_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_topicid_to_bytes_generic_abi(...args);
+  uniffi_p2panda_ffi_fn_method_signingkey_to_bytes_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_signingkey_to_bytes_generic_abi(...args);
 
     return normalizeRustBuffer(result);
 
   },
 
 
-  uniffi_p2panda_ffi_fn_method_topicid_to_hex(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_topicid_to_hex(...args);
+  uniffi_p2panda_ffi_fn_method_signingkey_to_hex(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_signingkey_to_hex(...args);
 
     return normalizeRustBuffer(result);
 
   },
 
 
-  uniffi_p2panda_ffi_fn_method_topicid_to_hex_generic_abi(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_topicid_to_hex_generic_abi(...args);
+  uniffi_p2panda_ffi_fn_method_signingkey_to_hex_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_signingkey_to_hex_generic_abi(...args);
 
     return normalizeRustBuffer(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_signingkey_verifying_key(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_signingkey_verifying_key(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_signingkey_verifying_key_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_signingkey_verifying_key_generic_abi(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_clone_topic(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_clone_topic(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_clone_topic_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_clone_topic_generic_abi(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_free_topic(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_free_topic(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_free_topic_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_free_topic_generic_abi(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_constructor_topic_from_bytes(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_topic_from_bytes(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_constructor_topic_from_hash(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_topic_from_hash(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_constructor_topic_from_hash_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_topic_from_hash_generic_abi(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_constructor_topic_from_hex(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_topic_from_hex(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_constructor_topic_random(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_topic_random(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_topic_to_bytes(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_topic_to_bytes(...args);
+
+    return normalizeRustBuffer(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_topic_to_bytes_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_topic_to_bytes_generic_abi(...args);
+
+    return normalizeRustBuffer(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_topic_to_hex(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_topic_to_hex(...args);
+
+    return normalizeRustBuffer(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_topic_to_hex_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_topic_to_hex_generic_abi(...args);
+
+    return normalizeRustBuffer(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_clone_verifyingkey(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_clone_verifyingkey(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_clone_verifyingkey_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_clone_verifyingkey_generic_abi(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_free_verifyingkey(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_free_verifyingkey(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_free_verifyingkey_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_free_verifyingkey_generic_abi(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_bytes(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_bytes(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_hex(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_hex(...args);
+
+    return normalizeHandle(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes(...args);
+
+    return normalizeRustBuffer(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes_generic_abi(...args);
+
+    return normalizeRustBuffer(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex(...args);
+
+    return normalizeRustBuffer(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex_generic_abi(...args);
+
+    return normalizeRustBuffer(result);
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_verifyingkey_verify(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_verifyingkey_verify(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_fn_method_verifyingkey_verify_generic_abi(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_fn_method_verifyingkey_verify_generic_abi(...args);
+
+    return result;
 
   },
 
@@ -6104,16 +6104,16 @@ export const ffiFunctions = Object.freeze({
   },
 
 
-  uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key(...args);
+  uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url(...args);
 
     return result;
 
   },
 
 
-  uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url(...args);
+  uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key(...args);
 
     return result;
 
@@ -6200,14 +6200,6 @@ export const ffiFunctions = Object.freeze({
   },
 
 
-  uniffi_p2panda_ffi_checksum_method_header_public_key(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_header_public_key(...args);
-
-    return result;
-
-  },
-
-
   uniffi_p2panda_ffi_checksum_method_header_seq_num(...args) {
     const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_header_seq_num(...args);
 
@@ -6226,6 +6218,14 @@ export const ffiFunctions = Object.freeze({
 
   uniffi_p2panda_ffi_checksum_method_header_timestamp(...args) {
     const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_header_timestamp(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_method_header_verifying_key(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_header_verifying_key(...args);
 
     return result;
 
@@ -6256,62 +6256,6 @@ export const ffiFunctions = Object.freeze({
   },
 
 
-  uniffi_p2panda_ffi_checksum_method_privatekey_public_key(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_privatekey_public_key(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_checksum_method_privatekey_sign(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_privatekey_sign(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_checksum_method_privatekey_to_hex(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_privatekey_to_hex(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_checksum_method_publickey_to_bytes(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_publickey_to_bytes(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_checksum_method_publickey_to_hex(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_publickey_to_hex(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_checksum_method_publickey_verify(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_publickey_verify(...args);
-
-    return result;
-
-  },
-
-
   uniffi_p2panda_ffi_checksum_method_relayurl_to_str(...args) {
     const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_relayurl_to_str(...args);
 
@@ -6336,16 +6280,72 @@ export const ffiFunctions = Object.freeze({
   },
 
 
-  uniffi_p2panda_ffi_checksum_method_topicid_to_bytes(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_topicid_to_bytes(...args);
+  uniffi_p2panda_ffi_checksum_method_signingkey_sign(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_signingkey_sign(...args);
 
     return result;
 
   },
 
 
-  uniffi_p2panda_ffi_checksum_method_topicid_to_hex(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_topicid_to_hex(...args);
+  uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_method_signingkey_to_hex(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_signingkey_to_hex(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_method_topic_to_bytes(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_topic_to_bytes(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_method_topic_to_hex(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_topic_to_hex(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_method_verifyingkey_verify(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_method_verifyingkey_verify(...args);
 
     return result;
 
@@ -6664,46 +6664,6 @@ export const ffiFunctions = Object.freeze({
   },
 
 
-  uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_checksum_constructor_privatekey_generate(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_privatekey_generate(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes(...args);
-
-    return result;
-
-  },
-
-
-  uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex(...args);
-
-    return result;
-
-  },
-
-
   uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str(...args) {
     const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str(...args);
 
@@ -6728,32 +6688,72 @@ export const ffiFunctions = Object.freeze({
   },
 
 
-  uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes(...args);
+  uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes(...args);
 
     return result;
 
   },
 
 
-  uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash(...args);
+  uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex(...args);
 
     return result;
 
   },
 
 
-  uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex(...args);
+  uniffi_p2panda_ffi_checksum_constructor_signingkey_generate(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_signingkey_generate(...args);
 
     return result;
 
   },
 
 
-  uniffi_p2panda_ffi_checksum_constructor_topicid_random(...args) {
-    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_topicid_random(...args);
+  uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_constructor_topic_from_hash(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_topic_from_hash(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_constructor_topic_from_hex(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_topic_from_hex(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_constructor_topic_random(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_topic_random(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes(...args);
+
+    return result;
+
+  },
+
+
+  uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex(...args) {
+    const result = getLoadedFfiFunctions().uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex(...args);
 
     return result;
 
@@ -6906,17 +6906,6 @@ export function uniffi_p2panda_ffi_fn_method_nodebuilder_network_id_generic_abi(
 
 
 
-export function uniffi_p2panda_ffi_fn_method_nodebuilder_private_key(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_nodebuilder_private_key(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_method_nodebuilder_private_key_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_nodebuilder_private_key_generic_abi(...args);
-}
-
-
-
 export function uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url(...args) {
   return ffiFunctions.uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url(...args);
 }
@@ -6924,6 +6913,17 @@ export function uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url(...args) {
 
 export function uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url_generic_abi(...args) {
   return ffiFunctions.uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key_generic_abi(...args);
 }
 
 
@@ -7122,17 +7122,6 @@ export function uniffi_p2panda_ffi_fn_method_header_prune_flag_generic_abi(...ar
 
 
 
-export function uniffi_p2panda_ffi_fn_method_header_public_key(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_header_public_key(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_method_header_public_key_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_header_public_key_generic_abi(...args);
-}
-
-
-
 export function uniffi_p2panda_ffi_fn_method_header_seq_num(...args) {
   return ffiFunctions.uniffi_p2panda_ffi_fn_method_header_seq_num(...args);
 }
@@ -7162,6 +7151,17 @@ export function uniffi_p2panda_ffi_fn_method_header_timestamp(...args) {
 
 export function uniffi_p2panda_ffi_fn_method_header_timestamp_generic_abi(...args) {
   return ffiFunctions.uniffi_p2panda_ffi_fn_method_header_timestamp_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_method_header_verifying_key(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_header_verifying_key(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_method_header_verifying_key_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_header_verifying_key_generic_abi(...args);
 }
 
 
@@ -7246,157 +7246,6 @@ export function uniffi_p2panda_ffi_fn_method_networkid_to_hex(...args) {
 
 export function uniffi_p2panda_ffi_fn_method_networkid_to_hex_generic_abi(...args) {
   return ffiFunctions.uniffi_p2panda_ffi_fn_method_networkid_to_hex_generic_abi(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_clone_privatekey(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_clone_privatekey(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_clone_privatekey_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_clone_privatekey_generic_abi(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_free_privatekey(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_free_privatekey(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_free_privatekey_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_free_privatekey_generic_abi(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_constructor_privatekey_from_bytes(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_privatekey_from_bytes(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_constructor_privatekey_from_hex(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_privatekey_from_hex(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_constructor_privatekey_generate(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_privatekey_generate(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_method_privatekey_public_key(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_public_key(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_method_privatekey_public_key_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_public_key_generic_abi(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_method_privatekey_sign(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_sign(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_method_privatekey_sign_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_sign_generic_abi(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_method_privatekey_to_bytes(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_to_bytes(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_method_privatekey_to_bytes_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_to_bytes_generic_abi(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_method_privatekey_to_hex(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_to_hex(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_method_privatekey_to_hex_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_to_hex_generic_abi(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_clone_publickey(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_clone_publickey(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_clone_publickey_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_clone_publickey_generic_abi(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_free_publickey(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_free_publickey(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_free_publickey_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_free_publickey_generic_abi(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_constructor_publickey_from_bytes(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_publickey_from_bytes(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_constructor_publickey_from_hex(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_publickey_from_hex(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_method_publickey_to_bytes(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_publickey_to_bytes(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_method_publickey_to_bytes_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_publickey_to_bytes_generic_abi(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_method_publickey_to_hex(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_publickey_to_hex(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_method_publickey_to_hex_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_publickey_to_hex_generic_abi(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_method_publickey_verify(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_publickey_verify(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_method_publickey_verify_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_publickey_verify_generic_abi(...args);
 }
 
 
@@ -7496,75 +7345,226 @@ export function uniffi_p2panda_ffi_fn_method_signature_to_hex_generic_abi(...arg
 
 
 
-export function uniffi_p2panda_ffi_fn_clone_topicid(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_clone_topicid(...args);
+export function uniffi_p2panda_ffi_fn_clone_signingkey(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_clone_signingkey(...args);
 }
 
 
-export function uniffi_p2panda_ffi_fn_clone_topicid_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_clone_topicid_generic_abi(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_fn_free_topicid(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_free_topicid(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_free_topicid_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_free_topicid_generic_abi(...args);
+export function uniffi_p2panda_ffi_fn_clone_signingkey_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_clone_signingkey_generic_abi(...args);
 }
 
 
 
-export function uniffi_p2panda_ffi_fn_constructor_topicid_from_bytes(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topicid_from_bytes(...args);
+export function uniffi_p2panda_ffi_fn_free_signingkey(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_free_signingkey(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_free_signingkey_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_free_signingkey_generic_abi(...args);
 }
 
 
 
-export function uniffi_p2panda_ffi_fn_constructor_topicid_from_hash(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topicid_from_hash(...args);
-}
-
-
-export function uniffi_p2panda_ffi_fn_constructor_topicid_from_hash_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topicid_from_hash_generic_abi(...args);
+export function uniffi_p2panda_ffi_fn_constructor_signingkey_from_bytes(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_signingkey_from_bytes(...args);
 }
 
 
 
-export function uniffi_p2panda_ffi_fn_constructor_topicid_from_hex(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topicid_from_hex(...args);
+export function uniffi_p2panda_ffi_fn_constructor_signingkey_from_hex(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_signingkey_from_hex(...args);
 }
 
 
 
-export function uniffi_p2panda_ffi_fn_constructor_topicid_random(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topicid_random(...args);
+export function uniffi_p2panda_ffi_fn_constructor_signingkey_generate(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_signingkey_generate(...args);
 }
 
 
 
-export function uniffi_p2panda_ffi_fn_method_topicid_to_bytes(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_topicid_to_bytes(...args);
+export function uniffi_p2panda_ffi_fn_method_signingkey_sign(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_sign(...args);
 }
 
 
-export function uniffi_p2panda_ffi_fn_method_topicid_to_bytes_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_topicid_to_bytes_generic_abi(...args);
+export function uniffi_p2panda_ffi_fn_method_signingkey_sign_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_sign_generic_abi(...args);
 }
 
 
 
-export function uniffi_p2panda_ffi_fn_method_topicid_to_hex(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_topicid_to_hex(...args);
+export function uniffi_p2panda_ffi_fn_method_signingkey_to_bytes(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_to_bytes(...args);
 }
 
 
-export function uniffi_p2panda_ffi_fn_method_topicid_to_hex_generic_abi(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_fn_method_topicid_to_hex_generic_abi(...args);
+export function uniffi_p2panda_ffi_fn_method_signingkey_to_bytes_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_to_bytes_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_method_signingkey_to_hex(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_to_hex(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_method_signingkey_to_hex_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_to_hex_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_method_signingkey_verifying_key(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_verifying_key(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_method_signingkey_verifying_key_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_verifying_key_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_clone_topic(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_clone_topic(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_clone_topic_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_clone_topic_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_free_topic(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_free_topic(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_free_topic_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_free_topic_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_constructor_topic_from_bytes(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topic_from_bytes(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_constructor_topic_from_hash(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topic_from_hash(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_constructor_topic_from_hash_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topic_from_hash_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_constructor_topic_from_hex(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topic_from_hex(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_constructor_topic_random(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topic_random(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_method_topic_to_bytes(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_topic_to_bytes(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_method_topic_to_bytes_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_topic_to_bytes_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_method_topic_to_hex(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_topic_to_hex(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_method_topic_to_hex_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_topic_to_hex_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_clone_verifyingkey(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_clone_verifyingkey(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_clone_verifyingkey_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_clone_verifyingkey_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_free_verifyingkey(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_free_verifyingkey(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_free_verifyingkey_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_free_verifyingkey_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_bytes(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_bytes(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_hex(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_hex(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex_generic_abi(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_fn_method_verifyingkey_verify(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_verifyingkey_verify(...args);
+}
+
+
+export function uniffi_p2panda_ffi_fn_method_verifyingkey_verify_generic_abi(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_fn_method_verifyingkey_verify_generic_abi(...args);
 }
 
 
@@ -8710,14 +8710,14 @@ export function uniffi_p2panda_ffi_checksum_method_nodebuilder_network_id(...arg
 
 
 
-export function uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key(...args);
+export function uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url(...args);
 }
 
 
 
-export function uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url(...args);
+export function uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key(...args);
 }
 
 
@@ -8782,12 +8782,6 @@ export function uniffi_p2panda_ffi_checksum_method_header_prune_flag(...args) {
 
 
 
-export function uniffi_p2panda_ffi_checksum_method_header_public_key(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_header_public_key(...args);
-}
-
-
-
 export function uniffi_p2panda_ffi_checksum_method_header_seq_num(...args) {
   return ffiFunctions.uniffi_p2panda_ffi_checksum_method_header_seq_num(...args);
 }
@@ -8802,6 +8796,12 @@ export function uniffi_p2panda_ffi_checksum_method_header_signature(...args) {
 
 export function uniffi_p2panda_ffi_checksum_method_header_timestamp(...args) {
   return ffiFunctions.uniffi_p2panda_ffi_checksum_method_header_timestamp(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_method_header_verifying_key(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_header_verifying_key(...args);
 }
 
 
@@ -8824,48 +8824,6 @@ export function uniffi_p2panda_ffi_checksum_method_networkid_to_hex(...args) {
 
 
 
-export function uniffi_p2panda_ffi_checksum_method_privatekey_public_key(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_privatekey_public_key(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_checksum_method_privatekey_sign(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_privatekey_sign(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_checksum_method_privatekey_to_hex(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_privatekey_to_hex(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_checksum_method_publickey_to_bytes(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_publickey_to_bytes(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_checksum_method_publickey_to_hex(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_publickey_to_hex(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_checksum_method_publickey_verify(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_publickey_verify(...args);
-}
-
-
-
 export function uniffi_p2panda_ffi_checksum_method_relayurl_to_str(...args) {
   return ffiFunctions.uniffi_p2panda_ffi_checksum_method_relayurl_to_str(...args);
 }
@@ -8884,14 +8842,56 @@ export function uniffi_p2panda_ffi_checksum_method_signature_to_hex(...args) {
 
 
 
-export function uniffi_p2panda_ffi_checksum_method_topicid_to_bytes(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_topicid_to_bytes(...args);
+export function uniffi_p2panda_ffi_checksum_method_signingkey_sign(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_signingkey_sign(...args);
 }
 
 
 
-export function uniffi_p2panda_ffi_checksum_method_topicid_to_hex(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_topicid_to_hex(...args);
+export function uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_method_signingkey_to_hex(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_signingkey_to_hex(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_method_topic_to_bytes(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_topic_to_bytes(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_method_topic_to_hex(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_topic_to_hex(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_method_verifyingkey_verify(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_method_verifyingkey_verify(...args);
 }
 
 
@@ -9130,36 +9130,6 @@ export function uniffi_p2panda_ffi_checksum_constructor_networkid_random(...args
 
 
 
-export function uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_checksum_constructor_privatekey_generate(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_privatekey_generate(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes(...args);
-}
-
-
-
-export function uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex(...args);
-}
-
-
-
 export function uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str(...args) {
   return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str(...args);
 }
@@ -9178,26 +9148,56 @@ export function uniffi_p2panda_ffi_checksum_constructor_signature_from_hex(...ar
 
 
 
-export function uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes(...args);
+export function uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes(...args);
 }
 
 
 
-export function uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash(...args);
+export function uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex(...args);
 }
 
 
 
-export function uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex(...args);
+export function uniffi_p2panda_ffi_checksum_constructor_signingkey_generate(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_signingkey_generate(...args);
 }
 
 
 
-export function uniffi_p2panda_ffi_checksum_constructor_topicid_random(...args) {
-  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topicid_random(...args);
+export function uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_constructor_topic_from_hash(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topic_from_hash(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_constructor_topic_from_hex(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topic_from_hex(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_constructor_topic_random(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_topic_random(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes(...args);
+}
+
+
+
+export function uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex(...args) {
+  return ffiFunctions.uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex(...args);
 }
 
 

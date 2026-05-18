@@ -401,6 +401,12 @@ export const Source = Object.freeze({
       tag: "LocalStore",
     });
   },
+  ExternalStream(session_id) {
+    return Object.freeze({
+      tag: "ExternalStream",
+      "session_id": session_id,
+    });
+  },
 });
 
 export const StreamEvent = Object.freeze({
@@ -428,6 +434,18 @@ export const StreamEvent = Object.freeze({
       "sent_bytes_topic_total": sent_bytes_topic_total,
       "received_bytes_topic_total": received_bytes_topic_total,
       "error": error,
+    });
+  },
+  ImportStarted(session_id) {
+    return Object.freeze({
+      tag: "ImportStarted",
+      "session_id": session_id,
+    });
+  },
+  ImportEnded(session_id) {
+    return Object.freeze({
+      tag: "ImportEnded",
+      "session_id": session_id,
     });
   },
 });
@@ -847,9 +865,11 @@ const FfiConverterSource = new (class extends AbstractFfiConverterByteArray {
     const enumValue = uniffiRequireTaggedEnumValue("Source", value);
     switch (enumValue.tag) {
       case "SyncSession":
-        return 4 + FfiConverterPublicKey.allocationSize(enumValue["remote_node_id"]) + FfiConverterUInt64.allocationSize(enumValue["session_id"]) + FfiConverterUInt64.allocationSize(enumValue["sent_operations"]) + FfiConverterUInt64.allocationSize(enumValue["received_operations"]) + FfiConverterUInt64.allocationSize(enumValue["sent_bytes"]) + FfiConverterUInt64.allocationSize(enumValue["received_bytes"]) + FfiConverterUInt64.allocationSize(enumValue["sent_bytes_topic_total"]) + FfiConverterUInt64.allocationSize(enumValue["received_bytes_topic_total"]) + FfiConverterSessionPhase.allocationSize(enumValue["phase"]);
+        return 4 + FfiConverterVerifyingKey.allocationSize(enumValue["remote_node_id"]) + FfiConverterUInt64.allocationSize(enumValue["session_id"]) + FfiConverterUInt64.allocationSize(enumValue["sent_operations"]) + FfiConverterUInt64.allocationSize(enumValue["received_operations"]) + FfiConverterUInt64.allocationSize(enumValue["sent_bytes"]) + FfiConverterUInt64.allocationSize(enumValue["received_bytes"]) + FfiConverterUInt64.allocationSize(enumValue["sent_bytes_topic_total"]) + FfiConverterUInt64.allocationSize(enumValue["received_bytes_topic_total"]) + FfiConverterSessionPhase.allocationSize(enumValue["phase"]);
       case "LocalStore":
         return 4;
+      case "ExternalStream":
+        return 4 + FfiConverterUInt64.allocationSize(enumValue["session_id"]);
       default:
         throw new UnexpectedEnumCase(`Unexpected Source case ${String(enumValue.tag)}.`);
     }
@@ -860,7 +880,7 @@ const FfiConverterSource = new (class extends AbstractFfiConverterByteArray {
     switch (enumValue.tag) {
       case "SyncSession":
         writer.writeInt32(1);
-        FfiConverterPublicKey.write(enumValue["remote_node_id"], writer);
+        FfiConverterVerifyingKey.write(enumValue["remote_node_id"], writer);
         FfiConverterUInt64.write(enumValue["session_id"], writer);
         FfiConverterUInt64.write(enumValue["sent_operations"], writer);
         FfiConverterUInt64.write(enumValue["received_operations"], writer);
@@ -873,6 +893,10 @@ const FfiConverterSource = new (class extends AbstractFfiConverterByteArray {
       case "LocalStore":
         writer.writeInt32(2);
         return;
+      case "ExternalStream":
+        writer.writeInt32(3);
+        FfiConverterUInt64.write(enumValue["session_id"], writer);
+        return;
       default:
         throw new UnexpectedEnumCase(`Unexpected Source case ${String(enumValue.tag)}.`);
     }
@@ -882,9 +906,11 @@ const FfiConverterSource = new (class extends AbstractFfiConverterByteArray {
     const enumTag = reader.readInt32();
     switch (enumTag) {
       case 1:
-        return Source.SyncSession(FfiConverterPublicKey.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterSessionPhase.read(reader));
+        return Source.SyncSession(FfiConverterVerifyingKey.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterSessionPhase.read(reader));
       case 2:
         return Source.LocalStore();
+      case 3:
+        return Source.ExternalStream(FfiConverterUInt64.read(reader));
       default:
         throw new UnexpectedEnumCase(`Unexpected Source case ${String(enumTag)}.`);
     }
@@ -895,9 +921,13 @@ const FfiConverterStreamEvent = new (class extends AbstractFfiConverterByteArray
     const enumValue = uniffiRequireTaggedEnumValue("StreamEvent", value);
     switch (enumValue.tag) {
       case "SyncStarted":
-        return 4 + FfiConverterPublicKey.allocationSize(enumValue["remote_node_id"]) + FfiConverterUInt64.allocationSize(enumValue["session_id"]) + FfiConverterUInt64.allocationSize(enumValue["incoming_operations"]) + FfiConverterUInt64.allocationSize(enumValue["outgoing_operations"]) + FfiConverterUInt64.allocationSize(enumValue["incoming_bytes"]) + FfiConverterUInt64.allocationSize(enumValue["outgoing_bytes"]) + FfiConverterUInt64.allocationSize(enumValue["topic_sessions"]);
+        return 4 + FfiConverterVerifyingKey.allocationSize(enumValue["remote_node_id"]) + FfiConverterUInt64.allocationSize(enumValue["session_id"]) + FfiConverterUInt64.allocationSize(enumValue["incoming_operations"]) + FfiConverterUInt64.allocationSize(enumValue["outgoing_operations"]) + FfiConverterUInt64.allocationSize(enumValue["incoming_bytes"]) + FfiConverterUInt64.allocationSize(enumValue["outgoing_bytes"]) + FfiConverterUInt64.allocationSize(enumValue["topic_sessions"]);
       case "SyncEnded":
-        return 4 + FfiConverterPublicKey.allocationSize(enumValue["remote_node_id"]) + FfiConverterUInt64.allocationSize(enumValue["session_id"]) + FfiConverterUInt64.allocationSize(enumValue["sent_operations"]) + FfiConverterUInt64.allocationSize(enumValue["received_operations"]) + FfiConverterUInt64.allocationSize(enumValue["sent_bytes"]) + FfiConverterUInt64.allocationSize(enumValue["received_bytes"]) + FfiConverterUInt64.allocationSize(enumValue["sent_bytes_topic_total"]) + FfiConverterUInt64.allocationSize(enumValue["received_bytes_topic_total"]) + uniffiOptionalConverter(FfiConverterSyncError).allocationSize(enumValue["error"]);
+        return 4 + FfiConverterVerifyingKey.allocationSize(enumValue["remote_node_id"]) + FfiConverterUInt64.allocationSize(enumValue["session_id"]) + FfiConverterUInt64.allocationSize(enumValue["sent_operations"]) + FfiConverterUInt64.allocationSize(enumValue["received_operations"]) + FfiConverterUInt64.allocationSize(enumValue["sent_bytes"]) + FfiConverterUInt64.allocationSize(enumValue["received_bytes"]) + FfiConverterUInt64.allocationSize(enumValue["sent_bytes_topic_total"]) + FfiConverterUInt64.allocationSize(enumValue["received_bytes_topic_total"]) + uniffiOptionalConverter(FfiConverterSyncError).allocationSize(enumValue["error"]);
+      case "ImportStarted":
+        return 4 + FfiConverterUInt64.allocationSize(enumValue["session_id"]);
+      case "ImportEnded":
+        return 4 + FfiConverterUInt64.allocationSize(enumValue["session_id"]);
       default:
         throw new UnexpectedEnumCase(`Unexpected StreamEvent case ${String(enumValue.tag)}.`);
     }
@@ -908,7 +938,7 @@ const FfiConverterStreamEvent = new (class extends AbstractFfiConverterByteArray
     switch (enumValue.tag) {
       case "SyncStarted":
         writer.writeInt32(1);
-        FfiConverterPublicKey.write(enumValue["remote_node_id"], writer);
+        FfiConverterVerifyingKey.write(enumValue["remote_node_id"], writer);
         FfiConverterUInt64.write(enumValue["session_id"], writer);
         FfiConverterUInt64.write(enumValue["incoming_operations"], writer);
         FfiConverterUInt64.write(enumValue["outgoing_operations"], writer);
@@ -918,7 +948,7 @@ const FfiConverterStreamEvent = new (class extends AbstractFfiConverterByteArray
         return;
       case "SyncEnded":
         writer.writeInt32(2);
-        FfiConverterPublicKey.write(enumValue["remote_node_id"], writer);
+        FfiConverterVerifyingKey.write(enumValue["remote_node_id"], writer);
         FfiConverterUInt64.write(enumValue["session_id"], writer);
         FfiConverterUInt64.write(enumValue["sent_operations"], writer);
         FfiConverterUInt64.write(enumValue["received_operations"], writer);
@@ -927,6 +957,14 @@ const FfiConverterStreamEvent = new (class extends AbstractFfiConverterByteArray
         FfiConverterUInt64.write(enumValue["sent_bytes_topic_total"], writer);
         FfiConverterUInt64.write(enumValue["received_bytes_topic_total"], writer);
         uniffiOptionalConverter(FfiConverterSyncError).write(enumValue["error"], writer);
+        return;
+      case "ImportStarted":
+        writer.writeInt32(3);
+        FfiConverterUInt64.write(enumValue["session_id"], writer);
+        return;
+      case "ImportEnded":
+        writer.writeInt32(4);
+        FfiConverterUInt64.write(enumValue["session_id"], writer);
         return;
       default:
         throw new UnexpectedEnumCase(`Unexpected StreamEvent case ${String(enumValue.tag)}.`);
@@ -937,9 +975,13 @@ const FfiConverterStreamEvent = new (class extends AbstractFfiConverterByteArray
     const enumTag = reader.readInt32();
     switch (enumTag) {
       case 1:
-        return StreamEvent.SyncStarted(FfiConverterPublicKey.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader));
+        return StreamEvent.SyncStarted(FfiConverterVerifyingKey.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader));
       case 2:
-        return StreamEvent.SyncEnded(FfiConverterPublicKey.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), uniffiOptionalConverter(FfiConverterSyncError).read(reader));
+        return StreamEvent.SyncEnded(FfiConverterVerifyingKey.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), FfiConverterUInt64.read(reader), uniffiOptionalConverter(FfiConverterSyncError).read(reader));
+      case 3:
+        return StreamEvent.ImportStarted(FfiConverterUInt64.read(reader));
+      case 4:
+        return StreamEvent.ImportEnded(FfiConverterUInt64.read(reader));
       default:
         throw new UnexpectedEnumCase(`Unexpected StreamEvent case ${String(enumTag)}.`);
     }
@@ -1758,7 +1800,7 @@ export class NodeBuilder extends UniffiObjectBase {
       uniffiNodeBuilderObjectFactory.usesGenericAbi(this)
         ? ffiFunctions.uniffi_p2panda_ffi_fn_method_nodebuilder_bootstrap_generic_abi
         : ffiFunctions.uniffi_p2panda_ffi_fn_method_nodebuilder_bootstrap;
-    const loweredNodeId = uniffiPublicKeyObjectFactory.cloneHandle(node_id);
+    const loweredNodeId = uniffiVerifyingKeyObjectFactory.cloneHandle(node_id);
     const loweredRelayUrl = uniffiRelayUrlObjectFactory.cloneHandle(relay_url);
     uniffiRustCaller.rustCall(
       (status) => ffiMethod(loweredSelf, loweredNodeId, loweredRelayUrl, status),
@@ -1805,19 +1847,6 @@ export class NodeBuilder extends UniffiObjectBase {
     );
   }
 
-  private_key(private_key) {
-    const loweredSelf = uniffiNodeBuilderObjectFactory.cloneHandle(this);
-    const ffiMethod =
-      uniffiNodeBuilderObjectFactory.usesGenericAbi(this)
-        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_nodebuilder_private_key_generic_abi
-        : ffiFunctions.uniffi_p2panda_ffi_fn_method_nodebuilder_private_key;
-    const loweredPrivateKey = uniffiPrivateKeyObjectFactory.cloneHandle(private_key);
-    uniffiRustCaller.rustCall(
-      (status) => ffiMethod(loweredSelf, loweredPrivateKey, status),
-      uniffiRustCallOptions(FfiConverterNodeBuilderError),
-    );
-  }
-
   relay_url(url) {
     const loweredSelf = uniffiNodeBuilderObjectFactory.cloneHandle(this);
     const ffiMethod =
@@ -1827,6 +1856,19 @@ export class NodeBuilder extends UniffiObjectBase {
     const loweredUrl = uniffiRelayUrlObjectFactory.cloneHandle(url);
     uniffiRustCaller.rustCall(
       (status) => ffiMethod(loweredSelf, loweredUrl, status),
+      uniffiRustCallOptions(FfiConverterNodeBuilderError),
+    );
+  }
+
+  signing_key(signing_key) {
+    const loweredSelf = uniffiNodeBuilderObjectFactory.cloneHandle(this);
+    const ffiMethod =
+      uniffiNodeBuilderObjectFactory.usesGenericAbi(this)
+        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key_generic_abi
+        : ffiFunctions.uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key;
+    const loweredSigningKey = uniffiSigningKeyObjectFactory.cloneHandle(signing_key);
+    uniffiRustCaller.rustCall(
+      (status) => ffiMethod(loweredSelf, loweredSigningKey, status),
       uniffiRustCallOptions(FfiConverterNodeBuilderError),
     );
   }
@@ -2199,19 +2241,6 @@ export class Header extends UniffiObjectBase {
     return FfiConverterBool.lift(uniffiResult);
   }
 
-  public_key() {
-    const loweredSelf = uniffiHeaderObjectFactory.cloneHandle(this);
-    const ffiMethod =
-      uniffiHeaderObjectFactory.usesGenericAbi(this)
-        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_header_public_key_generic_abi
-        : ffiFunctions.uniffi_p2panda_ffi_fn_method_header_public_key;
-    const uniffiResult = uniffiRustCaller.rustCall(
-      (status) => ffiMethod(loweredSelf, status),
-      uniffiRustCallOptions(),
-    );
-    return uniffiPublicKeyObjectFactory.create(uniffiResult);
-  }
-
   seq_num() {
     const loweredSelf = uniffiHeaderObjectFactory.cloneHandle(this);
     const ffiMethod =
@@ -2249,6 +2278,19 @@ export class Header extends UniffiObjectBase {
       uniffiRustCallOptions(),
     );
     return FfiConverterUInt64.lift(uniffiResult);
+  }
+
+  verifying_key() {
+    const loweredSelf = uniffiHeaderObjectFactory.cloneHandle(this);
+    const ffiMethod =
+      uniffiHeaderObjectFactory.usesGenericAbi(this)
+        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_header_verifying_key_generic_abi
+        : ffiFunctions.uniffi_p2panda_ffi_fn_method_header_verifying_key;
+    const uniffiResult = uniffiRustCaller.rustCall(
+      (status) => ffiMethod(loweredSelf, status),
+      uniffiRustCallOptions(),
+    );
+    return uniffiVerifyingKeyObjectFactory.create(uniffiResult);
   }
 
   version() {
@@ -2451,276 +2493,6 @@ const uniffiNetworkIdObjectFactory = createObjectFactory({
 });
 const FfiConverterNetworkId = createObjectConverter(uniffiNetworkIdObjectFactory);
 
-export class PrivateKey extends UniffiObjectBase {
-  constructor() {
-    super();
-    return uniffiNotImplemented("PrivateKey.constructor");
-  }
-
-  static from_bytes(value) {
-    const loweredValue = uniffiLowerIntoRustBuffer(FfiConverterBytes, value);
-    const pointer = uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_privatekey_from_bytes(loweredValue, status),
-      uniffiRustCallOptions(FfiConverterConversionError),
-    );
-    return uniffiPrivateKeyObjectFactory.create(pointer);
-  }
-
-  static from_hex(value) {
-    const loweredValue = uniffiLowerString(value);
-    const pointer = uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_privatekey_from_hex(loweredValue, status),
-      uniffiRustCallOptions(FfiConverterConversionError),
-    );
-    return uniffiPrivateKeyObjectFactory.create(pointer);
-  }
-
-  static generate() {
-    const pointer = uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_privatekey_generate(status),
-      uniffiRustCallOptions(),
-    );
-    return uniffiPrivateKeyObjectFactory.create(pointer);
-  }
-
-  public_key() {
-    const loweredSelf = uniffiPrivateKeyObjectFactory.cloneHandle(this);
-    const ffiMethod =
-      uniffiPrivateKeyObjectFactory.usesGenericAbi(this)
-        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_public_key_generic_abi
-        : ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_public_key;
-    const uniffiResult = uniffiRustCaller.rustCall(
-      (status) => ffiMethod(loweredSelf, status),
-      uniffiRustCallOptions(),
-    );
-    return uniffiPublicKeyObjectFactory.create(uniffiResult);
-  }
-
-  sign(bytes) {
-    const loweredSelf = uniffiPrivateKeyObjectFactory.cloneHandle(this);
-    const ffiMethod =
-      uniffiPrivateKeyObjectFactory.usesGenericAbi(this)
-        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_sign_generic_abi
-        : ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_sign;
-    const loweredBytes = uniffiLowerIntoRustBuffer(FfiConverterBytes, bytes);
-    const uniffiResult = uniffiRustCaller.rustCall(
-      (status) => ffiMethod(loweredSelf, loweredBytes, status),
-      uniffiRustCallOptions(),
-    );
-    return uniffiSignatureObjectFactory.create(uniffiResult);
-  }
-
-  to_bytes() {
-    const loweredSelf = uniffiPrivateKeyObjectFactory.cloneHandle(this);
-    const ffiMethod =
-      uniffiPrivateKeyObjectFactory.usesGenericAbi(this)
-        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_to_bytes_generic_abi
-        : ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_to_bytes;
-    const uniffiResult = uniffiRustCaller.rustCall(
-      (status) => ffiMethod(loweredSelf, status),
-      uniffiRustCallOptions(),
-    );
-    return uniffiLiftFromRustBuffer(FfiConverterBytes, uniffiResult);
-  }
-
-  to_hex() {
-    const loweredSelf = uniffiPrivateKeyObjectFactory.cloneHandle(this);
-    const ffiMethod =
-      uniffiPrivateKeyObjectFactory.usesGenericAbi(this)
-        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_to_hex_generic_abi
-        : ffiFunctions.uniffi_p2panda_ffi_fn_method_privatekey_to_hex;
-    const uniffiResult = uniffiRustCaller.rustCall(
-      (status) => ffiMethod(loweredSelf, status),
-      uniffiRustCallOptions(),
-    );
-    return uniffiLiftStringFromRustBuffer(uniffiResult);
-  }
-}
-
-const uniffiPrivateKeyObjectFactory = createObjectFactory({
-  typeName: "PrivateKey",
-  createInstance: () => Object.create(PrivateKey.prototype),
-  cloneFreeUsesUniffiHandle: true,
-  cloneHandleGeneric(handle) {
-    return uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_clone_privatekey_generic_abi(handle, status),
-      uniffiRustCallOptions(),
-    );
-  },
-  cloneHandleRawExternal(handle) {
-    const rawExternalCloneHandle = uniffiGetCachedLibraryFunction(
-      "uniffi_p2panda_ffi_fn_clone_privatekey:raw-external",
-      (bindings) => bindings.library.func(
-        "uniffi_p2panda_ffi_fn_clone_privatekey",
-        bindings.ffiTypes.VoidPointer,
-        [bindings.ffiTypes.VoidPointer, koffi.pointer(bindings.ffiTypes.RustCallStatus)],
-      ),
-    );
-    return uniffiRustCaller.rustCall(
-      (status) => rawExternalCloneHandle(handle, status),
-      uniffiRustCallOptions(),
-    );
-  },
-  cloneHandle(handle) {
-    return uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_clone_privatekey(handle, status),
-      uniffiRustCallOptions(),
-    );
-  },
-  freeHandleGeneric(handle) {
-    uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_free_privatekey_generic_abi(handle, status),
-      uniffiRustCallOptions(),
-    );
-  },
-  freeHandleRawExternal(handle) {
-    const rawExternalFreeHandle = uniffiGetCachedLibraryFunction(
-      "uniffi_p2panda_ffi_fn_free_privatekey:raw-external",
-      (bindings) => bindings.library.func(
-        "uniffi_p2panda_ffi_fn_free_privatekey",
-        "void",
-        [bindings.ffiTypes.VoidPointer, koffi.pointer(bindings.ffiTypes.RustCallStatus)],
-      ),
-    );
-    uniffiRustCaller.rustCall(
-      (status) => rawExternalFreeHandle(handle, status),
-      uniffiRustCallOptions(),
-    );
-  },
-  freeHandle(handle) {
-    uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_free_privatekey(handle, status),
-      uniffiRustCallOptions(),
-    );
-  },
-});
-const FfiConverterPrivateKey = createObjectConverter(uniffiPrivateKeyObjectFactory);
-
-export class PublicKey extends UniffiObjectBase {
-  constructor() {
-    super();
-    return uniffiNotImplemented("PublicKey.constructor");
-  }
-
-  static from_bytes(value) {
-    const loweredValue = uniffiLowerIntoRustBuffer(FfiConverterBytes, value);
-    const pointer = uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_publickey_from_bytes(loweredValue, status),
-      uniffiRustCallOptions(FfiConverterConversionError),
-    );
-    return uniffiPublicKeyObjectFactory.create(pointer);
-  }
-
-  static from_hex(value) {
-    const loweredValue = uniffiLowerString(value);
-    const pointer = uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_publickey_from_hex(loweredValue, status),
-      uniffiRustCallOptions(FfiConverterConversionError),
-    );
-    return uniffiPublicKeyObjectFactory.create(pointer);
-  }
-
-  to_bytes() {
-    const loweredSelf = uniffiPublicKeyObjectFactory.cloneHandle(this);
-    const ffiMethod =
-      uniffiPublicKeyObjectFactory.usesGenericAbi(this)
-        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_publickey_to_bytes_generic_abi
-        : ffiFunctions.uniffi_p2panda_ffi_fn_method_publickey_to_bytes;
-    const uniffiResult = uniffiRustCaller.rustCall(
-      (status) => ffiMethod(loweredSelf, status),
-      uniffiRustCallOptions(),
-    );
-    return uniffiLiftFromRustBuffer(FfiConverterBytes, uniffiResult);
-  }
-
-  to_hex() {
-    const loweredSelf = uniffiPublicKeyObjectFactory.cloneHandle(this);
-    const ffiMethod =
-      uniffiPublicKeyObjectFactory.usesGenericAbi(this)
-        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_publickey_to_hex_generic_abi
-        : ffiFunctions.uniffi_p2panda_ffi_fn_method_publickey_to_hex;
-    const uniffiResult = uniffiRustCaller.rustCall(
-      (status) => ffiMethod(loweredSelf, status),
-      uniffiRustCallOptions(),
-    );
-    return uniffiLiftStringFromRustBuffer(uniffiResult);
-  }
-
-  verify(bytes, signature) {
-    const loweredSelf = uniffiPublicKeyObjectFactory.cloneHandle(this);
-    const ffiMethod =
-      uniffiPublicKeyObjectFactory.usesGenericAbi(this)
-        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_publickey_verify_generic_abi
-        : ffiFunctions.uniffi_p2panda_ffi_fn_method_publickey_verify;
-    const loweredBytes = uniffiLowerIntoRustBuffer(FfiConverterBytes, bytes);
-    const loweredSignature = uniffiSignatureObjectFactory.cloneHandle(signature);
-    const uniffiResult = uniffiRustCaller.rustCall(
-      (status) => ffiMethod(loweredSelf, loweredBytes, loweredSignature, status),
-      uniffiRustCallOptions(),
-    );
-    return FfiConverterBool.lift(uniffiResult);
-  }
-}
-
-const uniffiPublicKeyObjectFactory = createObjectFactory({
-  typeName: "PublicKey",
-  createInstance: () => Object.create(PublicKey.prototype),
-  cloneFreeUsesUniffiHandle: true,
-  cloneHandleGeneric(handle) {
-    return uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_clone_publickey_generic_abi(handle, status),
-      uniffiRustCallOptions(),
-    );
-  },
-  cloneHandleRawExternal(handle) {
-    const rawExternalCloneHandle = uniffiGetCachedLibraryFunction(
-      "uniffi_p2panda_ffi_fn_clone_publickey:raw-external",
-      (bindings) => bindings.library.func(
-        "uniffi_p2panda_ffi_fn_clone_publickey",
-        bindings.ffiTypes.VoidPointer,
-        [bindings.ffiTypes.VoidPointer, koffi.pointer(bindings.ffiTypes.RustCallStatus)],
-      ),
-    );
-    return uniffiRustCaller.rustCall(
-      (status) => rawExternalCloneHandle(handle, status),
-      uniffiRustCallOptions(),
-    );
-  },
-  cloneHandle(handle) {
-    return uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_clone_publickey(handle, status),
-      uniffiRustCallOptions(),
-    );
-  },
-  freeHandleGeneric(handle) {
-    uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_free_publickey_generic_abi(handle, status),
-      uniffiRustCallOptions(),
-    );
-  },
-  freeHandleRawExternal(handle) {
-    const rawExternalFreeHandle = uniffiGetCachedLibraryFunction(
-      "uniffi_p2panda_ffi_fn_free_publickey:raw-external",
-      (bindings) => bindings.library.func(
-        "uniffi_p2panda_ffi_fn_free_publickey",
-        "void",
-        [bindings.ffiTypes.VoidPointer, koffi.pointer(bindings.ffiTypes.RustCallStatus)],
-      ),
-    );
-    uniffiRustCaller.rustCall(
-      (status) => rawExternalFreeHandle(handle, status),
-      uniffiRustCallOptions(),
-    );
-  },
-  freeHandle(handle) {
-    uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_free_publickey(handle, status),
-      uniffiRustCallOptions(),
-    );
-  },
-});
-const FfiConverterPublicKey = createObjectConverter(uniffiPublicKeyObjectFactory);
-
 export class RelayUrl extends UniffiObjectBase {
   constructor() {
     super();
@@ -2919,53 +2691,58 @@ const uniffiSignatureObjectFactory = createObjectFactory({
 });
 const FfiConverterSignature = createObjectConverter(uniffiSignatureObjectFactory);
 
-export class TopicId extends UniffiObjectBase {
+export class SigningKey extends UniffiObjectBase {
   constructor() {
     super();
-    return uniffiNotImplemented("TopicId.constructor");
+    return uniffiNotImplemented("SigningKey.constructor");
   }
 
   static from_bytes(value) {
     const loweredValue = uniffiLowerIntoRustBuffer(FfiConverterBytes, value);
     const pointer = uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topicid_from_bytes(loweredValue, status),
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_signingkey_from_bytes(loweredValue, status),
       uniffiRustCallOptions(FfiConverterConversionError),
     );
-    return uniffiTopicIdObjectFactory.create(pointer);
-  }
-
-  static from_hash(hash) {
-    const loweredHash = uniffiHashObjectFactory.cloneHandle(hash);
-    const pointer = uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topicid_from_hash(loweredHash, status),
-      uniffiRustCallOptions(),
-    );
-    return uniffiTopicIdObjectFactory.create(pointer);
+    return uniffiSigningKeyObjectFactory.create(pointer);
   }
 
   static from_hex(value) {
     const loweredValue = uniffiLowerString(value);
     const pointer = uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topicid_from_hex(loweredValue, status),
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_signingkey_from_hex(loweredValue, status),
       uniffiRustCallOptions(FfiConverterConversionError),
     );
-    return uniffiTopicIdObjectFactory.create(pointer);
+    return uniffiSigningKeyObjectFactory.create(pointer);
   }
 
-  static random() {
+  static generate() {
     const pointer = uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topicid_random(status),
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_signingkey_generate(status),
       uniffiRustCallOptions(),
     );
-    return uniffiTopicIdObjectFactory.create(pointer);
+    return uniffiSigningKeyObjectFactory.create(pointer);
+  }
+
+  sign(bytes) {
+    const loweredSelf = uniffiSigningKeyObjectFactory.cloneHandle(this);
+    const ffiMethod =
+      uniffiSigningKeyObjectFactory.usesGenericAbi(this)
+        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_sign_generic_abi
+        : ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_sign;
+    const loweredBytes = uniffiLowerIntoRustBuffer(FfiConverterBytes, bytes);
+    const uniffiResult = uniffiRustCaller.rustCall(
+      (status) => ffiMethod(loweredSelf, loweredBytes, status),
+      uniffiRustCallOptions(),
+    );
+    return uniffiSignatureObjectFactory.create(uniffiResult);
   }
 
   to_bytes() {
-    const loweredSelf = uniffiTopicIdObjectFactory.cloneHandle(this);
+    const loweredSelf = uniffiSigningKeyObjectFactory.cloneHandle(this);
     const ffiMethod =
-      uniffiTopicIdObjectFactory.usesGenericAbi(this)
-        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_topicid_to_bytes_generic_abi
-        : ffiFunctions.uniffi_p2panda_ffi_fn_method_topicid_to_bytes;
+      uniffiSigningKeyObjectFactory.usesGenericAbi(this)
+        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_to_bytes_generic_abi
+        : ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_to_bytes;
     const uniffiResult = uniffiRustCaller.rustCall(
       (status) => ffiMethod(loweredSelf, status),
       uniffiRustCallOptions(),
@@ -2974,34 +2751,47 @@ export class TopicId extends UniffiObjectBase {
   }
 
   to_hex() {
-    const loweredSelf = uniffiTopicIdObjectFactory.cloneHandle(this);
+    const loweredSelf = uniffiSigningKeyObjectFactory.cloneHandle(this);
     const ffiMethod =
-      uniffiTopicIdObjectFactory.usesGenericAbi(this)
-        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_topicid_to_hex_generic_abi
-        : ffiFunctions.uniffi_p2panda_ffi_fn_method_topicid_to_hex;
+      uniffiSigningKeyObjectFactory.usesGenericAbi(this)
+        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_to_hex_generic_abi
+        : ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_to_hex;
     const uniffiResult = uniffiRustCaller.rustCall(
       (status) => ffiMethod(loweredSelf, status),
       uniffiRustCallOptions(),
     );
     return uniffiLiftStringFromRustBuffer(uniffiResult);
   }
+
+  verifying_key() {
+    const loweredSelf = uniffiSigningKeyObjectFactory.cloneHandle(this);
+    const ffiMethod =
+      uniffiSigningKeyObjectFactory.usesGenericAbi(this)
+        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_verifying_key_generic_abi
+        : ffiFunctions.uniffi_p2panda_ffi_fn_method_signingkey_verifying_key;
+    const uniffiResult = uniffiRustCaller.rustCall(
+      (status) => ffiMethod(loweredSelf, status),
+      uniffiRustCallOptions(),
+    );
+    return uniffiVerifyingKeyObjectFactory.create(uniffiResult);
+  }
 }
 
-const uniffiTopicIdObjectFactory = createObjectFactory({
-  typeName: "TopicId",
-  createInstance: () => Object.create(TopicId.prototype),
+const uniffiSigningKeyObjectFactory = createObjectFactory({
+  typeName: "SigningKey",
+  createInstance: () => Object.create(SigningKey.prototype),
   cloneFreeUsesUniffiHandle: true,
   cloneHandleGeneric(handle) {
     return uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_clone_topicid_generic_abi(handle, status),
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_clone_signingkey_generic_abi(handle, status),
       uniffiRustCallOptions(),
     );
   },
   cloneHandleRawExternal(handle) {
     const rawExternalCloneHandle = uniffiGetCachedLibraryFunction(
-      "uniffi_p2panda_ffi_fn_clone_topicid:raw-external",
+      "uniffi_p2panda_ffi_fn_clone_signingkey:raw-external",
       (bindings) => bindings.library.func(
-        "uniffi_p2panda_ffi_fn_clone_topicid",
+        "uniffi_p2panda_ffi_fn_clone_signingkey",
         bindings.ffiTypes.VoidPointer,
         [bindings.ffiTypes.VoidPointer, koffi.pointer(bindings.ffiTypes.RustCallStatus)],
       ),
@@ -3013,21 +2803,21 @@ const uniffiTopicIdObjectFactory = createObjectFactory({
   },
   cloneHandle(handle) {
     return uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_clone_topicid(handle, status),
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_clone_signingkey(handle, status),
       uniffiRustCallOptions(),
     );
   },
   freeHandleGeneric(handle) {
     uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_free_topicid_generic_abi(handle, status),
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_free_signingkey_generic_abi(handle, status),
       uniffiRustCallOptions(),
     );
   },
   freeHandleRawExternal(handle) {
     const rawExternalFreeHandle = uniffiGetCachedLibraryFunction(
-      "uniffi_p2panda_ffi_fn_free_topicid:raw-external",
+      "uniffi_p2panda_ffi_fn_free_signingkey:raw-external",
       (bindings) => bindings.library.func(
-        "uniffi_p2panda_ffi_fn_free_topicid",
+        "uniffi_p2panda_ffi_fn_free_signingkey",
         "void",
         [bindings.ffiTypes.VoidPointer, koffi.pointer(bindings.ffiTypes.RustCallStatus)],
       ),
@@ -3039,12 +2829,264 @@ const uniffiTopicIdObjectFactory = createObjectFactory({
   },
   freeHandle(handle) {
     uniffiRustCaller.rustCall(
-      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_free_topicid(handle, status),
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_free_signingkey(handle, status),
       uniffiRustCallOptions(),
     );
   },
 });
-const FfiConverterTopicId = createObjectConverter(uniffiTopicIdObjectFactory);
+const FfiConverterSigningKey = createObjectConverter(uniffiSigningKeyObjectFactory);
+
+export class Topic extends UniffiObjectBase {
+  constructor() {
+    super();
+    return uniffiNotImplemented("Topic.constructor");
+  }
+
+  static from_bytes(value) {
+    const loweredValue = uniffiLowerIntoRustBuffer(FfiConverterBytes, value);
+    const pointer = uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topic_from_bytes(loweredValue, status),
+      uniffiRustCallOptions(FfiConverterConversionError),
+    );
+    return uniffiTopicObjectFactory.create(pointer);
+  }
+
+  static from_hash(hash) {
+    const loweredHash = uniffiHashObjectFactory.cloneHandle(hash);
+    const pointer = uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topic_from_hash(loweredHash, status),
+      uniffiRustCallOptions(),
+    );
+    return uniffiTopicObjectFactory.create(pointer);
+  }
+
+  static from_hex(value) {
+    const loweredValue = uniffiLowerString(value);
+    const pointer = uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topic_from_hex(loweredValue, status),
+      uniffiRustCallOptions(FfiConverterConversionError),
+    );
+    return uniffiTopicObjectFactory.create(pointer);
+  }
+
+  static random() {
+    const pointer = uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_topic_random(status),
+      uniffiRustCallOptions(),
+    );
+    return uniffiTopicObjectFactory.create(pointer);
+  }
+
+  to_bytes() {
+    const loweredSelf = uniffiTopicObjectFactory.cloneHandle(this);
+    const ffiMethod =
+      uniffiTopicObjectFactory.usesGenericAbi(this)
+        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_topic_to_bytes_generic_abi
+        : ffiFunctions.uniffi_p2panda_ffi_fn_method_topic_to_bytes;
+    const uniffiResult = uniffiRustCaller.rustCall(
+      (status) => ffiMethod(loweredSelf, status),
+      uniffiRustCallOptions(),
+    );
+    return uniffiLiftFromRustBuffer(FfiConverterBytes, uniffiResult);
+  }
+
+  to_hex() {
+    const loweredSelf = uniffiTopicObjectFactory.cloneHandle(this);
+    const ffiMethod =
+      uniffiTopicObjectFactory.usesGenericAbi(this)
+        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_topic_to_hex_generic_abi
+        : ffiFunctions.uniffi_p2panda_ffi_fn_method_topic_to_hex;
+    const uniffiResult = uniffiRustCaller.rustCall(
+      (status) => ffiMethod(loweredSelf, status),
+      uniffiRustCallOptions(),
+    );
+    return uniffiLiftStringFromRustBuffer(uniffiResult);
+  }
+}
+
+const uniffiTopicObjectFactory = createObjectFactory({
+  typeName: "Topic",
+  createInstance: () => Object.create(Topic.prototype),
+  cloneFreeUsesUniffiHandle: true,
+  cloneHandleGeneric(handle) {
+    return uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_clone_topic_generic_abi(handle, status),
+      uniffiRustCallOptions(),
+    );
+  },
+  cloneHandleRawExternal(handle) {
+    const rawExternalCloneHandle = uniffiGetCachedLibraryFunction(
+      "uniffi_p2panda_ffi_fn_clone_topic:raw-external",
+      (bindings) => bindings.library.func(
+        "uniffi_p2panda_ffi_fn_clone_topic",
+        bindings.ffiTypes.VoidPointer,
+        [bindings.ffiTypes.VoidPointer, koffi.pointer(bindings.ffiTypes.RustCallStatus)],
+      ),
+    );
+    return uniffiRustCaller.rustCall(
+      (status) => rawExternalCloneHandle(handle, status),
+      uniffiRustCallOptions(),
+    );
+  },
+  cloneHandle(handle) {
+    return uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_clone_topic(handle, status),
+      uniffiRustCallOptions(),
+    );
+  },
+  freeHandleGeneric(handle) {
+    uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_free_topic_generic_abi(handle, status),
+      uniffiRustCallOptions(),
+    );
+  },
+  freeHandleRawExternal(handle) {
+    const rawExternalFreeHandle = uniffiGetCachedLibraryFunction(
+      "uniffi_p2panda_ffi_fn_free_topic:raw-external",
+      (bindings) => bindings.library.func(
+        "uniffi_p2panda_ffi_fn_free_topic",
+        "void",
+        [bindings.ffiTypes.VoidPointer, koffi.pointer(bindings.ffiTypes.RustCallStatus)],
+      ),
+    );
+    uniffiRustCaller.rustCall(
+      (status) => rawExternalFreeHandle(handle, status),
+      uniffiRustCallOptions(),
+    );
+  },
+  freeHandle(handle) {
+    uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_free_topic(handle, status),
+      uniffiRustCallOptions(),
+    );
+  },
+});
+const FfiConverterTopic = createObjectConverter(uniffiTopicObjectFactory);
+
+export class VerifyingKey extends UniffiObjectBase {
+  constructor() {
+    super();
+    return uniffiNotImplemented("VerifyingKey.constructor");
+  }
+
+  static from_bytes(value) {
+    const loweredValue = uniffiLowerIntoRustBuffer(FfiConverterBytes, value);
+    const pointer = uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_bytes(loweredValue, status),
+      uniffiRustCallOptions(FfiConverterConversionError),
+    );
+    return uniffiVerifyingKeyObjectFactory.create(pointer);
+  }
+
+  static from_hex(value) {
+    const loweredValue = uniffiLowerString(value);
+    const pointer = uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_hex(loweredValue, status),
+      uniffiRustCallOptions(FfiConverterConversionError),
+    );
+    return uniffiVerifyingKeyObjectFactory.create(pointer);
+  }
+
+  to_bytes() {
+    const loweredSelf = uniffiVerifyingKeyObjectFactory.cloneHandle(this);
+    const ffiMethod =
+      uniffiVerifyingKeyObjectFactory.usesGenericAbi(this)
+        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes_generic_abi
+        : ffiFunctions.uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes;
+    const uniffiResult = uniffiRustCaller.rustCall(
+      (status) => ffiMethod(loweredSelf, status),
+      uniffiRustCallOptions(),
+    );
+    return uniffiLiftFromRustBuffer(FfiConverterBytes, uniffiResult);
+  }
+
+  to_hex() {
+    const loweredSelf = uniffiVerifyingKeyObjectFactory.cloneHandle(this);
+    const ffiMethod =
+      uniffiVerifyingKeyObjectFactory.usesGenericAbi(this)
+        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex_generic_abi
+        : ffiFunctions.uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex;
+    const uniffiResult = uniffiRustCaller.rustCall(
+      (status) => ffiMethod(loweredSelf, status),
+      uniffiRustCallOptions(),
+    );
+    return uniffiLiftStringFromRustBuffer(uniffiResult);
+  }
+
+  verify(bytes, signature) {
+    const loweredSelf = uniffiVerifyingKeyObjectFactory.cloneHandle(this);
+    const ffiMethod =
+      uniffiVerifyingKeyObjectFactory.usesGenericAbi(this)
+        ? ffiFunctions.uniffi_p2panda_ffi_fn_method_verifyingkey_verify_generic_abi
+        : ffiFunctions.uniffi_p2panda_ffi_fn_method_verifyingkey_verify;
+    const loweredBytes = uniffiLowerIntoRustBuffer(FfiConverterBytes, bytes);
+    const loweredSignature = uniffiSignatureObjectFactory.cloneHandle(signature);
+    const uniffiResult = uniffiRustCaller.rustCall(
+      (status) => ffiMethod(loweredSelf, loweredBytes, loweredSignature, status),
+      uniffiRustCallOptions(),
+    );
+    return FfiConverterBool.lift(uniffiResult);
+  }
+}
+
+const uniffiVerifyingKeyObjectFactory = createObjectFactory({
+  typeName: "VerifyingKey",
+  createInstance: () => Object.create(VerifyingKey.prototype),
+  cloneFreeUsesUniffiHandle: true,
+  cloneHandleGeneric(handle) {
+    return uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_clone_verifyingkey_generic_abi(handle, status),
+      uniffiRustCallOptions(),
+    );
+  },
+  cloneHandleRawExternal(handle) {
+    const rawExternalCloneHandle = uniffiGetCachedLibraryFunction(
+      "uniffi_p2panda_ffi_fn_clone_verifyingkey:raw-external",
+      (bindings) => bindings.library.func(
+        "uniffi_p2panda_ffi_fn_clone_verifyingkey",
+        bindings.ffiTypes.VoidPointer,
+        [bindings.ffiTypes.VoidPointer, koffi.pointer(bindings.ffiTypes.RustCallStatus)],
+      ),
+    );
+    return uniffiRustCaller.rustCall(
+      (status) => rawExternalCloneHandle(handle, status),
+      uniffiRustCallOptions(),
+    );
+  },
+  cloneHandle(handle) {
+    return uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_clone_verifyingkey(handle, status),
+      uniffiRustCallOptions(),
+    );
+  },
+  freeHandleGeneric(handle) {
+    uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_free_verifyingkey_generic_abi(handle, status),
+      uniffiRustCallOptions(),
+    );
+  },
+  freeHandleRawExternal(handle) {
+    const rawExternalFreeHandle = uniffiGetCachedLibraryFunction(
+      "uniffi_p2panda_ffi_fn_free_verifyingkey:raw-external",
+      (bindings) => bindings.library.func(
+        "uniffi_p2panda_ffi_fn_free_verifyingkey",
+        "void",
+        [bindings.ffiTypes.VoidPointer, koffi.pointer(bindings.ffiTypes.RustCallStatus)],
+      ),
+    );
+    uniffiRustCaller.rustCall(
+      (status) => rawExternalFreeHandle(handle, status),
+      uniffiRustCallOptions(),
+    );
+  },
+  freeHandle(handle) {
+    uniffiRustCaller.rustCall(
+      (status) => ffiFunctions.uniffi_p2panda_ffi_fn_free_verifyingkey(handle, status),
+      uniffiRustCallOptions(),
+    );
+  },
+});
+const FfiConverterVerifyingKey = createObjectConverter(uniffiVerifyingKeyObjectFactory);
 
 export class EphemeralMessage extends UniffiObjectBase {
   constructor() {
@@ -3062,7 +3104,7 @@ export class EphemeralMessage extends UniffiObjectBase {
       (status) => ffiMethod(loweredSelf, status),
       uniffiRustCallOptions(),
     );
-    return uniffiPublicKeyObjectFactory.create(uniffiResult);
+    return uniffiVerifyingKeyObjectFactory.create(uniffiResult);
   }
 
   body() {
@@ -3101,7 +3143,7 @@ export class EphemeralMessage extends UniffiObjectBase {
       (status) => ffiMethod(loweredSelf, status),
       uniffiRustCallOptions(),
     );
-    return uniffiTopicIdObjectFactory.create(uniffiResult);
+    return uniffiTopicObjectFactory.create(uniffiResult);
   }
 }
 
@@ -3199,7 +3241,7 @@ export class EphemeralStream extends UniffiObjectBase {
       (status) => ffiMethod(loweredSelf, status),
       uniffiRustCallOptions(),
     );
-    return uniffiTopicIdObjectFactory.create(uniffiResult);
+    return uniffiTopicObjectFactory.create(uniffiResult);
   }
 }
 
@@ -3295,7 +3337,7 @@ export class Node extends UniffiObjectBase {
       uniffiNodeObjectFactory.usesGenericAbi(this)
         ? ffiFunctions.uniffi_p2panda_ffi_fn_method_node_ephemeral_stream_generic_abi
         : ffiFunctions.uniffi_p2panda_ffi_fn_method_node_ephemeral_stream;
-    const loweredTopic = uniffiTopicIdObjectFactory.cloneHandle(topic);
+    const loweredTopic = uniffiTopicObjectFactory.cloneHandle(topic);
     const loweredOnMessage = FfiConverterEphemeralStreamCallback.lower(on_message);
     const completePointer = uniffiGetCachedLibraryFunction(
       "complete:ffi_p2panda_ffi_rust_future_complete_u64",
@@ -3327,7 +3369,7 @@ export class Node extends UniffiObjectBase {
       (status) => ffiMethod(loweredSelf, status),
       uniffiRustCallOptions(),
     );
-    return uniffiPublicKeyObjectFactory.create(uniffiResult);
+    return uniffiVerifyingKeyObjectFactory.create(uniffiResult);
   }
 
   async insert_bootstrap(node_id, relay_url) {
@@ -3336,7 +3378,7 @@ export class Node extends UniffiObjectBase {
       uniffiNodeObjectFactory.usesGenericAbi(this)
         ? ffiFunctions.uniffi_p2panda_ffi_fn_method_node_insert_bootstrap_generic_abi
         : ffiFunctions.uniffi_p2panda_ffi_fn_method_node_insert_bootstrap;
-    const loweredNodeId = uniffiPublicKeyObjectFactory.cloneHandle(node_id);
+    const loweredNodeId = uniffiVerifyingKeyObjectFactory.cloneHandle(node_id);
     const loweredRelayUrl = uniffiRelayUrlObjectFactory.cloneHandle(relay_url);
     const completeFunc = (rustFuture, status) => ffiFunctions.ffi_p2panda_ffi_rust_future_complete_void(rustFuture, status);
     return rustCallAsync({
@@ -3369,7 +3411,7 @@ export class Node extends UniffiObjectBase {
       uniffiNodeObjectFactory.usesGenericAbi(this)
         ? ffiFunctions.uniffi_p2panda_ffi_fn_method_node_stream_generic_abi
         : ffiFunctions.uniffi_p2panda_ffi_fn_method_node_stream;
-    const loweredTopic = uniffiTopicIdObjectFactory.cloneHandle(topic);
+    const loweredTopic = uniffiTopicObjectFactory.cloneHandle(topic);
     const loweredCallback = FfiConverterTopicStreamCallback.lower(callback);
     const completePointer = uniffiGetCachedLibraryFunction(
       "complete:ffi_p2panda_ffi_rust_future_complete_u64",
@@ -3397,7 +3439,7 @@ export class Node extends UniffiObjectBase {
       uniffiNodeObjectFactory.usesGenericAbi(this)
         ? ffiFunctions.uniffi_p2panda_ffi_fn_method_node_stream_from_generic_abi
         : ffiFunctions.uniffi_p2panda_ffi_fn_method_node_stream_from;
-    const loweredTopic = uniffiTopicIdObjectFactory.cloneHandle(topic);
+    const loweredTopic = uniffiTopicObjectFactory.cloneHandle(topic);
     const loweredFrom = uniffiLowerIntoRustBuffer(FfiConverterStreamFrom, from);
     const loweredCallback = FfiConverterTopicStreamCallback.lower(callback);
     const completePointer = uniffiGetCachedLibraryFunction(
@@ -3632,7 +3674,7 @@ export class ProcessedOperation extends UniffiObjectBase {
       (status) => ffiMethod(loweredSelf, status),
       uniffiRustCallOptions(),
     );
-    return uniffiPublicKeyObjectFactory.create(uniffiResult);
+    return uniffiVerifyingKeyObjectFactory.create(uniffiResult);
   }
 
   id() {
@@ -3697,7 +3739,7 @@ export class ProcessedOperation extends UniffiObjectBase {
       (status) => ffiMethod(loweredSelf, status),
       uniffiRustCallOptions(),
     );
-    return uniffiTopicIdObjectFactory.create(uniffiResult);
+    return uniffiTopicObjectFactory.create(uniffiResult);
   }
 }
 
@@ -3849,7 +3891,7 @@ export class TopicStream extends UniffiObjectBase {
       (status) => ffiMethod(loweredSelf, status),
       uniffiRustCallOptions(),
     );
-    return uniffiTopicIdObjectFactory.create(uniffiResult);
+    return uniffiTopicObjectFactory.create(uniffiResult);
   }
 }
 

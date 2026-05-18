@@ -70,9 +70,9 @@ export declare function uniffi_p2panda_ffi_fn_method_nodebuilder_mdns_mode(...ar
 
 export declare function uniffi_p2panda_ffi_fn_method_nodebuilder_network_id(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_fn_method_nodebuilder_private_key(...args: any[]): any;
-
 export declare function uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_fn_method_nodebuilder_spawn(...args: any[]): any;
 
@@ -112,13 +112,13 @@ export declare function uniffi_p2panda_ffi_fn_method_header_payload_size(...args
 
 export declare function uniffi_p2panda_ffi_fn_method_header_prune_flag(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_fn_method_header_public_key(...args: any[]): any;
-
 export declare function uniffi_p2panda_ffi_fn_method_header_seq_num(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_fn_method_header_signature(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_fn_method_header_timestamp(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_method_header_verifying_key(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_fn_method_header_version(...args: any[]): any;
 
@@ -137,38 +137,6 @@ export declare function uniffi_p2panda_ffi_fn_constructor_networkid_random(...ar
 export declare function uniffi_p2panda_ffi_fn_method_networkid_to_bytes(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_fn_method_networkid_to_hex(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_clone_privatekey(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_free_privatekey(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_constructor_privatekey_from_bytes(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_constructor_privatekey_from_hex(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_constructor_privatekey_generate(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_method_privatekey_public_key(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_method_privatekey_sign(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_method_privatekey_to_bytes(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_method_privatekey_to_hex(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_clone_publickey(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_free_publickey(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_constructor_publickey_from_bytes(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_constructor_publickey_from_hex(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_method_publickey_to_bytes(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_method_publickey_to_hex(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_fn_method_publickey_verify(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_fn_clone_relayurl(...args: any[]): any;
 
@@ -190,21 +158,53 @@ export declare function uniffi_p2panda_ffi_fn_method_signature_to_bytes(...args:
 
 export declare function uniffi_p2panda_ffi_fn_method_signature_to_hex(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_fn_clone_topicid(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_fn_clone_signingkey(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_fn_free_topicid(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_fn_free_signingkey(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_fn_constructor_topicid_from_bytes(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_fn_constructor_signingkey_from_bytes(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_fn_constructor_topicid_from_hash(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_fn_constructor_signingkey_from_hex(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_fn_constructor_topicid_from_hex(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_fn_constructor_signingkey_generate(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_fn_constructor_topicid_random(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_fn_method_signingkey_sign(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_fn_method_topicid_to_bytes(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_fn_method_signingkey_to_bytes(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_fn_method_topicid_to_hex(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_fn_method_signingkey_to_hex(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_method_signingkey_verifying_key(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_clone_topic(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_free_topic(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_constructor_topic_from_bytes(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_constructor_topic_from_hash(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_constructor_topic_from_hex(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_constructor_topic_random(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_method_topic_to_bytes(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_method_topic_to_hex(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_clone_verifyingkey(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_free_verifyingkey(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_bytes(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_hex(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_fn_method_verifyingkey_verify(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_fn_clone_ephemeralmessage(...args: any[]): any;
 
@@ -428,9 +428,9 @@ export declare function uniffi_p2panda_ffi_checksum_method_nodebuilder_mdns_mode
 
 export declare function uniffi_p2panda_ffi_checksum_method_nodebuilder_network_id(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key(...args: any[]): any;
-
 export declare function uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_checksum_method_nodebuilder_spawn(...args: any[]): any;
 
@@ -452,13 +452,13 @@ export declare function uniffi_p2panda_ffi_checksum_method_header_payload_size(.
 
 export declare function uniffi_p2panda_ffi_checksum_method_header_prune_flag(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_checksum_method_header_public_key(...args: any[]): any;
-
 export declare function uniffi_p2panda_ffi_checksum_method_header_seq_num(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_checksum_method_header_signature(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_checksum_method_header_timestamp(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_method_header_verifying_key(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_checksum_method_header_version(...args: any[]): any;
 
@@ -466,29 +466,29 @@ export declare function uniffi_p2panda_ffi_checksum_method_networkid_to_bytes(..
 
 export declare function uniffi_p2panda_ffi_checksum_method_networkid_to_hex(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_checksum_method_privatekey_public_key(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_checksum_method_privatekey_sign(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_checksum_method_privatekey_to_hex(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_checksum_method_publickey_to_bytes(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_checksum_method_publickey_to_hex(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_checksum_method_publickey_verify(...args: any[]): any;
-
 export declare function uniffi_p2panda_ffi_checksum_method_relayurl_to_str(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_checksum_method_signature_to_bytes(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_checksum_method_signature_to_hex(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_checksum_method_topicid_to_bytes(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_checksum_method_signingkey_sign(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_checksum_method_topicid_to_hex(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_method_signingkey_to_hex(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_method_topic_to_bytes(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_method_topic_to_hex(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_method_verifyingkey_verify(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_checksum_method_ephemeralmessage_author(...args: any[]): any;
 
@@ -568,29 +568,29 @@ export declare function uniffi_p2panda_ffi_checksum_constructor_networkid_from_h
 
 export declare function uniffi_p2panda_ffi_checksum_constructor_networkid_random(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_checksum_constructor_privatekey_generate(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes(...args: any[]): any;
-
-export declare function uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex(...args: any[]): any;
-
 export declare function uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_checksum_constructor_signature_from_bytes(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_checksum_constructor_signature_from_hex(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_checksum_constructor_signingkey_generate(...args: any[]): any;
 
-export declare function uniffi_p2panda_ffi_checksum_constructor_topicid_random(...args: any[]): any;
+export declare function uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_constructor_topic_from_hash(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_constructor_topic_from_hex(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_constructor_topic_random(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes(...args: any[]): any;
+
+export declare function uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex(...args: any[]): any;
 
 export declare function uniffi_p2panda_ffi_checksum_constructor_node_spawn(...args: any[]): any;
 

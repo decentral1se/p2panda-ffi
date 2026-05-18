@@ -10,12 +10,12 @@ function toNumber(value: bigint | number): number {
   return Number(value);
 }
 
-export class PublicKey {
+export class VerifyingKey {
   /** @internal */
-  __inner: ffi.PublicKey;
+  __inner: ffi.VerifyingKey;
 
   public constructor(hexStr: string) {
-    this.__inner = ffi.PublicKey.from_hex(hexStr);
+    this.__inner = ffi.VerifyingKey.from_hex(hexStr);
   }
 
   public toString(): string {
@@ -23,20 +23,20 @@ export class PublicKey {
   }
 }
 
-export class PrivateKey {
+export class SigningKey {
   /** @internal */
-  __inner: ffi.PrivateKey;
+  __inner: ffi.SigningKey;
 
   public constructor(hexStr: undefined | string) {
     if (hexStr) {
-      this.__inner = ffi.PrivateKey.from_hex(hexStr);
+      this.__inner = ffi.SigningKey.from_hex(hexStr);
     } else {
-      this.__inner = ffi.PrivateKey.generate();
+      this.__inner = ffi.SigningKey.generate();
     }
   }
 
-  public publicKey(): string {
-    return this.__inner.public_key().to_hex();
+  public verifyingKey(): string {
+    return this.__inner.verifying_key().to_hex();
   }
 
   public toString(): string {
@@ -70,12 +70,12 @@ export class NodeBuilder {
     this.__inner.database_url(url);
   }
 
-  public privateKey(privateKey: string | PrivateKey) {
-    if (typeof privateKey === "string") {
-      privateKey = new PrivateKey(privateKey);
+  public signingKey(signingKey: string | SigningKey) {
+    if (typeof signingKey === "string") {
+      signingKey = new SigningKey(signingKey);
     }
 
-    this.__inner.private_key(privateKey.__inner);
+    this.__inner.signing_key(signingKey.__inner);
   }
 
   public networkId(networkId: string) {
@@ -101,11 +101,11 @@ export class NodeBuilder {
     this.__inner.relay_url(ffiRelayUrl);
   }
 
-  public bootstrap(nodeId: string | PublicKey, relayUrl: string) {
+  public bootstrap(nodeId: string | VerifyingKey, relayUrl: string) {
     const ffiRelayUrl = ffi.RelayUrl.from_str(relayUrl);
 
     if (typeof nodeId === "string") {
-      nodeId = new PublicKey(nodeId);
+      nodeId = new VerifyingKey(nodeId);
     }
 
     this.__inner.bootstrap(nodeId.__inner, ffiRelayUrl);
@@ -152,15 +152,15 @@ export class NodeBuilder {
   }
 }
 
-export class TopicId {
+export class Topic {
   /** @internal */
-  __inner: ffi.TopicId;
+  __inner: ffi.Topic;
 
   public constructor(hexStr: undefined | string) {
     if (hexStr) {
-      this.__inner = ffi.TopicId.from_hex(hexStr);
+      this.__inner = ffi.Topic.from_hex(hexStr);
     } else {
-      this.__inner = ffi.TopicId.random();
+      this.__inner = ffi.Topic.random();
     }
   }
 
@@ -170,7 +170,7 @@ export class TopicId {
 }
 
 export type Header = {
-  publicKey: string;
+  verifyingKey: string;
   logId: string;
   seqNum: number;
   backlink: undefined | string;
@@ -180,7 +180,7 @@ export type Header = {
 
 export type Operation<T> = {
   id: string;
-  topicId: string;
+  topic: string;
   author: string;
   timestamp: number;
   header: Header;
@@ -194,7 +194,7 @@ export interface TopicStreamCallback<T> {
 }
 
 export type EphemeralMessage<T> = {
-  topicId: string;
+  topic: string;
   author: string;
   timestamp: number;
   message: T;
@@ -223,32 +223,32 @@ export class Node {
   }
 
   public async insertBootstrap(
-    nodeId: string | PublicKey,
+    nodeId: string | VerifyingKey,
     relayUrl: string
   ): Promise<void> {
     const ffiRelayUrl = ffi.RelayUrl.from_str(relayUrl);
 
     if (typeof nodeId === "string") {
-      nodeId = new PublicKey(nodeId);
+      nodeId = new VerifyingKey(nodeId);
     }
 
     this.__inner.insert_bootstrap(nodeId.__inner, ffiRelayUrl);
   }
 
   public async stream<T>(
-    topic: string | TopicId,
+    topic: string | Topic,
     callback: TopicStreamCallback<T>
   ): Promise<TopicStream<T>> {
     return await this.streamFrom(topic, "frontier", callback);
   }
 
   public async streamFrom<T>(
-    topic: string | TopicId,
+    topic: string | Topic,
     from: "start" | "frontier" | Cursor,
     callback: TopicStreamCallback<T>
   ): Promise<TopicStream<T>> {
     if (typeof topic === "string") {
-      topic = new TopicId(topic);
+      topic = new Topic(topic);
     }
 
     let ffiFrom;
@@ -286,7 +286,7 @@ export class Node {
         }
 
         const id = operation.id().to_hex();
-        const topicId = operation.topic().to_hex();
+        const topic = operation.topic().to_hex();
         const author = operation.author().to_hex();
         const timestamp = toNumber((operation.timestamp() as bigint) / 1000000n);
 
@@ -297,7 +297,7 @@ export class Node {
           backlink = ffiBacklink.to_hex();
         }
         const header = {
-          publicKey: ffiHeader.public_key().to_hex(),
+          verifyingKey: ffiHeader.verifying_key().to_hex(),
           seqNum: toNumber(ffiHeader.seq_num()),
           logId: ffiHeader.log_id().to_hex(),
           backlink,
@@ -307,7 +307,7 @@ export class Node {
 
         callback.onOperation({
           id,
-          topicId,
+          topic,
           author,
           timestamp,
           header,
@@ -320,11 +320,11 @@ export class Node {
   }
 
   public async ephemeralStream<T>(
-    topic: string | TopicId,
+    topic: string | Topic,
     callback: EphemeralStreamCallback<T>
   ): Promise<EphemeralStream<T>> {
     if (typeof topic === "string") {
-      topic = new TopicId(topic);
+      topic = new Topic(topic);
     }
 
     const ffiHandler = await this.__inner.ephemeral_stream(topic.__inner, {
@@ -340,7 +340,7 @@ export class Node {
           return;
         }
 
-        const topicId = ffiMessage.topic().to_hex();
+        const topic = ffiMessage.topic().to_hex();
         const author = ffiMessage.author().to_hex();
 
         const timestamp = parseInt(
@@ -348,7 +348,7 @@ export class Node {
         );
 
         callback.onMessage({
-          topicId,
+          topic,
           author,
           timestamp,
           message,
@@ -369,7 +369,7 @@ export class TopicStream<T> {
     this.__inner = inner;
   }
 
-  public topicId(): string {
+  public topic(): string {
     return this.__inner.topic().to_hex();
   }
 
@@ -400,7 +400,7 @@ export class EphemeralStream<T> {
     this.__inner = inner;
   }
 
-  public topicId(): string {
+  public topic(): string {
     return this.__inner.topic().to_hex();
   }
 
