@@ -74,5 +74,12 @@ installed in your Rust toolbelt.
 
 ```bash
 # Generate FFI bindings for Node.js
-make ffi-node
+make ffi-nodejs
+
+# Re-build wrapper package if any changes done there
+cd nodejs
+npm run build
+
+# Run example
+node nodejs/example.js
 ```
