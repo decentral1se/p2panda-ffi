@@ -481,17 +481,17 @@ def _uniffi_check_contract_api_version(lib):
 def _uniffi_check_api_checksums(lib):
     if lib.uniffi_p2panda_ffi_checksum_method_cursor_name() != 43705:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_ephemeralmessage_author() != 52355:
+    if lib.uniffi_p2panda_ffi_checksum_method_ephemeralmessage_author() != 14882:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_ephemeralmessage_body() != 33930:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_ephemeralmessage_timestamp() != 55567:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_ephemeralmessage_topic() != 61410:
+    if lib.uniffi_p2panda_ffi_checksum_method_ephemeralmessage_topic() != 38439:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_ephemeralstream_publish() != 48773:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_ephemeralstream_topic() != 11085:
+    if lib.uniffi_p2panda_ffi_checksum_method_ephemeralstream_topic() != 59080:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_ephemeralstreamcallback_on_message() != 18635:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
@@ -525,13 +525,13 @@ def _uniffi_check_api_checksums(lib):
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_header_prune_flag() != 18333:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_header_public_key() != 13290:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_header_seq_num() != 41915:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_header_signature() != 51488:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_header_timestamp() != 468:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_method_header_verifying_key() != 49825:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_header_version() != 39499:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
@@ -549,17 +549,17 @@ def _uniffi_check_api_checksums(lib):
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_constructor_node_spawn() != 35164:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_node_ephemeral_stream() != 19494:
+    if lib.uniffi_p2panda_ffi_checksum_method_node_ephemeral_stream() != 5042:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_node_id() != 45319:
+    if lib.uniffi_p2panda_ffi_checksum_method_node_id() != 37166:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_node_insert_bootstrap() != 19201:
+    if lib.uniffi_p2panda_ffi_checksum_method_node_insert_bootstrap() != 52055:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_node_network_id() != 50875:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_node_stream() != 52148:
+    if lib.uniffi_p2panda_ffi_checksum_method_node_stream() != 64795:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_node_stream_from() != 17067:
+    if lib.uniffi_p2panda_ffi_checksum_method_node_stream_from() != 43613:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_constructor_nodebuilder_new() != 50633:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
@@ -573,7 +573,7 @@ def _uniffi_check_api_checksums(lib):
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_nodebuilder_bind_port_v6() != 43790:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_nodebuilder_bootstrap() != 42251:
+    if lib.uniffi_p2panda_ffi_checksum_method_nodebuilder_bootstrap() != 4171:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_nodebuilder_database_url() != 57213:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
@@ -581,29 +581,15 @@ def _uniffi_check_api_checksums(lib):
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_nodebuilder_network_id() != 25341:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key() != 55001:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url() != 60407:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key() != 10426:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_nodebuilder_spawn() != 44540:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes() != 9528:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex() != 18057:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_constructor_privatekey_generate() != 31662:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_privatekey_public_key() != 36762:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_privatekey_sign() != 16842:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes() != 28452:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_privatekey_to_hex() != 34482:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_processedoperation_ack() != 34154:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_processedoperation_author() != 17427:
+    if lib.uniffi_p2panda_ffi_checksum_method_processedoperation_author() != 20224:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_processedoperation_id() != 16528:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
@@ -613,17 +599,7 @@ def _uniffi_check_api_checksums(lib):
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_processedoperation_timestamp() != 6001:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_processedoperation_topic() != 8589:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes() != 34513:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex() != 51719:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_publickey_to_bytes() != 23757:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_publickey_to_hex() != 31307:
-        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_publickey_verify() != 27867:
+    if lib.uniffi_p2panda_ffi_checksum_method_processedoperation_topic() != 44447:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str() != 25654:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
@@ -637,17 +613,31 @@ def _uniffi_check_api_checksums(lib):
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_signature_to_hex() != 43786:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes() != 16286:
+    if lib.uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes() != 6451:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash() != 34777:
+    if lib.uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex() != 43956:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex() != 27303:
+    if lib.uniffi_p2panda_ffi_checksum_constructor_signingkey_generate() != 39498:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_constructor_topicid_random() != 8969:
+    if lib.uniffi_p2panda_ffi_checksum_method_signingkey_sign() != 24276:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_topicid_to_bytes() != 63194:
+    if lib.uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes() != 8598:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_topicid_to_hex() != 29111:
+    if lib.uniffi_p2panda_ffi_checksum_method_signingkey_to_hex() != 39900:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key() != 25493:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes() != 12780:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_constructor_topic_from_hash() != 7948:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_constructor_topic_from_hex() != 15447:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_constructor_topic_random() != 23664:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_method_topic_to_bytes() != 64925:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_method_topic_to_hex() != 10156:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_topicstream_ack() != 2763:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
@@ -655,13 +645,23 @@ def _uniffi_check_api_checksums(lib):
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_topicstream_publish() != 12423:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
-    if lib.uniffi_p2panda_ffi_checksum_method_topicstream_topic() != 54824:
+    if lib.uniffi_p2panda_ffi_checksum_method_topicstream_topic() != 26950:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_topicstreamcallback_on_event() != 30815:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_topicstreamcallback_on_error() != 39094:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
     if lib.uniffi_p2panda_ffi_checksum_method_topicstreamcallback_on_operation() != 23156:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes() != 57326:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex() != 22727:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes() != 19802:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex() != 56335:
+        raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
+    if lib.uniffi_p2panda_ffi_checksum_method_verifyingkey_verify() != 13296:
         raise InternalError("UniFFI API checksum mismatch: try cleaning and rebuilding your project")
 
 # A ctypes library to expose the extern-C FFI definitions.
@@ -1026,16 +1026,6 @@ _UniffiLib.uniffi_p2panda_ffi_fn_free_nodebuilder.argtypes = (
     ctypes.POINTER(_UniffiRustCallStatus),
 )
 _UniffiLib.uniffi_p2panda_ffi_fn_free_nodebuilder.restype = None
-_UniffiLib.uniffi_p2panda_ffi_fn_clone_privatekey.argtypes = (
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_clone_privatekey.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_free_privatekey.argtypes = (
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_free_privatekey.restype = None
 _UniffiLib.uniffi_p2panda_ffi_fn_clone_processedoperation.argtypes = (
     ctypes.c_uint64,
     ctypes.POINTER(_UniffiRustCallStatus),
@@ -1046,16 +1036,6 @@ _UniffiLib.uniffi_p2panda_ffi_fn_free_processedoperation.argtypes = (
     ctypes.POINTER(_UniffiRustCallStatus),
 )
 _UniffiLib.uniffi_p2panda_ffi_fn_free_processedoperation.restype = None
-_UniffiLib.uniffi_p2panda_ffi_fn_clone_publickey.argtypes = (
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_clone_publickey.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_free_publickey.argtypes = (
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_free_publickey.restype = None
 _UniffiLib.uniffi_p2panda_ffi_fn_clone_relayurl.argtypes = (
     ctypes.c_uint64,
     ctypes.POINTER(_UniffiRustCallStatus),
@@ -1076,16 +1056,26 @@ _UniffiLib.uniffi_p2panda_ffi_fn_free_signature.argtypes = (
     ctypes.POINTER(_UniffiRustCallStatus),
 )
 _UniffiLib.uniffi_p2panda_ffi_fn_free_signature.restype = None
-_UniffiLib.uniffi_p2panda_ffi_fn_clone_topicid.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_fn_clone_signingkey.argtypes = (
     ctypes.c_uint64,
     ctypes.POINTER(_UniffiRustCallStatus),
 )
-_UniffiLib.uniffi_p2panda_ffi_fn_clone_topicid.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_free_topicid.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_fn_clone_signingkey.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_free_signingkey.argtypes = (
     ctypes.c_uint64,
     ctypes.POINTER(_UniffiRustCallStatus),
 )
-_UniffiLib.uniffi_p2panda_ffi_fn_free_topicid.restype = None
+_UniffiLib.uniffi_p2panda_ffi_fn_free_signingkey.restype = None
+_UniffiLib.uniffi_p2panda_ffi_fn_clone_topic.argtypes = (
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_clone_topic.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_free_topic.argtypes = (
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_free_topic.restype = None
 _UniffiLib.uniffi_p2panda_ffi_fn_clone_topicstream.argtypes = (
     ctypes.c_uint64,
     ctypes.POINTER(_UniffiRustCallStatus),
@@ -1106,6 +1096,16 @@ _UniffiLib.uniffi_p2panda_ffi_fn_free_topicstreamcallback.argtypes = (
     ctypes.POINTER(_UniffiRustCallStatus),
 )
 _UniffiLib.uniffi_p2panda_ffi_fn_free_topicstreamcallback.restype = None
+_UniffiLib.uniffi_p2panda_ffi_fn_clone_verifyingkey.argtypes = (
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_clone_verifyingkey.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_free_verifyingkey.argtypes = (
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_free_verifyingkey.restype = None
 _UNIFFI_CALLBACK_INTERFACE_P2PANDA_FFI_EPHEMERAL_STREAM_CALLBACK_METHOD0 = ctypes.CFUNCTYPE(None,ctypes.c_uint64,ctypes.c_uint64,ctypes.c_void_p,
     ctypes.POINTER(_UniffiRustCallStatus),
 )
@@ -1264,11 +1264,6 @@ _UniffiLib.uniffi_p2panda_ffi_fn_method_header_prune_flag.argtypes = (
     ctypes.POINTER(_UniffiRustCallStatus),
 )
 _UniffiLib.uniffi_p2panda_ffi_fn_method_header_prune_flag.restype = ctypes.c_int8
-_UniffiLib.uniffi_p2panda_ffi_fn_method_header_public_key.argtypes = (
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_method_header_public_key.restype = ctypes.c_uint64
 _UniffiLib.uniffi_p2panda_ffi_fn_method_header_seq_num.argtypes = (
     ctypes.c_uint64,
     ctypes.POINTER(_UniffiRustCallStatus),
@@ -1284,6 +1279,11 @@ _UniffiLib.uniffi_p2panda_ffi_fn_method_header_timestamp.argtypes = (
     ctypes.POINTER(_UniffiRustCallStatus),
 )
 _UniffiLib.uniffi_p2panda_ffi_fn_method_header_timestamp.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_method_header_verifying_key.argtypes = (
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_method_header_verifying_key.restype = ctypes.c_uint64
 _UniffiLib.uniffi_p2panda_ffi_fn_method_header_version.argtypes = (
     ctypes.c_uint64,
     ctypes.POINTER(_UniffiRustCallStatus),
@@ -1415,57 +1415,22 @@ _UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_network_id.argtypes = (
     ctypes.POINTER(_UniffiRustCallStatus),
 )
 _UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_network_id.restype = None
-_UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_private_key.argtypes = (
-    ctypes.c_uint64,
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_private_key.restype = None
 _UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url.argtypes = (
     ctypes.c_uint64,
     ctypes.c_uint64,
     ctypes.POINTER(_UniffiRustCallStatus),
 )
 _UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url.restype = None
+_UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key.argtypes = (
+    ctypes.c_uint64,
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key.restype = None
 _UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_spawn.argtypes = (
     ctypes.c_uint64,
 )
 _UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_spawn.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_privatekey_from_bytes.argtypes = (
-    _UniffiRustBuffer,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_privatekey_from_bytes.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_privatekey_from_hex.argtypes = (
-    _UniffiRustBuffer,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_privatekey_from_hex.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_privatekey_generate.argtypes = (
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_privatekey_generate.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_method_privatekey_public_key.argtypes = (
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_method_privatekey_public_key.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_method_privatekey_sign.argtypes = (
-    ctypes.c_uint64,
-    _UniffiRustBuffer,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_method_privatekey_sign.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_method_privatekey_to_bytes.argtypes = (
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_method_privatekey_to_bytes.restype = _UniffiRustBuffer
-_UniffiLib.uniffi_p2panda_ffi_fn_method_privatekey_to_hex.argtypes = (
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_method_privatekey_to_hex.restype = _UniffiRustBuffer
 _UniffiLib.uniffi_p2panda_ffi_fn_method_processedoperation_ack.argtypes = (
     ctypes.c_uint64,
 )
@@ -1500,33 +1465,6 @@ _UniffiLib.uniffi_p2panda_ffi_fn_method_processedoperation_topic.argtypes = (
     ctypes.POINTER(_UniffiRustCallStatus),
 )
 _UniffiLib.uniffi_p2panda_ffi_fn_method_processedoperation_topic.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_publickey_from_bytes.argtypes = (
-    _UniffiRustBuffer,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_publickey_from_bytes.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_publickey_from_hex.argtypes = (
-    _UniffiRustBuffer,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_publickey_from_hex.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_method_publickey_to_bytes.argtypes = (
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_method_publickey_to_bytes.restype = _UniffiRustBuffer
-_UniffiLib.uniffi_p2panda_ffi_fn_method_publickey_to_hex.argtypes = (
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_method_publickey_to_hex.restype = _UniffiRustBuffer
-_UniffiLib.uniffi_p2panda_ffi_fn_method_publickey_verify.argtypes = (
-    ctypes.c_uint64,
-    _UniffiRustBuffer,
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_method_publickey_verify.restype = ctypes.c_int8
 _UniffiLib.uniffi_p2panda_ffi_fn_constructor_relayurl_from_str.argtypes = (
     _UniffiRustBuffer,
     ctypes.POINTER(_UniffiRustCallStatus),
@@ -1557,35 +1495,70 @@ _UniffiLib.uniffi_p2panda_ffi_fn_method_signature_to_hex.argtypes = (
     ctypes.POINTER(_UniffiRustCallStatus),
 )
 _UniffiLib.uniffi_p2panda_ffi_fn_method_signature_to_hex.restype = _UniffiRustBuffer
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topicid_from_bytes.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_signingkey_from_bytes.argtypes = (
     _UniffiRustBuffer,
     ctypes.POINTER(_UniffiRustCallStatus),
 )
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topicid_from_bytes.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topicid_from_hash.argtypes = (
-    ctypes.c_uint64,
-    ctypes.POINTER(_UniffiRustCallStatus),
-)
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topicid_from_hash.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topicid_from_hex.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_signingkey_from_bytes.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_signingkey_from_hex.argtypes = (
     _UniffiRustBuffer,
     ctypes.POINTER(_UniffiRustCallStatus),
 )
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topicid_from_hex.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topicid_random.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_signingkey_from_hex.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_signingkey_generate.argtypes = (
     ctypes.POINTER(_UniffiRustCallStatus),
 )
-_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topicid_random.restype = ctypes.c_uint64
-_UniffiLib.uniffi_p2panda_ffi_fn_method_topicid_to_bytes.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_signingkey_generate.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_method_signingkey_sign.argtypes = (
+    ctypes.c_uint64,
+    _UniffiRustBuffer,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_method_signingkey_sign.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_method_signingkey_to_bytes.argtypes = (
     ctypes.c_uint64,
     ctypes.POINTER(_UniffiRustCallStatus),
 )
-_UniffiLib.uniffi_p2panda_ffi_fn_method_topicid_to_bytes.restype = _UniffiRustBuffer
-_UniffiLib.uniffi_p2panda_ffi_fn_method_topicid_to_hex.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_fn_method_signingkey_to_bytes.restype = _UniffiRustBuffer
+_UniffiLib.uniffi_p2panda_ffi_fn_method_signingkey_to_hex.argtypes = (
     ctypes.c_uint64,
     ctypes.POINTER(_UniffiRustCallStatus),
 )
-_UniffiLib.uniffi_p2panda_ffi_fn_method_topicid_to_hex.restype = _UniffiRustBuffer
+_UniffiLib.uniffi_p2panda_ffi_fn_method_signingkey_to_hex.restype = _UniffiRustBuffer
+_UniffiLib.uniffi_p2panda_ffi_fn_method_signingkey_verifying_key.argtypes = (
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_method_signingkey_verifying_key.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topic_from_bytes.argtypes = (
+    _UniffiRustBuffer,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topic_from_bytes.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topic_from_hash.argtypes = (
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topic_from_hash.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topic_from_hex.argtypes = (
+    _UniffiRustBuffer,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topic_from_hex.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topic_random.argtypes = (
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_topic_random.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_method_topic_to_bytes.argtypes = (
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_method_topic_to_bytes.restype = _UniffiRustBuffer
+_UniffiLib.uniffi_p2panda_ffi_fn_method_topic_to_hex.argtypes = (
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_method_topic_to_hex.restype = _UniffiRustBuffer
 _UniffiLib.uniffi_p2panda_ffi_fn_method_topicstream_ack.argtypes = (
     ctypes.c_uint64,
     ctypes.c_uint64,
@@ -1625,6 +1598,33 @@ _UniffiLib.uniffi_p2panda_ffi_fn_method_topicstreamcallback_on_operation.argtype
     ctypes.POINTER(_UniffiRustCallStatus),
 )
 _UniffiLib.uniffi_p2panda_ffi_fn_method_topicstreamcallback_on_operation.restype = None
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_bytes.argtypes = (
+    _UniffiRustBuffer,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_bytes.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_hex.argtypes = (
+    _UniffiRustBuffer,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_hex.restype = ctypes.c_uint64
+_UniffiLib.uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes.argtypes = (
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes.restype = _UniffiRustBuffer
+_UniffiLib.uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex.argtypes = (
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex.restype = _UniffiRustBuffer
+_UniffiLib.uniffi_p2panda_ffi_fn_method_verifyingkey_verify.argtypes = (
+    ctypes.c_uint64,
+    _UniffiRustBuffer,
+    ctypes.c_uint64,
+    ctypes.POINTER(_UniffiRustCallStatus),
+)
+_UniffiLib.uniffi_p2panda_ffi_fn_method_verifyingkey_verify.restype = ctypes.c_int8
 _UniffiLib.ffi_p2panda_ffi_uniffi_contract_version.argtypes = (
 )
 _UniffiLib.ffi_p2panda_ffi_uniffi_contract_version.restype = ctypes.c_uint32
@@ -1697,9 +1697,6 @@ _UniffiLib.uniffi_p2panda_ffi_checksum_method_header_payload_size.restype = ctyp
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_header_prune_flag.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_header_prune_flag.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_header_public_key.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_header_public_key.restype = ctypes.c_uint16
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_header_seq_num.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_header_seq_num.restype = ctypes.c_uint16
@@ -1709,6 +1706,9 @@ _UniffiLib.uniffi_p2panda_ffi_checksum_method_header_signature.restype = ctypes.
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_header_timestamp.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_header_timestamp.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_header_verifying_key.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_header_verifying_key.restype = ctypes.c_uint16
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_header_version.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_header_version.restype = ctypes.c_uint16
@@ -1781,36 +1781,15 @@ _UniffiLib.uniffi_p2panda_ffi_checksum_method_nodebuilder_mdns_mode.restype = ct
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_nodebuilder_network_id.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_nodebuilder_network_id.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key.restype = ctypes.c_uint16
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key.restype = ctypes.c_uint16
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_nodebuilder_spawn.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_nodebuilder_spawn.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_privatekey_generate.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_privatekey_generate.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_privatekey_public_key.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_privatekey_public_key.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_privatekey_sign.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_privatekey_sign.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_privatekey_to_hex.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_privatekey_to_hex.restype = ctypes.c_uint16
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_processedoperation_ack.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_processedoperation_ack.restype = ctypes.c_uint16
@@ -1832,21 +1811,6 @@ _UniffiLib.uniffi_p2panda_ffi_checksum_method_processedoperation_timestamp.resty
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_processedoperation_topic.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_processedoperation_topic.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_publickey_to_bytes.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_publickey_to_bytes.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_publickey_to_hex.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_publickey_to_hex.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_publickey_verify.argtypes = (
-)
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_publickey_verify.restype = ctypes.c_uint16
 _UniffiLib.uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str.restype = ctypes.c_uint16
@@ -1865,24 +1829,45 @@ _UniffiLib.uniffi_p2panda_ffi_checksum_method_signature_to_bytes.restype = ctype
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_signature_to_hex.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_signature_to_hex.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes.argtypes = (
 )
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex.argtypes = (
 )
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_signingkey_generate.argtypes = (
 )
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topicid_random.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_signingkey_generate.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_signingkey_sign.argtypes = (
 )
-_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topicid_random.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_topicid_to_bytes.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_signingkey_sign.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes.argtypes = (
 )
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_topicid_to_bytes.restype = ctypes.c_uint16
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_topicid_to_hex.argtypes = (
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_signingkey_to_hex.argtypes = (
 )
-_UniffiLib.uniffi_p2panda_ffi_checksum_method_topicid_to_hex.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_signingkey_to_hex.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topic_from_hash.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topic_from_hash.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topic_from_hex.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topic_from_hex.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topic_random.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_topic_random.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_topic_to_bytes.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_topic_to_bytes.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_topic_to_hex.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_topic_to_hex.restype = ctypes.c_uint16
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_topicstream_ack.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_topicstream_ack.restype = ctypes.c_uint16
@@ -1904,6 +1889,21 @@ _UniffiLib.uniffi_p2panda_ffi_checksum_method_topicstreamcallback_on_error.resty
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_topicstreamcallback_on_operation.argtypes = (
 )
 _UniffiLib.uniffi_p2panda_ffi_checksum_method_topicstreamcallback_on_operation.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex.restype = ctypes.c_uint16
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_verifyingkey_verify.argtypes = (
+)
+_UniffiLib.uniffi_p2panda_ffi_checksum_method_verifyingkey_verify.restype = ctypes.c_uint16
 
 _uniffi_check_contract_api_version(_UniffiLib)
 # _uniffi_check_api_checksums(_UniffiLib)
@@ -2731,7 +2731,7 @@ class _UniffiFfiConverterBoolean:
         buf.write_u8(value)
 
 
-class PublicKeyProtocol(typing.Protocol):
+class VerifyingKeyProtocol(typing.Protocol):
     
     def to_bytes(self, ) -> bytes:
         raise NotImplementedError
@@ -2740,36 +2740,36 @@ class PublicKeyProtocol(typing.Protocol):
     def verify(self, bytes: bytes,signature: Signature) -> bool:
         raise NotImplementedError
 
-class PublicKey(PublicKeyProtocol):
+class VerifyingKey(VerifyingKeyProtocol):
     
     _handle: ctypes.c_uint64
     @classmethod
-    def from_bytes(cls, value: bytes) -> PublicKey:
+    def from_bytes(cls, value: bytes) -> VerifyingKey:
         
         _UniffiFfiConverterBytes.check_lower(value)
         _uniffi_lowered_args = (
             _UniffiFfiConverterBytes.lower(value),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypePublicKey.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeVerifyingKey.lift
         _uniffi_error_converter = _UniffiFfiConverterTypeConversionError
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_publickey_from_bytes,
+            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_bytes,
             *_uniffi_lowered_args,
         )
         return cls._uniffi_make_instance(_uniffi_ffi_result)
     @classmethod
-    def from_hex(cls, value: str) -> PublicKey:
+    def from_hex(cls, value: str) -> VerifyingKey:
         
         _UniffiFfiConverterString.check_lower(value)
         _uniffi_lowered_args = (
             _UniffiFfiConverterString.lower(value),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypePublicKey.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeVerifyingKey.lift
         _uniffi_error_converter = _UniffiFfiConverterTypeConversionError
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_publickey_from_hex,
+            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_hex,
             *_uniffi_lowered_args,
         )
         return cls._uniffi_make_instance(_uniffi_ffi_result)
@@ -2781,10 +2781,10 @@ class PublicKey(PublicKeyProtocol):
         # In case of partial initialization of instances.
         handle = getattr(self, "_handle", None)
         if handle is not None:
-            _uniffi_rust_call(_UniffiLib.uniffi_p2panda_ffi_fn_free_publickey, handle)
+            _uniffi_rust_call(_UniffiLib.uniffi_p2panda_ffi_fn_free_verifyingkey, handle)
 
     def _uniffi_clone_handle(self):
-        return _uniffi_rust_call(_UniffiLib.uniffi_p2panda_ffi_fn_clone_publickey, self._handle)
+        return _uniffi_rust_call(_UniffiLib.uniffi_p2panda_ffi_fn_clone_verifyingkey, self._handle)
 
     # Used by alternative constructors or any methods which return this type.
     @classmethod
@@ -2802,7 +2802,7 @@ class PublicKey(PublicKeyProtocol):
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_method_publickey_to_bytes,
+            _UniffiLib.uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes,
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
@@ -2814,7 +2814,7 @@ class PublicKey(PublicKeyProtocol):
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_method_publickey_to_hex,
+            _UniffiLib.uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex,
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
@@ -2832,7 +2832,7 @@ class PublicKey(PublicKeyProtocol):
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_method_publickey_verify,
+            _UniffiLib.uniffi_p2panda_ffi_fn_method_verifyingkey_verify,
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
@@ -2841,29 +2841,29 @@ class PublicKey(PublicKeyProtocol):
 
 
 
-class _UniffiFfiConverterTypePublicKey:
+class _UniffiFfiConverterTypeVerifyingKey:
     @staticmethod
-    def lift(value: int) -> PublicKey:
-        return PublicKey._uniffi_make_instance(value)
+    def lift(value: int) -> VerifyingKey:
+        return VerifyingKey._uniffi_make_instance(value)
 
     @staticmethod
-    def check_lower(value: PublicKey):
-        if not isinstance(value, PublicKey):
-            raise TypeError("Expected PublicKey instance, {} found".format(type(value).__name__))
+    def check_lower(value: VerifyingKey):
+        if not isinstance(value, VerifyingKey):
+            raise TypeError("Expected VerifyingKey instance, {} found".format(type(value).__name__))
 
     @staticmethod
-    def lower(value: PublicKey) -> ctypes.c_uint64:
+    def lower(value: VerifyingKey) -> ctypes.c_uint64:
         return value._uniffi_clone_handle()
 
     @classmethod
-    def read(cls, buf: _UniffiRustBuffer) -> PublicKey:
+    def read(cls, buf: _UniffiRustBuffer) -> VerifyingKey:
         ptr = buf.read_u64()
         if ptr == 0:
             raise InternalError("Raw handle value was null")
         return cls.lift(ptr)
 
     @classmethod
-    def write(cls, value: PublicKey, buf: _UniffiRustBuffer):
+    def write(cls, value: VerifyingKey, buf: _UniffiRustBuffer):
         buf.write_u64(cls.lower(value))
 
 class _UniffiFfiConverterUInt64(_UniffiConverterPrimitiveInt):
@@ -2892,7 +2892,7 @@ class Source:
     @dataclass
     class SYNC_SESSION:
         
-        def __init__(self, remote_node_id:PublicKey, session_id:int, sent_operations:int, received_operations:int, sent_bytes:int, received_bytes:int, sent_bytes_topic_total:int, received_bytes_topic_total:int, phase:SessionPhase):
+        def __init__(self, remote_node_id:VerifyingKey, session_id:int, sent_operations:int, received_operations:int, sent_bytes:int, received_bytes:int, sent_bytes_topic_total:int, received_bytes_topic_total:int, phase:SessionPhase):
             self.remote_node_id = remote_node_id
             
             """
@@ -2999,6 +2999,30 @@ class Source:
                 return False
             return True
 
+    @dataclass
+    class EXTERNAL_STREAM:
+        
+        def __init__(self, session_id:int):
+            self.session_id = session_id
+            
+            
+            pass
+
+    
+            
+            
+    
+        def __str__(self):
+            return "Source.EXTERNAL_STREAM(session_id={})".format(self.session_id)
+        def __eq__(self, other):
+            if not isinstance(other, Source):
+                return NotImplemented
+            if not other.is_EXTERNAL_STREAM():
+                return False
+            if self.session_id != other.session_id:
+                return False
+            return True
+
     
 
     # For each variant, we have `is_NAME` and `is_name` methods for easily checking
@@ -3011,6 +3035,10 @@ class Source:
         return isinstance(self, Source.LOCAL_STORE)
     def is_local_store(self) -> bool:
         return isinstance(self, Source.LOCAL_STORE)
+    def is_EXTERNAL_STREAM(self) -> bool:
+        return isinstance(self, Source.EXTERNAL_STREAM)
+    def is_external_stream(self) -> bool:
+        return isinstance(self, Source.EXTERNAL_STREAM)
     
 
 # Now, a little trick - we make each nested variant class be a subclass of the main
@@ -3018,6 +3046,7 @@ class Source:
 # We might be able to do this a little more neatly with a metaclass, but this'll do.
 Source.SYNC_SESSION = type("Source.SYNC_SESSION", (Source.SYNC_SESSION, Source,), {})  # type: ignore
 Source.LOCAL_STORE = type("Source.LOCAL_STORE", (Source.LOCAL_STORE, Source,), {})  # type: ignore
+Source.EXTERNAL_STREAM = type("Source.EXTERNAL_STREAM", (Source.EXTERNAL_STREAM, Source,), {})  # type: ignore
 
 
 
@@ -3028,7 +3057,7 @@ class _UniffiFfiConverterTypeSource(_UniffiConverterRustBuffer):
         variant = buf.read_i32()
         if variant == 1:
             return Source.SYNC_SESSION(
-                _UniffiFfiConverterTypePublicKey.read(buf),
+                _UniffiFfiConverterTypeVerifyingKey.read(buf),
                 _UniffiFfiConverterUInt64.read(buf),
                 _UniffiFfiConverterUInt64.read(buf),
                 _UniffiFfiConverterUInt64.read(buf),
@@ -3041,12 +3070,16 @@ class _UniffiFfiConverterTypeSource(_UniffiConverterRustBuffer):
         if variant == 2:
             return Source.LOCAL_STORE(
             )
+        if variant == 3:
+            return Source.EXTERNAL_STREAM(
+                _UniffiFfiConverterUInt64.read(buf),
+            )
         raise InternalError("Raw enum value doesn't match any cases")
 
     @staticmethod
     def check_lower(value):
         if value.is_SYNC_SESSION():
-            _UniffiFfiConverterTypePublicKey.check_lower(value.remote_node_id)
+            _UniffiFfiConverterTypeVerifyingKey.check_lower(value.remote_node_id)
             _UniffiFfiConverterUInt64.check_lower(value.session_id)
             _UniffiFfiConverterUInt64.check_lower(value.sent_operations)
             _UniffiFfiConverterUInt64.check_lower(value.received_operations)
@@ -3058,13 +3091,16 @@ class _UniffiFfiConverterTypeSource(_UniffiConverterRustBuffer):
             return
         if value.is_LOCAL_STORE():
             return
+        if value.is_EXTERNAL_STREAM():
+            _UniffiFfiConverterUInt64.check_lower(value.session_id)
+            return
         raise ValueError(value)
 
     @staticmethod
     def write(value, buf):
         if value.is_SYNC_SESSION():
             buf.write_i32(1)
-            _UniffiFfiConverterTypePublicKey.write(value.remote_node_id, buf)
+            _UniffiFfiConverterTypeVerifyingKey.write(value.remote_node_id, buf)
             _UniffiFfiConverterUInt64.write(value.session_id, buf)
             _UniffiFfiConverterUInt64.write(value.sent_operations, buf)
             _UniffiFfiConverterUInt64.write(value.received_operations, buf)
@@ -3075,6 +3111,9 @@ class _UniffiFfiConverterTypeSource(_UniffiConverterRustBuffer):
             _UniffiFfiConverterTypeSessionPhase.write(value.phase, buf)
         if value.is_LOCAL_STORE():
             buf.write_i32(2)
+        if value.is_EXTERNAL_STREAM():
+            buf.write_i32(3)
+            _UniffiFfiConverterUInt64.write(value.session_id, buf)
 
 
 
@@ -3308,7 +3347,7 @@ class StreamEvent:
     @dataclass
     class SYNC_STARTED:
         
-        def __init__(self, remote_node_id:PublicKey, session_id:int, incoming_operations:int, outgoing_operations:int, incoming_bytes:int, outgoing_bytes:int, topic_sessions:int):
+        def __init__(self, remote_node_id:VerifyingKey, session_id:int, incoming_operations:int, outgoing_operations:int, incoming_bytes:int, outgoing_bytes:int, topic_sessions:int):
             self.remote_node_id = remote_node_id
             
             """
@@ -3383,7 +3422,7 @@ class StreamEvent:
     @dataclass
     class SYNC_ENDED:
         
-        def __init__(self, remote_node_id:PublicKey, session_id:int, sent_operations:int, received_operations:int, sent_bytes:int, received_bytes:int, sent_bytes_topic_total:int, received_bytes_topic_total:int, error:typing.Optional[SyncError]):
+        def __init__(self, remote_node_id:VerifyingKey, session_id:int, sent_operations:int, received_operations:int, sent_bytes:int, received_bytes:int, sent_bytes_topic_total:int, received_bytes_topic_total:int, error:typing.Optional[SyncError]):
             self.remote_node_id = remote_node_id
             
             """
@@ -3471,6 +3510,54 @@ class StreamEvent:
                 return False
             return True
 
+    @dataclass
+    class IMPORT_STARTED:
+        
+        def __init__(self, session_id:int):
+            self.session_id = session_id
+            
+            
+            pass
+
+    
+            
+            
+    
+        def __str__(self):
+            return "StreamEvent.IMPORT_STARTED(session_id={})".format(self.session_id)
+        def __eq__(self, other):
+            if not isinstance(other, StreamEvent):
+                return NotImplemented
+            if not other.is_IMPORT_STARTED():
+                return False
+            if self.session_id != other.session_id:
+                return False
+            return True
+
+    @dataclass
+    class IMPORT_ENDED:
+        
+        def __init__(self, session_id:int):
+            self.session_id = session_id
+            
+            
+            pass
+
+    
+            
+            
+    
+        def __str__(self):
+            return "StreamEvent.IMPORT_ENDED(session_id={})".format(self.session_id)
+        def __eq__(self, other):
+            if not isinstance(other, StreamEvent):
+                return NotImplemented
+            if not other.is_IMPORT_ENDED():
+                return False
+            if self.session_id != other.session_id:
+                return False
+            return True
+
     
 
     # For each variant, we have `is_NAME` and `is_name` methods for easily checking
@@ -3483,6 +3570,14 @@ class StreamEvent:
         return isinstance(self, StreamEvent.SYNC_ENDED)
     def is_sync_ended(self) -> bool:
         return isinstance(self, StreamEvent.SYNC_ENDED)
+    def is_IMPORT_STARTED(self) -> bool:
+        return isinstance(self, StreamEvent.IMPORT_STARTED)
+    def is_import_started(self) -> bool:
+        return isinstance(self, StreamEvent.IMPORT_STARTED)
+    def is_IMPORT_ENDED(self) -> bool:
+        return isinstance(self, StreamEvent.IMPORT_ENDED)
+    def is_import_ended(self) -> bool:
+        return isinstance(self, StreamEvent.IMPORT_ENDED)
     
 
 # Now, a little trick - we make each nested variant class be a subclass of the main
@@ -3490,6 +3585,8 @@ class StreamEvent:
 # We might be able to do this a little more neatly with a metaclass, but this'll do.
 StreamEvent.SYNC_STARTED = type("StreamEvent.SYNC_STARTED", (StreamEvent.SYNC_STARTED, StreamEvent,), {})  # type: ignore
 StreamEvent.SYNC_ENDED = type("StreamEvent.SYNC_ENDED", (StreamEvent.SYNC_ENDED, StreamEvent,), {})  # type: ignore
+StreamEvent.IMPORT_STARTED = type("StreamEvent.IMPORT_STARTED", (StreamEvent.IMPORT_STARTED, StreamEvent,), {})  # type: ignore
+StreamEvent.IMPORT_ENDED = type("StreamEvent.IMPORT_ENDED", (StreamEvent.IMPORT_ENDED, StreamEvent,), {})  # type: ignore
 
 
 
@@ -3500,7 +3597,7 @@ class _UniffiFfiConverterTypeStreamEvent(_UniffiConverterRustBuffer):
         variant = buf.read_i32()
         if variant == 1:
             return StreamEvent.SYNC_STARTED(
-                _UniffiFfiConverterTypePublicKey.read(buf),
+                _UniffiFfiConverterTypeVerifyingKey.read(buf),
                 _UniffiFfiConverterUInt64.read(buf),
                 _UniffiFfiConverterUInt64.read(buf),
                 _UniffiFfiConverterUInt64.read(buf),
@@ -3510,7 +3607,7 @@ class _UniffiFfiConverterTypeStreamEvent(_UniffiConverterRustBuffer):
             )
         if variant == 2:
             return StreamEvent.SYNC_ENDED(
-                _UniffiFfiConverterTypePublicKey.read(buf),
+                _UniffiFfiConverterTypeVerifyingKey.read(buf),
                 _UniffiFfiConverterUInt64.read(buf),
                 _UniffiFfiConverterUInt64.read(buf),
                 _UniffiFfiConverterUInt64.read(buf),
@@ -3520,12 +3617,20 @@ class _UniffiFfiConverterTypeStreamEvent(_UniffiConverterRustBuffer):
                 _UniffiFfiConverterUInt64.read(buf),
                 _UniffiFfiConverterOptionalTypeSyncError.read(buf),
             )
+        if variant == 3:
+            return StreamEvent.IMPORT_STARTED(
+                _UniffiFfiConverterUInt64.read(buf),
+            )
+        if variant == 4:
+            return StreamEvent.IMPORT_ENDED(
+                _UniffiFfiConverterUInt64.read(buf),
+            )
         raise InternalError("Raw enum value doesn't match any cases")
 
     @staticmethod
     def check_lower(value):
         if value.is_SYNC_STARTED():
-            _UniffiFfiConverterTypePublicKey.check_lower(value.remote_node_id)
+            _UniffiFfiConverterTypeVerifyingKey.check_lower(value.remote_node_id)
             _UniffiFfiConverterUInt64.check_lower(value.session_id)
             _UniffiFfiConverterUInt64.check_lower(value.incoming_operations)
             _UniffiFfiConverterUInt64.check_lower(value.outgoing_operations)
@@ -3534,7 +3639,7 @@ class _UniffiFfiConverterTypeStreamEvent(_UniffiConverterRustBuffer):
             _UniffiFfiConverterUInt64.check_lower(value.topic_sessions)
             return
         if value.is_SYNC_ENDED():
-            _UniffiFfiConverterTypePublicKey.check_lower(value.remote_node_id)
+            _UniffiFfiConverterTypeVerifyingKey.check_lower(value.remote_node_id)
             _UniffiFfiConverterUInt64.check_lower(value.session_id)
             _UniffiFfiConverterUInt64.check_lower(value.sent_operations)
             _UniffiFfiConverterUInt64.check_lower(value.received_operations)
@@ -3544,13 +3649,19 @@ class _UniffiFfiConverterTypeStreamEvent(_UniffiConverterRustBuffer):
             _UniffiFfiConverterUInt64.check_lower(value.received_bytes_topic_total)
             _UniffiFfiConverterOptionalTypeSyncError.check_lower(value.error)
             return
+        if value.is_IMPORT_STARTED():
+            _UniffiFfiConverterUInt64.check_lower(value.session_id)
+            return
+        if value.is_IMPORT_ENDED():
+            _UniffiFfiConverterUInt64.check_lower(value.session_id)
+            return
         raise ValueError(value)
 
     @staticmethod
     def write(value, buf):
         if value.is_SYNC_STARTED():
             buf.write_i32(1)
-            _UniffiFfiConverterTypePublicKey.write(value.remote_node_id, buf)
+            _UniffiFfiConverterTypeVerifyingKey.write(value.remote_node_id, buf)
             _UniffiFfiConverterUInt64.write(value.session_id, buf)
             _UniffiFfiConverterUInt64.write(value.incoming_operations, buf)
             _UniffiFfiConverterUInt64.write(value.outgoing_operations, buf)
@@ -3559,7 +3670,7 @@ class _UniffiFfiConverterTypeStreamEvent(_UniffiConverterRustBuffer):
             _UniffiFfiConverterUInt64.write(value.topic_sessions, buf)
         if value.is_SYNC_ENDED():
             buf.write_i32(2)
-            _UniffiFfiConverterTypePublicKey.write(value.remote_node_id, buf)
+            _UniffiFfiConverterTypeVerifyingKey.write(value.remote_node_id, buf)
             _UniffiFfiConverterUInt64.write(value.session_id, buf)
             _UniffiFfiConverterUInt64.write(value.sent_operations, buf)
             _UniffiFfiConverterUInt64.write(value.received_operations, buf)
@@ -3568,6 +3679,12 @@ class _UniffiFfiConverterTypeStreamEvent(_UniffiConverterRustBuffer):
             _UniffiFfiConverterUInt64.write(value.sent_bytes_topic_total, buf)
             _UniffiFfiConverterUInt64.write(value.received_bytes_topic_total, buf)
             _UniffiFfiConverterOptionalTypeSyncError.write(value.error, buf)
+        if value.is_IMPORT_STARTED():
+            buf.write_i32(3)
+            _UniffiFfiConverterUInt64.write(value.session_id, buf)
+        if value.is_IMPORT_ENDED():
+            buf.write_i32(4)
+            _UniffiFfiConverterUInt64.write(value.session_id, buf)
 
 
 
@@ -3784,70 +3901,70 @@ class _UniffiFfiConverterTypeStreamFrom(_UniffiConverterRustBuffer):
 
 
 
-class TopicIdProtocol(typing.Protocol):
+class TopicProtocol(typing.Protocol):
     
     def to_bytes(self, ) -> bytes:
         raise NotImplementedError
     def to_hex(self, ) -> str:
         raise NotImplementedError
 
-class TopicId(TopicIdProtocol):
+class Topic(TopicProtocol):
     
     _handle: ctypes.c_uint64
     @classmethod
-    def from_bytes(cls, value: bytes) -> TopicId:
+    def from_bytes(cls, value: bytes) -> Topic:
         
         _UniffiFfiConverterBytes.check_lower(value)
         _uniffi_lowered_args = (
             _UniffiFfiConverterBytes.lower(value),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypeTopicId.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeTopic.lift
         _uniffi_error_converter = _UniffiFfiConverterTypeConversionError
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_topicid_from_bytes,
+            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_topic_from_bytes,
             *_uniffi_lowered_args,
         )
         return cls._uniffi_make_instance(_uniffi_ffi_result)
     @classmethod
-    def from_hash(cls, hash: Hash) -> TopicId:
+    def from_hash(cls, hash: Hash) -> Topic:
         
         _UniffiFfiConverterTypeHash.check_lower(hash)
         _uniffi_lowered_args = (
             _UniffiFfiConverterTypeHash.lower(hash),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypeTopicId.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeTopic.lift
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_topicid_from_hash,
+            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_topic_from_hash,
             *_uniffi_lowered_args,
         )
         return cls._uniffi_make_instance(_uniffi_ffi_result)
     @classmethod
-    def from_hex(cls, value: str) -> TopicId:
+    def from_hex(cls, value: str) -> Topic:
         
         _UniffiFfiConverterString.check_lower(value)
         _uniffi_lowered_args = (
             _UniffiFfiConverterString.lower(value),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypeTopicId.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeTopic.lift
         _uniffi_error_converter = _UniffiFfiConverterTypeConversionError
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_topicid_from_hex,
+            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_topic_from_hex,
             *_uniffi_lowered_args,
         )
         return cls._uniffi_make_instance(_uniffi_ffi_result)
     @classmethod
-    def random(cls, ) -> TopicId:
+    def random(cls, ) -> Topic:
         _uniffi_lowered_args = (
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypeTopicId.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeTopic.lift
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_topicid_random,
+            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_topic_random,
             *_uniffi_lowered_args,
         )
         return cls._uniffi_make_instance(_uniffi_ffi_result)
@@ -3859,10 +3976,10 @@ class TopicId(TopicIdProtocol):
         # In case of partial initialization of instances.
         handle = getattr(self, "_handle", None)
         if handle is not None:
-            _uniffi_rust_call(_UniffiLib.uniffi_p2panda_ffi_fn_free_topicid, handle)
+            _uniffi_rust_call(_UniffiLib.uniffi_p2panda_ffi_fn_free_topic, handle)
 
     def _uniffi_clone_handle(self):
-        return _uniffi_rust_call(_UniffiLib.uniffi_p2panda_ffi_fn_clone_topicid, self._handle)
+        return _uniffi_rust_call(_UniffiLib.uniffi_p2panda_ffi_fn_clone_topic, self._handle)
 
     # Used by alternative constructors or any methods which return this type.
     @classmethod
@@ -3880,7 +3997,7 @@ class TopicId(TopicIdProtocol):
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_method_topicid_to_bytes,
+            _UniffiLib.uniffi_p2panda_ffi_fn_method_topic_to_bytes,
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
@@ -3892,7 +4009,7 @@ class TopicId(TopicIdProtocol):
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_method_topicid_to_hex,
+            _UniffiLib.uniffi_p2panda_ffi_fn_method_topic_to_hex,
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
@@ -3901,41 +4018,41 @@ class TopicId(TopicIdProtocol):
 
 
 
-class _UniffiFfiConverterTypeTopicId:
+class _UniffiFfiConverterTypeTopic:
     @staticmethod
-    def lift(value: int) -> TopicId:
-        return TopicId._uniffi_make_instance(value)
+    def lift(value: int) -> Topic:
+        return Topic._uniffi_make_instance(value)
 
     @staticmethod
-    def check_lower(value: TopicId):
-        if not isinstance(value, TopicId):
-            raise TypeError("Expected TopicId instance, {} found".format(type(value).__name__))
+    def check_lower(value: Topic):
+        if not isinstance(value, Topic):
+            raise TypeError("Expected Topic instance, {} found".format(type(value).__name__))
 
     @staticmethod
-    def lower(value: TopicId) -> ctypes.c_uint64:
+    def lower(value: Topic) -> ctypes.c_uint64:
         return value._uniffi_clone_handle()
 
     @classmethod
-    def read(cls, buf: _UniffiRustBuffer) -> TopicId:
+    def read(cls, buf: _UniffiRustBuffer) -> Topic:
         ptr = buf.read_u64()
         if ptr == 0:
             raise InternalError("Raw handle value was null")
         return cls.lift(ptr)
 
     @classmethod
-    def write(cls, value: TopicId, buf: _UniffiRustBuffer):
+    def write(cls, value: Topic, buf: _UniffiRustBuffer):
         buf.write_u64(cls.lower(value))
 
 
 class EphemeralMessageProtocol(typing.Protocol):
     
-    def author(self, ) -> PublicKey:
+    def author(self, ) -> VerifyingKey:
         raise NotImplementedError
     def body(self, ) -> bytes:
         raise NotImplementedError
     def timestamp(self, ) -> int:
         raise NotImplementedError
-    def topic(self, ) -> TopicId:
+    def topic(self, ) -> Topic:
         raise NotImplementedError
 
 class EphemeralMessage(EphemeralMessageProtocol):
@@ -3962,11 +4079,11 @@ class EphemeralMessage(EphemeralMessageProtocol):
         inst = cls.__new__(cls)
         inst._handle = handle
         return inst
-    def author(self, ) -> PublicKey:
+    def author(self, ) -> VerifyingKey:
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypePublicKey.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeVerifyingKey.lift
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
@@ -3998,11 +4115,11 @@ class EphemeralMessage(EphemeralMessageProtocol):
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
-    def topic(self, ) -> TopicId:
+    def topic(self, ) -> Topic:
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypeTopicId.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeTopic.lift
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
@@ -4045,7 +4162,7 @@ class EphemeralStreamProtocol(typing.Protocol):
     
     async def publish(self, message: bytes) -> None:
         raise NotImplementedError
-    def topic(self, ) -> TopicId:
+    def topic(self, ) -> Topic:
         raise NotImplementedError
 
 class EphemeralStream(EphemeralStreamProtocol):
@@ -4089,11 +4206,11 @@ class EphemeralStream(EphemeralStreamProtocol):
             _uniffi_lift_return,
             _uniffi_error_converter,
         )
-    def topic(self, ) -> TopicId:
+    def topic(self, ) -> Topic:
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypeTopicId.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeTopic.lift
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
@@ -4455,13 +4572,13 @@ class HeaderProtocol(typing.Protocol):
         raise NotImplementedError
     def prune_flag(self, ) -> bool:
         raise NotImplementedError
-    def public_key(self, ) -> PublicKey:
-        raise NotImplementedError
     def seq_num(self, ) -> int:
         raise NotImplementedError
     def signature(self, ) -> Signature:
         raise NotImplementedError
     def timestamp(self, ) -> int:
+        raise NotImplementedError
+    def verifying_key(self, ) -> VerifyingKey:
         raise NotImplementedError
     def version(self, ) -> int:
         raise NotImplementedError
@@ -4562,18 +4679,6 @@ class Header(HeaderProtocol):
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
-    def public_key(self, ) -> PublicKey:
-        _uniffi_lowered_args = (
-            self._uniffi_clone_handle(),
-        )
-        _uniffi_lift_return = _UniffiFfiConverterTypePublicKey.lift
-        _uniffi_error_converter = None
-        _uniffi_ffi_result = _uniffi_rust_call_with_error(
-            _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_method_header_public_key,
-            *_uniffi_lowered_args,
-        )
-        return _uniffi_lift_return(_uniffi_ffi_result)
     def seq_num(self, ) -> int:
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
@@ -4607,6 +4712,18 @@ class Header(HeaderProtocol):
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
             _UniffiLib.uniffi_p2panda_ffi_fn_method_header_timestamp,
+            *_uniffi_lowered_args,
+        )
+        return _uniffi_lift_return(_uniffi_ffi_result)
+    def verifying_key(self, ) -> VerifyingKey:
+        _uniffi_lowered_args = (
+            self._uniffi_clone_handle(),
+        )
+        _uniffi_lift_return = _UniffiFfiConverterTypeVerifyingKey.lift
+        _uniffi_error_converter = None
+        _uniffi_ffi_result = _uniffi_rust_call_with_error(
+            _uniffi_error_converter,
+            _UniffiLib.uniffi_p2panda_ffi_fn_method_header_verifying_key,
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
@@ -5001,7 +5118,7 @@ class ProcessedOperationProtocol(typing.Protocol):
     
     async def ack(self, ) -> None:
         raise NotImplementedError
-    def author(self, ) -> PublicKey:
+    def author(self, ) -> VerifyingKey:
         raise NotImplementedError
     def id(self, ) -> Hash:
         raise NotImplementedError
@@ -5011,7 +5128,7 @@ class ProcessedOperationProtocol(typing.Protocol):
         raise NotImplementedError
     def timestamp(self, ) -> int:
         raise NotImplementedError
-    def topic(self, ) -> TopicId:
+    def topic(self, ) -> Topic:
         raise NotImplementedError
 
 class ProcessedOperation(ProcessedOperationProtocol):
@@ -5052,11 +5169,11 @@ class ProcessedOperation(ProcessedOperationProtocol):
             _uniffi_lift_return,
             _uniffi_error_converter,
         )
-    def author(self, ) -> PublicKey:
+    def author(self, ) -> VerifyingKey:
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypePublicKey.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeVerifyingKey.lift
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
@@ -5112,11 +5229,11 @@ class ProcessedOperation(ProcessedOperationProtocol):
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
-    def topic(self, ) -> TopicId:
+    def topic(self, ) -> Topic:
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypeTopicId.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeTopic.lift
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
@@ -5369,7 +5486,7 @@ class TopicStreamProtocol(typing.Protocol):
         raise NotImplementedError
     async def publish(self, message: bytes) -> Hash:
         raise NotImplementedError
-    def topic(self, ) -> TopicId:
+    def topic(self, ) -> Topic:
         raise NotImplementedError
 
 class TopicStream(TopicStreamProtocol):
@@ -5447,11 +5564,11 @@ class TopicStream(TopicStreamProtocol):
             _uniffi_lift_return,
             _uniffi_error_converter,
         )
-    def topic(self, ) -> TopicId:
+    def topic(self, ) -> Topic:
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypeTopicId.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeTopic.lift
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
@@ -5492,17 +5609,17 @@ class _UniffiFfiConverterTypeTopicStream:
 
 class NodeProtocol(typing.Protocol):
     
-    async def ephemeral_stream(self, topic: TopicId,on_message: EphemeralStreamCallback) -> EphemeralStream:
+    async def ephemeral_stream(self, topic: Topic,on_message: EphemeralStreamCallback) -> EphemeralStream:
         raise NotImplementedError
-    def id(self, ) -> PublicKey:
+    def id(self, ) -> VerifyingKey:
         raise NotImplementedError
-    async def insert_bootstrap(self, node_id: PublicKey,relay_url: RelayUrl) -> None:
+    async def insert_bootstrap(self, node_id: VerifyingKey,relay_url: RelayUrl) -> None:
         raise NotImplementedError
     def network_id(self, ) -> NetworkId:
         raise NotImplementedError
-    async def stream(self, topic: TopicId,callback: TopicStreamCallback) -> TopicStream:
+    async def stream(self, topic: Topic,callback: TopicStreamCallback) -> TopicStream:
         raise NotImplementedError
-    async def stream_from(self, topic: TopicId,_from: StreamFrom,callback: TopicStreamCallback) -> TopicStream:
+    async def stream_from(self, topic: Topic,_from: StreamFrom,callback: TopicStreamCallback) -> TopicStream:
         raise NotImplementedError
 
 class Node(NodeProtocol):
@@ -5543,14 +5660,14 @@ class Node(NodeProtocol):
         inst = cls.__new__(cls)
         inst._handle = handle
         return inst
-    async def ephemeral_stream(self, topic: TopicId,on_message: EphemeralStreamCallback) -> EphemeralStream:
+    async def ephemeral_stream(self, topic: Topic,on_message: EphemeralStreamCallback) -> EphemeralStream:
         
-        _UniffiFfiConverterTypeTopicId.check_lower(topic)
+        _UniffiFfiConverterTypeTopic.check_lower(topic)
 
         _UniffiFfiConverterTypeEphemeralStreamCallback.check_lower(on_message)
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
-            _UniffiFfiConverterTypeTopicId.lower(topic),
+            _UniffiFfiConverterTypeTopic.lower(topic),
             _UniffiFfiConverterTypeEphemeralStreamCallback.lower(on_message),
         )
         _uniffi_lift_return = _UniffiFfiConverterTypeEphemeralStream.lift
@@ -5563,11 +5680,11 @@ class Node(NodeProtocol):
             _uniffi_lift_return,
             _uniffi_error_converter,
         )
-    def id(self, ) -> PublicKey:
+    def id(self, ) -> VerifyingKey:
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypePublicKey.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeVerifyingKey.lift
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
@@ -5575,14 +5692,14 @@ class Node(NodeProtocol):
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
-    async def insert_bootstrap(self, node_id: PublicKey,relay_url: RelayUrl) -> None:
+    async def insert_bootstrap(self, node_id: VerifyingKey,relay_url: RelayUrl) -> None:
         
-        _UniffiFfiConverterTypePublicKey.check_lower(node_id)
+        _UniffiFfiConverterTypeVerifyingKey.check_lower(node_id)
 
         _UniffiFfiConverterTypeRelayUrl.check_lower(relay_url)
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
-            _UniffiFfiConverterTypePublicKey.lower(node_id),
+            _UniffiFfiConverterTypeVerifyingKey.lower(node_id),
             _UniffiFfiConverterTypeRelayUrl.lower(relay_url),
         )
         _uniffi_lift_return = lambda val: None
@@ -5607,14 +5724,14 @@ class Node(NodeProtocol):
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
-    async def stream(self, topic: TopicId,callback: TopicStreamCallback) -> TopicStream:
+    async def stream(self, topic: Topic,callback: TopicStreamCallback) -> TopicStream:
         
-        _UniffiFfiConverterTypeTopicId.check_lower(topic)
+        _UniffiFfiConverterTypeTopic.check_lower(topic)
 
         _UniffiFfiConverterTypeTopicStreamCallback.check_lower(callback)
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
-            _UniffiFfiConverterTypeTopicId.lower(topic),
+            _UniffiFfiConverterTypeTopic.lower(topic),
             _UniffiFfiConverterTypeTopicStreamCallback.lower(callback),
         )
         _uniffi_lift_return = _UniffiFfiConverterTypeTopicStream.lift
@@ -5627,16 +5744,16 @@ class Node(NodeProtocol):
             _uniffi_lift_return,
             _uniffi_error_converter,
         )
-    async def stream_from(self, topic: TopicId,_from: StreamFrom,callback: TopicStreamCallback) -> TopicStream:
+    async def stream_from(self, topic: Topic,_from: StreamFrom,callback: TopicStreamCallback) -> TopicStream:
         
-        _UniffiFfiConverterTypeTopicId.check_lower(topic)
+        _UniffiFfiConverterTypeTopic.check_lower(topic)
 
         _UniffiFfiConverterTypeStreamFrom.check_lower(_from)
 
         _UniffiFfiConverterTypeTopicStreamCallback.check_lower(callback)
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
-            _UniffiFfiConverterTypeTopicId.lower(topic),
+            _UniffiFfiConverterTypeTopic.lower(topic),
             _UniffiFfiConverterTypeStreamFrom.lower(_from),
             _UniffiFfiConverterTypeTopicStreamCallback.lower(callback),
         )
@@ -5694,59 +5811,59 @@ class _UniffiFfiConverterUInt16(_UniffiConverterPrimitiveInt):
         buf.write_u16(value)
 
 
-class PrivateKeyProtocol(typing.Protocol):
+class SigningKeyProtocol(typing.Protocol):
     
-    def public_key(self, ) -> PublicKey:
-        raise NotImplementedError
     def sign(self, bytes: bytes) -> Signature:
         raise NotImplementedError
     def to_bytes(self, ) -> bytes:
         raise NotImplementedError
     def to_hex(self, ) -> str:
         raise NotImplementedError
+    def verifying_key(self, ) -> VerifyingKey:
+        raise NotImplementedError
 
-class PrivateKey(PrivateKeyProtocol):
+class SigningKey(SigningKeyProtocol):
     
     _handle: ctypes.c_uint64
     @classmethod
-    def from_bytes(cls, value: bytes) -> PrivateKey:
+    def from_bytes(cls, value: bytes) -> SigningKey:
         
         _UniffiFfiConverterBytes.check_lower(value)
         _uniffi_lowered_args = (
             _UniffiFfiConverterBytes.lower(value),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypePrivateKey.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeSigningKey.lift
         _uniffi_error_converter = _UniffiFfiConverterTypeConversionError
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_privatekey_from_bytes,
+            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_signingkey_from_bytes,
             *_uniffi_lowered_args,
         )
         return cls._uniffi_make_instance(_uniffi_ffi_result)
     @classmethod
-    def from_hex(cls, value: str) -> PrivateKey:
+    def from_hex(cls, value: str) -> SigningKey:
         
         _UniffiFfiConverterString.check_lower(value)
         _uniffi_lowered_args = (
             _UniffiFfiConverterString.lower(value),
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypePrivateKey.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeSigningKey.lift
         _uniffi_error_converter = _UniffiFfiConverterTypeConversionError
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_privatekey_from_hex,
+            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_signingkey_from_hex,
             *_uniffi_lowered_args,
         )
         return cls._uniffi_make_instance(_uniffi_ffi_result)
     @classmethod
-    def generate(cls, ) -> PrivateKey:
+    def generate(cls, ) -> SigningKey:
         _uniffi_lowered_args = (
         )
-        _uniffi_lift_return = _UniffiFfiConverterTypePrivateKey.lift
+        _uniffi_lift_return = _UniffiFfiConverterTypeSigningKey.lift
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_privatekey_generate,
+            _UniffiLib.uniffi_p2panda_ffi_fn_constructor_signingkey_generate,
             *_uniffi_lowered_args,
         )
         return cls._uniffi_make_instance(_uniffi_ffi_result)
@@ -5758,10 +5875,10 @@ class PrivateKey(PrivateKeyProtocol):
         # In case of partial initialization of instances.
         handle = getattr(self, "_handle", None)
         if handle is not None:
-            _uniffi_rust_call(_UniffiLib.uniffi_p2panda_ffi_fn_free_privatekey, handle)
+            _uniffi_rust_call(_UniffiLib.uniffi_p2panda_ffi_fn_free_signingkey, handle)
 
     def _uniffi_clone_handle(self):
-        return _uniffi_rust_call(_UniffiLib.uniffi_p2panda_ffi_fn_clone_privatekey, self._handle)
+        return _uniffi_rust_call(_UniffiLib.uniffi_p2panda_ffi_fn_clone_signingkey, self._handle)
 
     # Used by alternative constructors or any methods which return this type.
     @classmethod
@@ -5771,18 +5888,6 @@ class PrivateKey(PrivateKeyProtocol):
         inst = cls.__new__(cls)
         inst._handle = handle
         return inst
-    def public_key(self, ) -> PublicKey:
-        _uniffi_lowered_args = (
-            self._uniffi_clone_handle(),
-        )
-        _uniffi_lift_return = _UniffiFfiConverterTypePublicKey.lift
-        _uniffi_error_converter = None
-        _uniffi_ffi_result = _uniffi_rust_call_with_error(
-            _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_method_privatekey_public_key,
-            *_uniffi_lowered_args,
-        )
-        return _uniffi_lift_return(_uniffi_ffi_result)
     def sign(self, bytes: bytes) -> Signature:
         
         _UniffiFfiConverterBytes.check_lower(bytes)
@@ -5794,7 +5899,7 @@ class PrivateKey(PrivateKeyProtocol):
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_method_privatekey_sign,
+            _UniffiLib.uniffi_p2panda_ffi_fn_method_signingkey_sign,
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
@@ -5806,7 +5911,7 @@ class PrivateKey(PrivateKeyProtocol):
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_method_privatekey_to_bytes,
+            _UniffiLib.uniffi_p2panda_ffi_fn_method_signingkey_to_bytes,
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
@@ -5818,7 +5923,19 @@ class PrivateKey(PrivateKeyProtocol):
         _uniffi_error_converter = None
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_method_privatekey_to_hex,
+            _UniffiLib.uniffi_p2panda_ffi_fn_method_signingkey_to_hex,
+            *_uniffi_lowered_args,
+        )
+        return _uniffi_lift_return(_uniffi_ffi_result)
+    def verifying_key(self, ) -> VerifyingKey:
+        _uniffi_lowered_args = (
+            self._uniffi_clone_handle(),
+        )
+        _uniffi_lift_return = _UniffiFfiConverterTypeVerifyingKey.lift
+        _uniffi_error_converter = None
+        _uniffi_ffi_result = _uniffi_rust_call_with_error(
+            _uniffi_error_converter,
+            _UniffiLib.uniffi_p2panda_ffi_fn_method_signingkey_verifying_key,
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
@@ -5827,29 +5944,29 @@ class PrivateKey(PrivateKeyProtocol):
 
 
 
-class _UniffiFfiConverterTypePrivateKey:
+class _UniffiFfiConverterTypeSigningKey:
     @staticmethod
-    def lift(value: int) -> PrivateKey:
-        return PrivateKey._uniffi_make_instance(value)
+    def lift(value: int) -> SigningKey:
+        return SigningKey._uniffi_make_instance(value)
 
     @staticmethod
-    def check_lower(value: PrivateKey):
-        if not isinstance(value, PrivateKey):
-            raise TypeError("Expected PrivateKey instance, {} found".format(type(value).__name__))
+    def check_lower(value: SigningKey):
+        if not isinstance(value, SigningKey):
+            raise TypeError("Expected SigningKey instance, {} found".format(type(value).__name__))
 
     @staticmethod
-    def lower(value: PrivateKey) -> ctypes.c_uint64:
+    def lower(value: SigningKey) -> ctypes.c_uint64:
         return value._uniffi_clone_handle()
 
     @classmethod
-    def read(cls, buf: _UniffiRustBuffer) -> PrivateKey:
+    def read(cls, buf: _UniffiRustBuffer) -> SigningKey:
         ptr = buf.read_u64()
         if ptr == 0:
             raise InternalError("Raw handle value was null")
         return cls.lift(ptr)
 
     @classmethod
-    def write(cls, value: PrivateKey, buf: _UniffiRustBuffer):
+    def write(cls, value: SigningKey, buf: _UniffiRustBuffer):
         buf.write_u64(cls.lower(value))
 
 
@@ -5865,7 +5982,7 @@ class NodeBuilderProtocol(typing.Protocol):
         raise NotImplementedError
     def bind_port_v6(self, port: int) -> None:
         raise NotImplementedError
-    def bootstrap(self, node_id: PublicKey,relay_url: RelayUrl) -> None:
+    def bootstrap(self, node_id: VerifyingKey,relay_url: RelayUrl) -> None:
         raise NotImplementedError
     def database_url(self, url: str) -> None:
         raise NotImplementedError
@@ -5873,9 +5990,9 @@ class NodeBuilderProtocol(typing.Protocol):
         raise NotImplementedError
     def network_id(self, network_id: NetworkId) -> None:
         raise NotImplementedError
-    def private_key(self, private_key: PrivateKey) -> None:
-        raise NotImplementedError
     def relay_url(self, url: RelayUrl) -> None:
+        raise NotImplementedError
+    def signing_key(self, signing_key: SigningKey) -> None:
         raise NotImplementedError
     async def spawn(self, ) -> Node:
         raise NotImplementedError
@@ -5987,14 +6104,14 @@ class NodeBuilder(NodeBuilderProtocol):
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
-    def bootstrap(self, node_id: PublicKey,relay_url: RelayUrl) -> None:
+    def bootstrap(self, node_id: VerifyingKey,relay_url: RelayUrl) -> None:
         
-        _UniffiFfiConverterTypePublicKey.check_lower(node_id)
+        _UniffiFfiConverterTypeVerifyingKey.check_lower(node_id)
 
         _UniffiFfiConverterTypeRelayUrl.check_lower(relay_url)
         _uniffi_lowered_args = (
             self._uniffi_clone_handle(),
-            _UniffiFfiConverterTypePublicKey.lower(node_id),
+            _UniffiFfiConverterTypeVerifyingKey.lower(node_id),
             _UniffiFfiConverterTypeRelayUrl.lower(relay_url),
         )
         _uniffi_lift_return = lambda val: None
@@ -6050,21 +6167,6 @@ class NodeBuilder(NodeBuilderProtocol):
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
-    def private_key(self, private_key: PrivateKey) -> None:
-        
-        _UniffiFfiConverterTypePrivateKey.check_lower(private_key)
-        _uniffi_lowered_args = (
-            self._uniffi_clone_handle(),
-            _UniffiFfiConverterTypePrivateKey.lower(private_key),
-        )
-        _uniffi_lift_return = lambda val: None
-        _uniffi_error_converter = _UniffiFfiConverterTypeNodeBuilderError
-        _uniffi_ffi_result = _uniffi_rust_call_with_error(
-            _uniffi_error_converter,
-            _UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_private_key,
-            *_uniffi_lowered_args,
-        )
-        return _uniffi_lift_return(_uniffi_ffi_result)
     def relay_url(self, url: RelayUrl) -> None:
         
         _UniffiFfiConverterTypeRelayUrl.check_lower(url)
@@ -6077,6 +6179,21 @@ class NodeBuilder(NodeBuilderProtocol):
         _uniffi_ffi_result = _uniffi_rust_call_with_error(
             _uniffi_error_converter,
             _UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url,
+            *_uniffi_lowered_args,
+        )
+        return _uniffi_lift_return(_uniffi_ffi_result)
+    def signing_key(self, signing_key: SigningKey) -> None:
+        
+        _UniffiFfiConverterTypeSigningKey.check_lower(signing_key)
+        _uniffi_lowered_args = (
+            self._uniffi_clone_handle(),
+            _UniffiFfiConverterTypeSigningKey.lower(signing_key),
+        )
+        _uniffi_lift_return = lambda val: None
+        _uniffi_error_converter = _UniffiFfiConverterTypeNodeBuilderError
+        _uniffi_ffi_result = _uniffi_rust_call_with_error(
+            _uniffi_error_converter,
+            _UniffiLib.uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key,
             *_uniffi_lowered_args,
         )
         return _uniffi_lift_return(_uniffi_ffi_result)
@@ -6159,12 +6276,12 @@ __all__ = [
     "StreamFrom",
     "Signature",
     "SignatureProtocol",
-    "PublicKey",
-    "PublicKeyProtocol",
+    "VerifyingKey",
+    "VerifyingKeyProtocol",
     "Cursor",
     "CursorProtocol",
-    "TopicId",
-    "TopicIdProtocol",
+    "Topic",
+    "TopicProtocol",
     "EphemeralMessage",
     "EphemeralMessageProtocol",
     "EphemeralStream",
@@ -6189,8 +6306,8 @@ __all__ = [
     "TopicStreamProtocol",
     "Node",
     "NodeProtocol",
-    "PrivateKey",
-    "PrivateKeyProtocol",
+    "SigningKey",
+    "SigningKeyProtocol",
     "NodeBuilder",
     "NodeBuilderProtocol",
 ]
