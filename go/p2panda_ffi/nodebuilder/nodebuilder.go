@@ -29,9 +29,9 @@ func New(options ...Option) (*p2panda.Node, error) {
 	return node, err
 }
 
-func WithPrivateKey(privateKey *p2panda.PrivateKey) Option {
+func WithSigningKey(signKey *p2panda.SigningKey) Option {
 	return func(n *p2panda.NodeBuilder) error {
-		if err := n.PrivateKey(privateKey); err != nil {
+		if err := n.SigningKey(signKey); err != nil {
 			return err
 		}
 		return nil
@@ -77,9 +77,9 @@ func WithRelayUrl(url string) Option {
 	}
 }
 
-func WithBootstrap(publicKey, relayUrl string) Option {
+func WithBootstrap(verifyKey, relayUrl string) Option {
 	return func(n *p2panda.NodeBuilder) error {
-		pk, err := p2panda.PublicKeyFromHex(publicKey)
+		vk, err := p2panda.VerifyingKeyFromHex(verifyKey)
 		if err != nil {
 			return err
 		}
@@ -89,7 +89,7 @@ func WithBootstrap(publicKey, relayUrl string) Option {
 			return err
 		}
 
-		if err := n.Bootstrap(pk, r); err != nil {
+		if err := n.Bootstrap(vk, r); err != nil {
 			return err
 		}
 

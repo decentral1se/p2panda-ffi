@@ -10,7 +10,6 @@ import (
 
 	p2panda "github.com/p2panda/p2panda-ffi/go/p2panda_ffi"
 	"github.com/p2panda/p2panda-ffi/go/p2panda_ffi/nodebuilder"
-	"github.com/p2panda/p2panda-ffi/go/p2panda_ffi/topic"
 )
 
 type ephemeralStreamHandler struct{}
@@ -73,13 +72,13 @@ func main() {
 		awaitInterrupt()
 	}
 
-	topicId, err := topic.NewId(*topicFlag)
+	topic, err := p2panda.TopicFromHex(*topicFlag)
 	if err != nil {
 		panic(err)
 	}
-	defer topicId.Destroy()
+	defer topic.Destroy()
 
-	ephemeralStream, err := node.EphemeralStream(topicId, ephemeralStreamHandler{})
+	ephemeralStream, err := node.EphemeralStream(topic, ephemeralStreamHandler{})
 	if err != nil {
 		panic(err)
 	}

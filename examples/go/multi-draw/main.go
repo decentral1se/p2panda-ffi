@@ -12,7 +12,6 @@ import (
 	"github.com/gdamore/tcell/v3/color"
 	p2panda "github.com/p2panda/p2panda-ffi/go/p2panda_ffi"
 	"github.com/p2panda/p2panda-ffi/go/p2panda_ffi/nodebuilder"
-	"github.com/p2panda/p2panda-ffi/go/p2panda_ffi/topic"
 )
 
 var (
@@ -112,17 +111,17 @@ func main() {
 	}
 	defer node.Destroy()
 
-	topicId, err := topic.NewId(*topicFlag)
+	topic, err := p2panda.TopicFromHex(*topicFlag)
 	if err != nil {
 		panic(err)
 	}
-	defer topicId.Destroy()
+	defer topic.Destroy()
 
 	handler := ephemeralStreamHandler{
 		peers:  make(map[string]peer),
 		screen: screen,
 	}
-	ephemeralStream, err := node.EphemeralStream(topicId, handler)
+	ephemeralStream, err := node.EphemeralStream(topic, handler)
 	if err != nil {
 		panic(err)
 	}
