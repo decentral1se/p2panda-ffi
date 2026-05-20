@@ -36,15 +36,15 @@ func TestNodeEphemeralStream(t *testing.T) {
 	}
 	defer node2.Destroy()
 
-	topicId := p2panda.TopicIdRandom()
-	defer topicId.Destroy()
+	topic := p2panda.TopicRandom()
+	defer topic.Destroy()
 
-	n1Stream, err := node1.EphemeralStream(topicId, ephemeralStreamHandler{})
+	n1Stream, err := node1.EphemeralStream(topic, ephemeralStreamHandler{})
 	defer n1Stream.Destroy()
 
 	done := make(chan bool)
 	n2Handler := ephemeralStreamHandler{Count: new(int), Done: done}
-	n2Stream, err := node2.EphemeralStream(topicId, n2Handler)
+	n2Stream, err := node2.EphemeralStream(topic, n2Handler)
 	defer n2Stream.Destroy()
 
 	for range 3 {

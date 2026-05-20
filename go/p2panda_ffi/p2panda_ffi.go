@@ -423,7 +423,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_nodebuilder_bootstrap()
 		})
-		if checksum != 42251 {
+		if checksum != 4171 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_nodebuilder_bootstrap: UniFFI API checksum mismatch")
 		}
@@ -457,20 +457,20 @@ func uniffiCheckChecksums() {
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key()
-		})
-		if checksum != 55001 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_nodebuilder_private_key: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url()
 		})
 		if checksum != 60407 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_nodebuilder_relay_url: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key()
+		})
+		if checksum != 10426 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_nodebuilder_signing_key: UniFFI API checksum mismatch")
 		}
 	}
 	{
@@ -565,15 +565,6 @@ func uniffiCheckChecksums() {
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_method_header_public_key()
-		})
-		if checksum != 13290 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_header_public_key: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_header_seq_num()
 		})
 		if checksum != 41915 {
@@ -597,6 +588,15 @@ func uniffiCheckChecksums() {
 		if checksum != 468 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_header_timestamp: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_method_header_verifying_key()
+		})
+		if checksum != 49825 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_header_verifying_key: UniFFI API checksum mismatch")
 		}
 	}
 	{
@@ -628,69 +628,6 @@ func uniffiCheckChecksums() {
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_method_privatekey_public_key()
-		})
-		if checksum != 36762 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_privatekey_public_key: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_method_privatekey_sign()
-		})
-		if checksum != 16842 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_privatekey_sign: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes()
-		})
-		if checksum != 28452 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_privatekey_to_bytes: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_method_privatekey_to_hex()
-		})
-		if checksum != 34482 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_privatekey_to_hex: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_method_publickey_to_bytes()
-		})
-		if checksum != 23757 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_publickey_to_bytes: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_method_publickey_to_hex()
-		})
-		if checksum != 31307 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_publickey_to_hex: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_method_publickey_verify()
-		})
-		if checksum != 27867 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_publickey_verify: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_relayurl_to_str()
 		})
 		if checksum != 47854 {
@@ -718,27 +655,90 @@ func uniffiCheckChecksums() {
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_method_topicid_to_bytes()
+			return C.uniffi_p2panda_ffi_checksum_method_signingkey_sign()
 		})
-		if checksum != 63194 {
+		if checksum != 24276 {
 			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_topicid_to_bytes: UniFFI API checksum mismatch")
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_signingkey_sign: UniFFI API checksum mismatch")
 		}
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_method_topicid_to_hex()
+			return C.uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes()
 		})
-		if checksum != 29111 {
+		if checksum != 8598 {
 			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_topicid_to_hex: UniFFI API checksum mismatch")
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_signingkey_to_bytes: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_method_signingkey_to_hex()
+		})
+		if checksum != 39900 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_signingkey_to_hex: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key()
+		})
+		if checksum != 25493 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_signingkey_verifying_key: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_method_topic_to_bytes()
+		})
+		if checksum != 64925 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_topic_to_bytes: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_method_topic_to_hex()
+		})
+		if checksum != 10156 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_topic_to_hex: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes()
+		})
+		if checksum != 19802 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_verifyingkey_to_bytes: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex()
+		})
+		if checksum != 56335 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_verifyingkey_to_hex: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_method_verifyingkey_verify()
+		})
+		if checksum != 13296 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_verifyingkey_verify: UniFFI API checksum mismatch")
 		}
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_ephemeralmessage_author()
 		})
-		if checksum != 52355 {
+		if checksum != 14882 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_ephemeralmessage_author: UniFFI API checksum mismatch")
 		}
@@ -765,7 +765,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_ephemeralmessage_topic()
 		})
-		if checksum != 61410 {
+		if checksum != 38439 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_ephemeralmessage_topic: UniFFI API checksum mismatch")
 		}
@@ -783,7 +783,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_ephemeralstream_topic()
 		})
-		if checksum != 11085 {
+		if checksum != 59080 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_ephemeralstream_topic: UniFFI API checksum mismatch")
 		}
@@ -801,7 +801,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_node_ephemeral_stream()
 		})
-		if checksum != 19494 {
+		if checksum != 5042 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_node_ephemeral_stream: UniFFI API checksum mismatch")
 		}
@@ -810,7 +810,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_node_id()
 		})
-		if checksum != 45319 {
+		if checksum != 37166 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_node_id: UniFFI API checksum mismatch")
 		}
@@ -819,7 +819,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_node_insert_bootstrap()
 		})
-		if checksum != 19201 {
+		if checksum != 52055 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_node_insert_bootstrap: UniFFI API checksum mismatch")
 		}
@@ -837,7 +837,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_node_stream()
 		})
-		if checksum != 52148 {
+		if checksum != 64795 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_node_stream: UniFFI API checksum mismatch")
 		}
@@ -846,7 +846,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_node_stream_from()
 		})
-		if checksum != 17067 {
+		if checksum != 43613 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_node_stream_from: UniFFI API checksum mismatch")
 		}
@@ -927,7 +927,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_processedoperation_author()
 		})
-		if checksum != 17427 {
+		if checksum != 20224 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_processedoperation_author: UniFFI API checksum mismatch")
 		}
@@ -972,7 +972,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_processedoperation_topic()
 		})
-		if checksum != 8589 {
+		if checksum != 44447 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_processedoperation_topic: UniFFI API checksum mismatch")
 		}
@@ -1008,7 +1008,7 @@ func uniffiCheckChecksums() {
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_method_topicstream_topic()
 		})
-		if checksum != 54824 {
+		if checksum != 26950 {
 			// If this happens try cleaning and rebuilding your project
 			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_method_topicstream_topic: UniFFI API checksum mismatch")
 		}
@@ -1087,51 +1087,6 @@ func uniffiCheckChecksums() {
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes()
-		})
-		if checksum != 9528 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_privatekey_from_bytes: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex()
-		})
-		if checksum != 18057 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_privatekey_from_hex: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_constructor_privatekey_generate()
-		})
-		if checksum != 31662 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_privatekey_generate: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes()
-		})
-		if checksum != 34513 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_publickey_from_bytes: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex()
-		})
-		if checksum != 51719 {
-			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_publickey_from_hex: UniFFI API checksum mismatch")
-		}
-	}
-	{
-		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
 			return C.uniffi_p2panda_ffi_checksum_constructor_relayurl_from_str()
 		})
 		if checksum != 25654 {
@@ -1159,38 +1114,83 @@ func uniffiCheckChecksums() {
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes()
+			return C.uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes()
 		})
-		if checksum != 16286 {
+		if checksum != 6451 {
 			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_topicid_from_bytes: UniFFI API checksum mismatch")
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_signingkey_from_bytes: UniFFI API checksum mismatch")
 		}
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash()
+			return C.uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex()
 		})
-		if checksum != 34777 {
+		if checksum != 43956 {
 			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_topicid_from_hash: UniFFI API checksum mismatch")
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_signingkey_from_hex: UniFFI API checksum mismatch")
 		}
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex()
+			return C.uniffi_p2panda_ffi_checksum_constructor_signingkey_generate()
 		})
-		if checksum != 27303 {
+		if checksum != 39498 {
 			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_topicid_from_hex: UniFFI API checksum mismatch")
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_signingkey_generate: UniFFI API checksum mismatch")
 		}
 	}
 	{
 		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
-			return C.uniffi_p2panda_ffi_checksum_constructor_topicid_random()
+			return C.uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes()
 		})
-		if checksum != 8969 {
+		if checksum != 12780 {
 			// If this happens try cleaning and rebuilding your project
-			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_topicid_random: UniFFI API checksum mismatch")
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_topic_from_bytes: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_constructor_topic_from_hash()
+		})
+		if checksum != 7948 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_topic_from_hash: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_constructor_topic_from_hex()
+		})
+		if checksum != 15447 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_topic_from_hex: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_constructor_topic_random()
+		})
+		if checksum != 23664 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_topic_random: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes()
+		})
+		if checksum != 57326 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_bytes: UniFFI API checksum mismatch")
+		}
+	}
+	{
+		checksum := rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint16_t {
+			return C.uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex()
+		})
+		if checksum != 22727 {
+			// If this happens try cleaning and rebuilding your project
+			panic("p2panda_ffi: uniffi_p2panda_ffi_checksum_constructor_verifyingkey_from_hex: UniFFI API checksum mismatch")
 		}
 	}
 	{
@@ -1525,19 +1525,19 @@ func (_ FfiDestroyerCursor) Destroy(value *Cursor) {
 }
 
 type EphemeralMessageInterface interface {
-	Author() *PublicKey
+	Author() *VerifyingKey
 	Body() []byte
 	Timestamp() uint64
-	Topic() *TopicId
+	Topic() *Topic
 }
 type EphemeralMessage struct {
 	ffiObject FfiObject
 }
 
-func (_self *EphemeralMessage) Author() *PublicKey {
+func (_self *EphemeralMessage) Author() *VerifyingKey {
 	_pointer := _self.ffiObject.incrementPointer("*EphemeralMessage")
 	defer _self.ffiObject.decrementPointer()
-	return FfiConverterPublicKeyINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+	return FfiConverterVerifyingKeyINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
 		return C.uniffi_p2panda_ffi_fn_method_ephemeralmessage_author(
 			_pointer, _uniffiStatus)
 	}))
@@ -1563,10 +1563,10 @@ func (_self *EphemeralMessage) Timestamp() uint64 {
 	}))
 }
 
-func (_self *EphemeralMessage) Topic() *TopicId {
+func (_self *EphemeralMessage) Topic() *Topic {
 	_pointer := _self.ffiObject.incrementPointer("*EphemeralMessage")
 	defer _self.ffiObject.decrementPointer()
-	return FfiConverterTopicIdINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+	return FfiConverterTopicINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
 		return C.uniffi_p2panda_ffi_fn_method_ephemeralmessage_topic(
 			_pointer, _uniffiStatus)
 	}))
@@ -1629,7 +1629,7 @@ func (_ FfiDestroyerEphemeralMessage) Destroy(value *EphemeralMessage) {
 
 type EphemeralStreamInterface interface {
 	Publish(message []byte) error
-	Topic() *TopicId
+	Topic() *Topic
 }
 type EphemeralStream struct {
 	ffiObject FfiObject
@@ -1666,10 +1666,10 @@ func (_self *EphemeralStream) Publish(message []byte) error {
 	return err
 }
 
-func (_self *EphemeralStream) Topic() *TopicId {
+func (_self *EphemeralStream) Topic() *Topic {
 	_pointer := _self.ffiObject.incrementPointer("*EphemeralStream")
 	defer _self.ffiObject.decrementPointer()
-	return FfiConverterTopicIdINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+	return FfiConverterTopicINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
 		return C.uniffi_p2panda_ffi_fn_method_ephemeralstream_topic(
 			_pointer, _uniffiStatus)
 	}))
@@ -2136,10 +2136,10 @@ type HeaderInterface interface {
 	PayloadHash() *Hash
 	PayloadSize() uint64
 	PruneFlag() bool
-	PublicKey() *PublicKey
 	SeqNum() uint64
 	Signature() *Signature
 	Timestamp() uint64
+	VerifyingKey() *VerifyingKey
 	Version() uint64
 }
 type Header struct {
@@ -2202,15 +2202,6 @@ func (_self *Header) PruneFlag() bool {
 	}))
 }
 
-func (_self *Header) PublicKey() *PublicKey {
-	_pointer := _self.ffiObject.incrementPointer("*Header")
-	defer _self.ffiObject.decrementPointer()
-	return FfiConverterPublicKeyINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
-		return C.uniffi_p2panda_ffi_fn_method_header_public_key(
-			_pointer, _uniffiStatus)
-	}))
-}
-
 func (_self *Header) SeqNum() uint64 {
 	_pointer := _self.ffiObject.incrementPointer("*Header")
 	defer _self.ffiObject.decrementPointer()
@@ -2234,6 +2225,15 @@ func (_self *Header) Timestamp() uint64 {
 	defer _self.ffiObject.decrementPointer()
 	return FfiConverterUint64INSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
 		return C.uniffi_p2panda_ffi_fn_method_header_timestamp(
+			_pointer, _uniffiStatus)
+	}))
+}
+
+func (_self *Header) VerifyingKey() *VerifyingKey {
+	_pointer := _self.ffiObject.incrementPointer("*Header")
+	defer _self.ffiObject.decrementPointer()
+	return FfiConverterVerifyingKeyINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+		return C.uniffi_p2panda_ffi_fn_method_header_verifying_key(
 			_pointer, _uniffiStatus)
 	}))
 }
@@ -2424,12 +2424,12 @@ func (_ FfiDestroyerNetworkId) Destroy(value *NetworkId) {
 }
 
 type NodeInterface interface {
-	EphemeralStream(topic *TopicId, onMessage EphemeralStreamCallback) (*EphemeralStream, error)
-	Id() *PublicKey
-	InsertBootstrap(nodeId *PublicKey, relayUrl *RelayUrl) error
+	EphemeralStream(topic *Topic, onMessage EphemeralStreamCallback) (*EphemeralStream, error)
+	Id() *VerifyingKey
+	InsertBootstrap(nodeId *VerifyingKey, relayUrl *RelayUrl) error
 	NetworkId() *NetworkId
-	Stream(topic *TopicId, callback TopicStreamCallback) (*TopicStream, error)
-	StreamFrom(topic *TopicId, from StreamFrom, callback TopicStreamCallback) (*TopicStream, error)
+	Stream(topic *Topic, callback TopicStreamCallback) (*TopicStream, error)
+	StreamFrom(topic *Topic, from StreamFrom, callback TopicStreamCallback) (*TopicStream, error)
 }
 type Node struct {
 	ffiObject FfiObject
@@ -2465,7 +2465,7 @@ func NodeSpawn() (*Node, error) {
 	return res, err
 }
 
-func (_self *Node) EphemeralStream(topic *TopicId, onMessage EphemeralStreamCallback) (*EphemeralStream, error) {
+func (_self *Node) EphemeralStream(topic *Topic, onMessage EphemeralStreamCallback) (*EphemeralStream, error) {
 	_pointer := _self.ffiObject.incrementPointer("*Node")
 	defer _self.ffiObject.decrementPointer()
 	res, err := uniffiRustCallAsync[*CreateStreamError](
@@ -2480,7 +2480,7 @@ func (_self *Node) EphemeralStream(topic *TopicId, onMessage EphemeralStreamCall
 			return FfiConverterEphemeralStreamINSTANCE.Lift(ffi)
 		},
 		C.uniffi_p2panda_ffi_fn_method_node_ephemeral_stream(
-			_pointer, FfiConverterTopicIdINSTANCE.Lower(topic), FfiConverterEphemeralStreamCallbackINSTANCE.Lower(onMessage)),
+			_pointer, FfiConverterTopicINSTANCE.Lower(topic), FfiConverterEphemeralStreamCallbackINSTANCE.Lower(onMessage)),
 		// pollFn
 		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
 			C.ffi_p2panda_ffi_rust_future_poll_u64(handle, continuation, data)
@@ -2498,16 +2498,16 @@ func (_self *Node) EphemeralStream(topic *TopicId, onMessage EphemeralStreamCall
 	return res, err
 }
 
-func (_self *Node) Id() *PublicKey {
+func (_self *Node) Id() *VerifyingKey {
 	_pointer := _self.ffiObject.incrementPointer("*Node")
 	defer _self.ffiObject.decrementPointer()
-	return FfiConverterPublicKeyINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+	return FfiConverterVerifyingKeyINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
 		return C.uniffi_p2panda_ffi_fn_method_node_id(
 			_pointer, _uniffiStatus)
 	}))
 }
 
-func (_self *Node) InsertBootstrap(nodeId *PublicKey, relayUrl *RelayUrl) error {
+func (_self *Node) InsertBootstrap(nodeId *VerifyingKey, relayUrl *RelayUrl) error {
 	_pointer := _self.ffiObject.incrementPointer("*Node")
 	defer _self.ffiObject.decrementPointer()
 	_, err := uniffiRustCallAsync[*NetworkError](
@@ -2520,7 +2520,7 @@ func (_self *Node) InsertBootstrap(nodeId *PublicKey, relayUrl *RelayUrl) error 
 		// liftFn
 		func(_ struct{}) struct{} { return struct{}{} },
 		C.uniffi_p2panda_ffi_fn_method_node_insert_bootstrap(
-			_pointer, FfiConverterPublicKeyINSTANCE.Lower(nodeId), FfiConverterRelayUrlINSTANCE.Lower(relayUrl)),
+			_pointer, FfiConverterVerifyingKeyINSTANCE.Lower(nodeId), FfiConverterRelayUrlINSTANCE.Lower(relayUrl)),
 		// pollFn
 		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
 			C.ffi_p2panda_ffi_rust_future_poll_void(handle, continuation, data)
@@ -2547,7 +2547,7 @@ func (_self *Node) NetworkId() *NetworkId {
 	}))
 }
 
-func (_self *Node) Stream(topic *TopicId, callback TopicStreamCallback) (*TopicStream, error) {
+func (_self *Node) Stream(topic *Topic, callback TopicStreamCallback) (*TopicStream, error) {
 	_pointer := _self.ffiObject.incrementPointer("*Node")
 	defer _self.ffiObject.decrementPointer()
 	res, err := uniffiRustCallAsync[*CreateStreamError](
@@ -2562,7 +2562,7 @@ func (_self *Node) Stream(topic *TopicId, callback TopicStreamCallback) (*TopicS
 			return FfiConverterTopicStreamINSTANCE.Lift(ffi)
 		},
 		C.uniffi_p2panda_ffi_fn_method_node_stream(
-			_pointer, FfiConverterTopicIdINSTANCE.Lower(topic), FfiConverterTopicStreamCallbackINSTANCE.Lower(callback)),
+			_pointer, FfiConverterTopicINSTANCE.Lower(topic), FfiConverterTopicStreamCallbackINSTANCE.Lower(callback)),
 		// pollFn
 		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
 			C.ffi_p2panda_ffi_rust_future_poll_u64(handle, continuation, data)
@@ -2580,7 +2580,7 @@ func (_self *Node) Stream(topic *TopicId, callback TopicStreamCallback) (*TopicS
 	return res, err
 }
 
-func (_self *Node) StreamFrom(topic *TopicId, from StreamFrom, callback TopicStreamCallback) (*TopicStream, error) {
+func (_self *Node) StreamFrom(topic *Topic, from StreamFrom, callback TopicStreamCallback) (*TopicStream, error) {
 	_pointer := _self.ffiObject.incrementPointer("*Node")
 	defer _self.ffiObject.decrementPointer()
 	res, err := uniffiRustCallAsync[*CreateStreamError](
@@ -2595,7 +2595,7 @@ func (_self *Node) StreamFrom(topic *TopicId, from StreamFrom, callback TopicStr
 			return FfiConverterTopicStreamINSTANCE.Lift(ffi)
 		},
 		C.uniffi_p2panda_ffi_fn_method_node_stream_from(
-			_pointer, FfiConverterTopicIdINSTANCE.Lower(topic), FfiConverterStreamFromINSTANCE.Lower(from), FfiConverterTopicStreamCallbackINSTANCE.Lower(callback)),
+			_pointer, FfiConverterTopicINSTANCE.Lower(topic), FfiConverterStreamFromINSTANCE.Lower(from), FfiConverterTopicStreamCallbackINSTANCE.Lower(callback)),
 		// pollFn
 		func(handle C.uint64_t, continuation C.UniffiRustFutureContinuationCallback, data C.uint64_t) {
 			C.ffi_p2panda_ffi_rust_future_poll_u64(handle, continuation, data)
@@ -2674,12 +2674,12 @@ type NodeBuilderInterface interface {
 	BindIpV6(ipAddress string) error
 	BindPortV4(port uint16) error
 	BindPortV6(port uint16) error
-	Bootstrap(nodeId *PublicKey, relayUrl *RelayUrl) error
+	Bootstrap(nodeId *VerifyingKey, relayUrl *RelayUrl) error
 	DatabaseUrl(url string) error
 	MdnsMode(mode MdnsDiscoveryMode) error
 	NetworkId(networkId *NetworkId) error
-	PrivateKey(privateKey *PrivateKey) error
 	RelayUrl(url *RelayUrl) error
+	SigningKey(signingKey *SigningKey) error
 	Spawn() (*Node, error)
 }
 type NodeBuilder struct {
@@ -2747,12 +2747,12 @@ func (_self *NodeBuilder) BindPortV6(port uint16) error {
 	return _uniffiErr.AsError()
 }
 
-func (_self *NodeBuilder) Bootstrap(nodeId *PublicKey, relayUrl *RelayUrl) error {
+func (_self *NodeBuilder) Bootstrap(nodeId *VerifyingKey, relayUrl *RelayUrl) error {
 	_pointer := _self.ffiObject.incrementPointer("*NodeBuilder")
 	defer _self.ffiObject.decrementPointer()
 	_, _uniffiErr := rustCallWithError[*NodeBuilderError](FfiConverterNodeBuilderError{}, func(_uniffiStatus *C.RustCallStatus) bool {
 		C.uniffi_p2panda_ffi_fn_method_nodebuilder_bootstrap(
-			_pointer, FfiConverterPublicKeyINSTANCE.Lower(nodeId), FfiConverterRelayUrlINSTANCE.Lower(relayUrl), _uniffiStatus)
+			_pointer, FfiConverterVerifyingKeyINSTANCE.Lower(nodeId), FfiConverterRelayUrlINSTANCE.Lower(relayUrl), _uniffiStatus)
 		return false
 	})
 	return _uniffiErr.AsError()
@@ -2791,23 +2791,23 @@ func (_self *NodeBuilder) NetworkId(networkId *NetworkId) error {
 	return _uniffiErr.AsError()
 }
 
-func (_self *NodeBuilder) PrivateKey(privateKey *PrivateKey) error {
-	_pointer := _self.ffiObject.incrementPointer("*NodeBuilder")
-	defer _self.ffiObject.decrementPointer()
-	_, _uniffiErr := rustCallWithError[*NodeBuilderError](FfiConverterNodeBuilderError{}, func(_uniffiStatus *C.RustCallStatus) bool {
-		C.uniffi_p2panda_ffi_fn_method_nodebuilder_private_key(
-			_pointer, FfiConverterPrivateKeyINSTANCE.Lower(privateKey), _uniffiStatus)
-		return false
-	})
-	return _uniffiErr.AsError()
-}
-
 func (_self *NodeBuilder) RelayUrl(url *RelayUrl) error {
 	_pointer := _self.ffiObject.incrementPointer("*NodeBuilder")
 	defer _self.ffiObject.decrementPointer()
 	_, _uniffiErr := rustCallWithError[*NodeBuilderError](FfiConverterNodeBuilderError{}, func(_uniffiStatus *C.RustCallStatus) bool {
 		C.uniffi_p2panda_ffi_fn_method_nodebuilder_relay_url(
 			_pointer, FfiConverterRelayUrlINSTANCE.Lower(url), _uniffiStatus)
+		return false
+	})
+	return _uniffiErr.AsError()
+}
+
+func (_self *NodeBuilder) SigningKey(signingKey *SigningKey) error {
+	_pointer := _self.ffiObject.incrementPointer("*NodeBuilder")
+	defer _self.ffiObject.decrementPointer()
+	_, _uniffiErr := rustCallWithError[*NodeBuilderError](FfiConverterNodeBuilderError{}, func(_uniffiStatus *C.RustCallStatus) bool {
+		C.uniffi_p2panda_ffi_fn_method_nodebuilder_signing_key(
+			_pointer, FfiConverterSigningKeyINSTANCE.Lower(signingKey), _uniffiStatus)
 		return false
 	})
 	return _uniffiErr.AsError()
@@ -2901,149 +2901,14 @@ func (_ FfiDestroyerNodeBuilder) Destroy(value *NodeBuilder) {
 	value.Destroy()
 }
 
-type PrivateKeyInterface interface {
-	PublicKey() *PublicKey
-	Sign(bytes []byte) *Signature
-	ToBytes() []byte
-	ToHex() string
-}
-type PrivateKey struct {
-	ffiObject FfiObject
-}
-
-func PrivateKeyFromBytes(value []byte) (*PrivateKey, error) {
-	_uniffiRV, _uniffiErr := rustCallWithError[*ConversionError](FfiConverterConversionError{}, func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
-		return C.uniffi_p2panda_ffi_fn_constructor_privatekey_from_bytes(FfiConverterBytesINSTANCE.Lower(value), _uniffiStatus)
-	})
-	if _uniffiErr != nil {
-		var _uniffiDefaultValue *PrivateKey
-		return _uniffiDefaultValue, _uniffiErr
-	} else {
-		return FfiConverterPrivateKeyINSTANCE.Lift(_uniffiRV), nil
-	}
-}
-
-func PrivateKeyFromHex(value string) (*PrivateKey, error) {
-	_uniffiRV, _uniffiErr := rustCallWithError[*ConversionError](FfiConverterConversionError{}, func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
-		return C.uniffi_p2panda_ffi_fn_constructor_privatekey_from_hex(FfiConverterStringINSTANCE.Lower(value), _uniffiStatus)
-	})
-	if _uniffiErr != nil {
-		var _uniffiDefaultValue *PrivateKey
-		return _uniffiDefaultValue, _uniffiErr
-	} else {
-		return FfiConverterPrivateKeyINSTANCE.Lift(_uniffiRV), nil
-	}
-}
-
-func PrivateKeyGenerate() *PrivateKey {
-	return FfiConverterPrivateKeyINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
-		return C.uniffi_p2panda_ffi_fn_constructor_privatekey_generate(_uniffiStatus)
-	}))
-}
-
-func (_self *PrivateKey) PublicKey() *PublicKey {
-	_pointer := _self.ffiObject.incrementPointer("*PrivateKey")
-	defer _self.ffiObject.decrementPointer()
-	return FfiConverterPublicKeyINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
-		return C.uniffi_p2panda_ffi_fn_method_privatekey_public_key(
-			_pointer, _uniffiStatus)
-	}))
-}
-
-func (_self *PrivateKey) Sign(bytes []byte) *Signature {
-	_pointer := _self.ffiObject.incrementPointer("*PrivateKey")
-	defer _self.ffiObject.decrementPointer()
-	return FfiConverterSignatureINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
-		return C.uniffi_p2panda_ffi_fn_method_privatekey_sign(
-			_pointer, FfiConverterBytesINSTANCE.Lower(bytes), _uniffiStatus)
-	}))
-}
-
-func (_self *PrivateKey) ToBytes() []byte {
-	_pointer := _self.ffiObject.incrementPointer("*PrivateKey")
-	defer _self.ffiObject.decrementPointer()
-	return FfiConverterBytesINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
-		return GoRustBuffer{
-			inner: C.uniffi_p2panda_ffi_fn_method_privatekey_to_bytes(
-				_pointer, _uniffiStatus),
-		}
-	}))
-}
-
-func (_self *PrivateKey) ToHex() string {
-	_pointer := _self.ffiObject.incrementPointer("*PrivateKey")
-	defer _self.ffiObject.decrementPointer()
-	return FfiConverterStringINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
-		return GoRustBuffer{
-			inner: C.uniffi_p2panda_ffi_fn_method_privatekey_to_hex(
-				_pointer, _uniffiStatus),
-		}
-	}))
-}
-func (object *PrivateKey) Destroy() {
-	runtime.SetFinalizer(object, nil)
-	object.ffiObject.destroy()
-}
-
-type FfiConverterPrivateKey struct{}
-
-var FfiConverterPrivateKeyINSTANCE = FfiConverterPrivateKey{}
-
-func (c FfiConverterPrivateKey) Lift(handle C.uint64_t) *PrivateKey {
-	result := &PrivateKey{
-		newFfiObject(
-			handle,
-			func(handle C.uint64_t, status *C.RustCallStatus) C.uint64_t {
-				return C.uniffi_p2panda_ffi_fn_clone_privatekey(handle, status)
-			},
-			func(handle C.uint64_t, status *C.RustCallStatus) {
-				C.uniffi_p2panda_ffi_fn_free_privatekey(handle, status)
-			},
-		),
-	}
-	runtime.SetFinalizer(result, (*PrivateKey).Destroy)
-	return result
-}
-
-func (c FfiConverterPrivateKey) Read(reader io.Reader) *PrivateKey {
-	return c.Lift(C.uint64_t(readUint64(reader)))
-}
-
-func (c FfiConverterPrivateKey) Lower(value *PrivateKey) C.uint64_t {
-	// TODO: this is bad - all synchronization from ObjectRuntime.go is discarded here,
-	// because the handle will be decremented immediately after this function returns,
-	// and someone will be left holding onto a non-locked handle.
-	handle := value.ffiObject.incrementPointer("*PrivateKey")
-	defer value.ffiObject.decrementPointer()
-	return handle
-}
-
-func (c FfiConverterPrivateKey) Write(writer io.Writer, value *PrivateKey) {
-	writeUint64(writer, uint64(c.Lower(value)))
-}
-
-func LiftFromExternalPrivateKey(handle uint64) *PrivateKey {
-	return FfiConverterPrivateKeyINSTANCE.Lift(C.uint64_t(handle))
-}
-
-func LowerToExternalPrivateKey(value *PrivateKey) uint64 {
-	return uint64(FfiConverterPrivateKeyINSTANCE.Lower(value))
-}
-
-type FfiDestroyerPrivateKey struct{}
-
-func (_ FfiDestroyerPrivateKey) Destroy(value *PrivateKey) {
-	value.Destroy()
-}
-
 type ProcessedOperationInterface interface {
 	Ack() error
-	Author() *PublicKey
+	Author() *VerifyingKey
 	Id() *Hash
 	Message() []byte
 	Processed() *Event
 	Timestamp() uint64
-	Topic() *TopicId
+	Topic() *Topic
 }
 type ProcessedOperation struct {
 	ffiObject FfiObject
@@ -3080,10 +2945,10 @@ func (_self *ProcessedOperation) Ack() error {
 	return err
 }
 
-func (_self *ProcessedOperation) Author() *PublicKey {
+func (_self *ProcessedOperation) Author() *VerifyingKey {
 	_pointer := _self.ffiObject.incrementPointer("*ProcessedOperation")
 	defer _self.ffiObject.decrementPointer()
-	return FfiConverterPublicKeyINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+	return FfiConverterVerifyingKeyINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
 		return C.uniffi_p2panda_ffi_fn_method_processedoperation_author(
 			_pointer, _uniffiStatus)
 	}))
@@ -3127,10 +2992,10 @@ func (_self *ProcessedOperation) Timestamp() uint64 {
 	}))
 }
 
-func (_self *ProcessedOperation) Topic() *TopicId {
+func (_self *ProcessedOperation) Topic() *Topic {
 	_pointer := _self.ffiObject.incrementPointer("*ProcessedOperation")
 	defer _self.ffiObject.decrementPointer()
-	return FfiConverterTopicIdINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+	return FfiConverterTopicINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
 		return C.uniffi_p2panda_ffi_fn_method_processedoperation_topic(
 			_pointer, _uniffiStatus)
 	}))
@@ -3188,125 +3053,6 @@ func LowerToExternalProcessedOperation(value *ProcessedOperation) uint64 {
 type FfiDestroyerProcessedOperation struct{}
 
 func (_ FfiDestroyerProcessedOperation) Destroy(value *ProcessedOperation) {
-	value.Destroy()
-}
-
-type PublicKeyInterface interface {
-	ToBytes() []byte
-	ToHex() string
-	Verify(bytes []byte, signature *Signature) bool
-}
-type PublicKey struct {
-	ffiObject FfiObject
-}
-
-func PublicKeyFromBytes(value []byte) (*PublicKey, error) {
-	_uniffiRV, _uniffiErr := rustCallWithError[*ConversionError](FfiConverterConversionError{}, func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
-		return C.uniffi_p2panda_ffi_fn_constructor_publickey_from_bytes(FfiConverterBytesINSTANCE.Lower(value), _uniffiStatus)
-	})
-	if _uniffiErr != nil {
-		var _uniffiDefaultValue *PublicKey
-		return _uniffiDefaultValue, _uniffiErr
-	} else {
-		return FfiConverterPublicKeyINSTANCE.Lift(_uniffiRV), nil
-	}
-}
-
-func PublicKeyFromHex(value string) (*PublicKey, error) {
-	_uniffiRV, _uniffiErr := rustCallWithError[*ConversionError](FfiConverterConversionError{}, func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
-		return C.uniffi_p2panda_ffi_fn_constructor_publickey_from_hex(FfiConverterStringINSTANCE.Lower(value), _uniffiStatus)
-	})
-	if _uniffiErr != nil {
-		var _uniffiDefaultValue *PublicKey
-		return _uniffiDefaultValue, _uniffiErr
-	} else {
-		return FfiConverterPublicKeyINSTANCE.Lift(_uniffiRV), nil
-	}
-}
-
-func (_self *PublicKey) ToBytes() []byte {
-	_pointer := _self.ffiObject.incrementPointer("*PublicKey")
-	defer _self.ffiObject.decrementPointer()
-	return FfiConverterBytesINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
-		return GoRustBuffer{
-			inner: C.uniffi_p2panda_ffi_fn_method_publickey_to_bytes(
-				_pointer, _uniffiStatus),
-		}
-	}))
-}
-
-func (_self *PublicKey) ToHex() string {
-	_pointer := _self.ffiObject.incrementPointer("*PublicKey")
-	defer _self.ffiObject.decrementPointer()
-	return FfiConverterStringINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
-		return GoRustBuffer{
-			inner: C.uniffi_p2panda_ffi_fn_method_publickey_to_hex(
-				_pointer, _uniffiStatus),
-		}
-	}))
-}
-
-func (_self *PublicKey) Verify(bytes []byte, signature *Signature) bool {
-	_pointer := _self.ffiObject.incrementPointer("*PublicKey")
-	defer _self.ffiObject.decrementPointer()
-	return FfiConverterBoolINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.int8_t {
-		return C.uniffi_p2panda_ffi_fn_method_publickey_verify(
-			_pointer, FfiConverterBytesINSTANCE.Lower(bytes), FfiConverterSignatureINSTANCE.Lower(signature), _uniffiStatus)
-	}))
-}
-func (object *PublicKey) Destroy() {
-	runtime.SetFinalizer(object, nil)
-	object.ffiObject.destroy()
-}
-
-type FfiConverterPublicKey struct{}
-
-var FfiConverterPublicKeyINSTANCE = FfiConverterPublicKey{}
-
-func (c FfiConverterPublicKey) Lift(handle C.uint64_t) *PublicKey {
-	result := &PublicKey{
-		newFfiObject(
-			handle,
-			func(handle C.uint64_t, status *C.RustCallStatus) C.uint64_t {
-				return C.uniffi_p2panda_ffi_fn_clone_publickey(handle, status)
-			},
-			func(handle C.uint64_t, status *C.RustCallStatus) {
-				C.uniffi_p2panda_ffi_fn_free_publickey(handle, status)
-			},
-		),
-	}
-	runtime.SetFinalizer(result, (*PublicKey).Destroy)
-	return result
-}
-
-func (c FfiConverterPublicKey) Read(reader io.Reader) *PublicKey {
-	return c.Lift(C.uint64_t(readUint64(reader)))
-}
-
-func (c FfiConverterPublicKey) Lower(value *PublicKey) C.uint64_t {
-	// TODO: this is bad - all synchronization from ObjectRuntime.go is discarded here,
-	// because the handle will be decremented immediately after this function returns,
-	// and someone will be left holding onto a non-locked handle.
-	handle := value.ffiObject.incrementPointer("*PublicKey")
-	defer value.ffiObject.decrementPointer()
-	return handle
-}
-
-func (c FfiConverterPublicKey) Write(writer io.Writer, value *PublicKey) {
-	writeUint64(writer, uint64(c.Lower(value)))
-}
-
-func LiftFromExternalPublicKey(handle uint64) *PublicKey {
-	return FfiConverterPublicKeyINSTANCE.Lift(C.uint64_t(handle))
-}
-
-func LowerToExternalPublicKey(value *PublicKey) uint64 {
-	return uint64(FfiConverterPublicKeyINSTANCE.Lower(value))
-}
-
-type FfiDestroyerPublicKey struct{}
-
-func (_ FfiDestroyerPublicKey) Destroy(value *PublicKey) {
 	value.Destroy()
 }
 
@@ -3504,124 +3250,259 @@ func (_ FfiDestroyerSignature) Destroy(value *Signature) {
 	value.Destroy()
 }
 
-type TopicIdInterface interface {
+type SigningKeyInterface interface {
+	Sign(bytes []byte) *Signature
 	ToBytes() []byte
 	ToHex() string
+	VerifyingKey() *VerifyingKey
 }
-type TopicId struct {
+type SigningKey struct {
 	ffiObject FfiObject
 }
 
-func TopicIdFromBytes(value []byte) (*TopicId, error) {
+func SigningKeyFromBytes(value []byte) (*SigningKey, error) {
 	_uniffiRV, _uniffiErr := rustCallWithError[*ConversionError](FfiConverterConversionError{}, func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
-		return C.uniffi_p2panda_ffi_fn_constructor_topicid_from_bytes(FfiConverterBytesINSTANCE.Lower(value), _uniffiStatus)
+		return C.uniffi_p2panda_ffi_fn_constructor_signingkey_from_bytes(FfiConverterBytesINSTANCE.Lower(value), _uniffiStatus)
 	})
 	if _uniffiErr != nil {
-		var _uniffiDefaultValue *TopicId
+		var _uniffiDefaultValue *SigningKey
 		return _uniffiDefaultValue, _uniffiErr
 	} else {
-		return FfiConverterTopicIdINSTANCE.Lift(_uniffiRV), nil
+		return FfiConverterSigningKeyINSTANCE.Lift(_uniffiRV), nil
 	}
 }
 
-func TopicIdFromHash(hash *Hash) *TopicId {
-	return FfiConverterTopicIdINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
-		return C.uniffi_p2panda_ffi_fn_constructor_topicid_from_hash(FfiConverterHashINSTANCE.Lower(hash), _uniffiStatus)
-	}))
-}
-
-func TopicIdFromHex(value string) (*TopicId, error) {
+func SigningKeyFromHex(value string) (*SigningKey, error) {
 	_uniffiRV, _uniffiErr := rustCallWithError[*ConversionError](FfiConverterConversionError{}, func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
-		return C.uniffi_p2panda_ffi_fn_constructor_topicid_from_hex(FfiConverterStringINSTANCE.Lower(value), _uniffiStatus)
+		return C.uniffi_p2panda_ffi_fn_constructor_signingkey_from_hex(FfiConverterStringINSTANCE.Lower(value), _uniffiStatus)
 	})
 	if _uniffiErr != nil {
-		var _uniffiDefaultValue *TopicId
+		var _uniffiDefaultValue *SigningKey
 		return _uniffiDefaultValue, _uniffiErr
 	} else {
-		return FfiConverterTopicIdINSTANCE.Lift(_uniffiRV), nil
+		return FfiConverterSigningKeyINSTANCE.Lift(_uniffiRV), nil
 	}
 }
 
-func TopicIdRandom() *TopicId {
-	return FfiConverterTopicIdINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
-		return C.uniffi_p2panda_ffi_fn_constructor_topicid_random(_uniffiStatus)
+func SigningKeyGenerate() *SigningKey {
+	return FfiConverterSigningKeyINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+		return C.uniffi_p2panda_ffi_fn_constructor_signingkey_generate(_uniffiStatus)
 	}))
 }
 
-func (_self *TopicId) ToBytes() []byte {
-	_pointer := _self.ffiObject.incrementPointer("*TopicId")
+func (_self *SigningKey) Sign(bytes []byte) *Signature {
+	_pointer := _self.ffiObject.incrementPointer("*SigningKey")
+	defer _self.ffiObject.decrementPointer()
+	return FfiConverterSignatureINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+		return C.uniffi_p2panda_ffi_fn_method_signingkey_sign(
+			_pointer, FfiConverterBytesINSTANCE.Lower(bytes), _uniffiStatus)
+	}))
+}
+
+func (_self *SigningKey) ToBytes() []byte {
+	_pointer := _self.ffiObject.incrementPointer("*SigningKey")
 	defer _self.ffiObject.decrementPointer()
 	return FfiConverterBytesINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
 		return GoRustBuffer{
-			inner: C.uniffi_p2panda_ffi_fn_method_topicid_to_bytes(
+			inner: C.uniffi_p2panda_ffi_fn_method_signingkey_to_bytes(
 				_pointer, _uniffiStatus),
 		}
 	}))
 }
 
-func (_self *TopicId) ToHex() string {
-	_pointer := _self.ffiObject.incrementPointer("*TopicId")
+func (_self *SigningKey) ToHex() string {
+	_pointer := _self.ffiObject.incrementPointer("*SigningKey")
 	defer _self.ffiObject.decrementPointer()
 	return FfiConverterStringINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
 		return GoRustBuffer{
-			inner: C.uniffi_p2panda_ffi_fn_method_topicid_to_hex(
+			inner: C.uniffi_p2panda_ffi_fn_method_signingkey_to_hex(
 				_pointer, _uniffiStatus),
 		}
 	}))
 }
-func (object *TopicId) Destroy() {
+
+func (_self *SigningKey) VerifyingKey() *VerifyingKey {
+	_pointer := _self.ffiObject.incrementPointer("*SigningKey")
+	defer _self.ffiObject.decrementPointer()
+	return FfiConverterVerifyingKeyINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+		return C.uniffi_p2panda_ffi_fn_method_signingkey_verifying_key(
+			_pointer, _uniffiStatus)
+	}))
+}
+func (object *SigningKey) Destroy() {
 	runtime.SetFinalizer(object, nil)
 	object.ffiObject.destroy()
 }
 
-type FfiConverterTopicId struct{}
+type FfiConverterSigningKey struct{}
 
-var FfiConverterTopicIdINSTANCE = FfiConverterTopicId{}
+var FfiConverterSigningKeyINSTANCE = FfiConverterSigningKey{}
 
-func (c FfiConverterTopicId) Lift(handle C.uint64_t) *TopicId {
-	result := &TopicId{
+func (c FfiConverterSigningKey) Lift(handle C.uint64_t) *SigningKey {
+	result := &SigningKey{
 		newFfiObject(
 			handle,
 			func(handle C.uint64_t, status *C.RustCallStatus) C.uint64_t {
-				return C.uniffi_p2panda_ffi_fn_clone_topicid(handle, status)
+				return C.uniffi_p2panda_ffi_fn_clone_signingkey(handle, status)
 			},
 			func(handle C.uint64_t, status *C.RustCallStatus) {
-				C.uniffi_p2panda_ffi_fn_free_topicid(handle, status)
+				C.uniffi_p2panda_ffi_fn_free_signingkey(handle, status)
 			},
 		),
 	}
-	runtime.SetFinalizer(result, (*TopicId).Destroy)
+	runtime.SetFinalizer(result, (*SigningKey).Destroy)
 	return result
 }
 
-func (c FfiConverterTopicId) Read(reader io.Reader) *TopicId {
+func (c FfiConverterSigningKey) Read(reader io.Reader) *SigningKey {
 	return c.Lift(C.uint64_t(readUint64(reader)))
 }
 
-func (c FfiConverterTopicId) Lower(value *TopicId) C.uint64_t {
+func (c FfiConverterSigningKey) Lower(value *SigningKey) C.uint64_t {
 	// TODO: this is bad - all synchronization from ObjectRuntime.go is discarded here,
 	// because the handle will be decremented immediately after this function returns,
 	// and someone will be left holding onto a non-locked handle.
-	handle := value.ffiObject.incrementPointer("*TopicId")
+	handle := value.ffiObject.incrementPointer("*SigningKey")
 	defer value.ffiObject.decrementPointer()
 	return handle
 }
 
-func (c FfiConverterTopicId) Write(writer io.Writer, value *TopicId) {
+func (c FfiConverterSigningKey) Write(writer io.Writer, value *SigningKey) {
 	writeUint64(writer, uint64(c.Lower(value)))
 }
 
-func LiftFromExternalTopicId(handle uint64) *TopicId {
-	return FfiConverterTopicIdINSTANCE.Lift(C.uint64_t(handle))
+func LiftFromExternalSigningKey(handle uint64) *SigningKey {
+	return FfiConverterSigningKeyINSTANCE.Lift(C.uint64_t(handle))
 }
 
-func LowerToExternalTopicId(value *TopicId) uint64 {
-	return uint64(FfiConverterTopicIdINSTANCE.Lower(value))
+func LowerToExternalSigningKey(value *SigningKey) uint64 {
+	return uint64(FfiConverterSigningKeyINSTANCE.Lower(value))
 }
 
-type FfiDestroyerTopicId struct{}
+type FfiDestroyerSigningKey struct{}
 
-func (_ FfiDestroyerTopicId) Destroy(value *TopicId) {
+func (_ FfiDestroyerSigningKey) Destroy(value *SigningKey) {
+	value.Destroy()
+}
+
+type TopicInterface interface {
+	ToBytes() []byte
+	ToHex() string
+}
+type Topic struct {
+	ffiObject FfiObject
+}
+
+func TopicFromBytes(value []byte) (*Topic, error) {
+	_uniffiRV, _uniffiErr := rustCallWithError[*ConversionError](FfiConverterConversionError{}, func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+		return C.uniffi_p2panda_ffi_fn_constructor_topic_from_bytes(FfiConverterBytesINSTANCE.Lower(value), _uniffiStatus)
+	})
+	if _uniffiErr != nil {
+		var _uniffiDefaultValue *Topic
+		return _uniffiDefaultValue, _uniffiErr
+	} else {
+		return FfiConverterTopicINSTANCE.Lift(_uniffiRV), nil
+	}
+}
+
+func TopicFromHash(hash *Hash) *Topic {
+	return FfiConverterTopicINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+		return C.uniffi_p2panda_ffi_fn_constructor_topic_from_hash(FfiConverterHashINSTANCE.Lower(hash), _uniffiStatus)
+	}))
+}
+
+func TopicFromHex(value string) (*Topic, error) {
+	_uniffiRV, _uniffiErr := rustCallWithError[*ConversionError](FfiConverterConversionError{}, func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+		return C.uniffi_p2panda_ffi_fn_constructor_topic_from_hex(FfiConverterStringINSTANCE.Lower(value), _uniffiStatus)
+	})
+	if _uniffiErr != nil {
+		var _uniffiDefaultValue *Topic
+		return _uniffiDefaultValue, _uniffiErr
+	} else {
+		return FfiConverterTopicINSTANCE.Lift(_uniffiRV), nil
+	}
+}
+
+func TopicRandom() *Topic {
+	return FfiConverterTopicINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+		return C.uniffi_p2panda_ffi_fn_constructor_topic_random(_uniffiStatus)
+	}))
+}
+
+func (_self *Topic) ToBytes() []byte {
+	_pointer := _self.ffiObject.incrementPointer("*Topic")
+	defer _self.ffiObject.decrementPointer()
+	return FfiConverterBytesINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
+		return GoRustBuffer{
+			inner: C.uniffi_p2panda_ffi_fn_method_topic_to_bytes(
+				_pointer, _uniffiStatus),
+		}
+	}))
+}
+
+func (_self *Topic) ToHex() string {
+	_pointer := _self.ffiObject.incrementPointer("*Topic")
+	defer _self.ffiObject.decrementPointer()
+	return FfiConverterStringINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
+		return GoRustBuffer{
+			inner: C.uniffi_p2panda_ffi_fn_method_topic_to_hex(
+				_pointer, _uniffiStatus),
+		}
+	}))
+}
+func (object *Topic) Destroy() {
+	runtime.SetFinalizer(object, nil)
+	object.ffiObject.destroy()
+}
+
+type FfiConverterTopic struct{}
+
+var FfiConverterTopicINSTANCE = FfiConverterTopic{}
+
+func (c FfiConverterTopic) Lift(handle C.uint64_t) *Topic {
+	result := &Topic{
+		newFfiObject(
+			handle,
+			func(handle C.uint64_t, status *C.RustCallStatus) C.uint64_t {
+				return C.uniffi_p2panda_ffi_fn_clone_topic(handle, status)
+			},
+			func(handle C.uint64_t, status *C.RustCallStatus) {
+				C.uniffi_p2panda_ffi_fn_free_topic(handle, status)
+			},
+		),
+	}
+	runtime.SetFinalizer(result, (*Topic).Destroy)
+	return result
+}
+
+func (c FfiConverterTopic) Read(reader io.Reader) *Topic {
+	return c.Lift(C.uint64_t(readUint64(reader)))
+}
+
+func (c FfiConverterTopic) Lower(value *Topic) C.uint64_t {
+	// TODO: this is bad - all synchronization from ObjectRuntime.go is discarded here,
+	// because the handle will be decremented immediately after this function returns,
+	// and someone will be left holding onto a non-locked handle.
+	handle := value.ffiObject.incrementPointer("*Topic")
+	defer value.ffiObject.decrementPointer()
+	return handle
+}
+
+func (c FfiConverterTopic) Write(writer io.Writer, value *Topic) {
+	writeUint64(writer, uint64(c.Lower(value)))
+}
+
+func LiftFromExternalTopic(handle uint64) *Topic {
+	return FfiConverterTopicINSTANCE.Lift(C.uint64_t(handle))
+}
+
+func LowerToExternalTopic(value *Topic) uint64 {
+	return uint64(FfiConverterTopicINSTANCE.Lower(value))
+}
+
+type FfiDestroyerTopic struct{}
+
+func (_ FfiDestroyerTopic) Destroy(value *Topic) {
 	value.Destroy()
 }
 
@@ -3629,7 +3510,7 @@ type TopicStreamInterface interface {
 	Ack(messageId *Hash) error
 	Prune(message *[]byte) (*Hash, error)
 	Publish(message []byte) (*Hash, error)
-	Topic() *TopicId
+	Topic() *Topic
 }
 type TopicStream struct {
 	ffiObject FfiObject
@@ -3732,10 +3613,10 @@ func (_self *TopicStream) Publish(message []byte) (*Hash, error) {
 	return res, err
 }
 
-func (_self *TopicStream) Topic() *TopicId {
+func (_self *TopicStream) Topic() *Topic {
 	_pointer := _self.ffiObject.incrementPointer("*TopicStream")
 	defer _self.ffiObject.decrementPointer()
-	return FfiConverterTopicIdINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+	return FfiConverterTopicINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
 		return C.uniffi_p2panda_ffi_fn_method_topicstream_topic(
 			_pointer, _uniffiStatus)
 	}))
@@ -3986,6 +3867,125 @@ func p2panda_ffi_node_cgo_dispatchCallbackInterfaceTopicStreamCallbackClone(hand
 
 func (c FfiConverterTopicStreamCallback) register() {
 	C.uniffi_p2panda_ffi_fn_init_callback_vtable_topicstreamcallback(&UniffiVTableCallbackInterfaceTopicStreamCallbackINSTANCE)
+}
+
+type VerifyingKeyInterface interface {
+	ToBytes() []byte
+	ToHex() string
+	Verify(bytes []byte, signature *Signature) bool
+}
+type VerifyingKey struct {
+	ffiObject FfiObject
+}
+
+func VerifyingKeyFromBytes(value []byte) (*VerifyingKey, error) {
+	_uniffiRV, _uniffiErr := rustCallWithError[*ConversionError](FfiConverterConversionError{}, func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+		return C.uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_bytes(FfiConverterBytesINSTANCE.Lower(value), _uniffiStatus)
+	})
+	if _uniffiErr != nil {
+		var _uniffiDefaultValue *VerifyingKey
+		return _uniffiDefaultValue, _uniffiErr
+	} else {
+		return FfiConverterVerifyingKeyINSTANCE.Lift(_uniffiRV), nil
+	}
+}
+
+func VerifyingKeyFromHex(value string) (*VerifyingKey, error) {
+	_uniffiRV, _uniffiErr := rustCallWithError[*ConversionError](FfiConverterConversionError{}, func(_uniffiStatus *C.RustCallStatus) C.uint64_t {
+		return C.uniffi_p2panda_ffi_fn_constructor_verifyingkey_from_hex(FfiConverterStringINSTANCE.Lower(value), _uniffiStatus)
+	})
+	if _uniffiErr != nil {
+		var _uniffiDefaultValue *VerifyingKey
+		return _uniffiDefaultValue, _uniffiErr
+	} else {
+		return FfiConverterVerifyingKeyINSTANCE.Lift(_uniffiRV), nil
+	}
+}
+
+func (_self *VerifyingKey) ToBytes() []byte {
+	_pointer := _self.ffiObject.incrementPointer("*VerifyingKey")
+	defer _self.ffiObject.decrementPointer()
+	return FfiConverterBytesINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
+		return GoRustBuffer{
+			inner: C.uniffi_p2panda_ffi_fn_method_verifyingkey_to_bytes(
+				_pointer, _uniffiStatus),
+		}
+	}))
+}
+
+func (_self *VerifyingKey) ToHex() string {
+	_pointer := _self.ffiObject.incrementPointer("*VerifyingKey")
+	defer _self.ffiObject.decrementPointer()
+	return FfiConverterStringINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) RustBufferI {
+		return GoRustBuffer{
+			inner: C.uniffi_p2panda_ffi_fn_method_verifyingkey_to_hex(
+				_pointer, _uniffiStatus),
+		}
+	}))
+}
+
+func (_self *VerifyingKey) Verify(bytes []byte, signature *Signature) bool {
+	_pointer := _self.ffiObject.incrementPointer("*VerifyingKey")
+	defer _self.ffiObject.decrementPointer()
+	return FfiConverterBoolINSTANCE.Lift(rustCall(func(_uniffiStatus *C.RustCallStatus) C.int8_t {
+		return C.uniffi_p2panda_ffi_fn_method_verifyingkey_verify(
+			_pointer, FfiConverterBytesINSTANCE.Lower(bytes), FfiConverterSignatureINSTANCE.Lower(signature), _uniffiStatus)
+	}))
+}
+func (object *VerifyingKey) Destroy() {
+	runtime.SetFinalizer(object, nil)
+	object.ffiObject.destroy()
+}
+
+type FfiConverterVerifyingKey struct{}
+
+var FfiConverterVerifyingKeyINSTANCE = FfiConverterVerifyingKey{}
+
+func (c FfiConverterVerifyingKey) Lift(handle C.uint64_t) *VerifyingKey {
+	result := &VerifyingKey{
+		newFfiObject(
+			handle,
+			func(handle C.uint64_t, status *C.RustCallStatus) C.uint64_t {
+				return C.uniffi_p2panda_ffi_fn_clone_verifyingkey(handle, status)
+			},
+			func(handle C.uint64_t, status *C.RustCallStatus) {
+				C.uniffi_p2panda_ffi_fn_free_verifyingkey(handle, status)
+			},
+		),
+	}
+	runtime.SetFinalizer(result, (*VerifyingKey).Destroy)
+	return result
+}
+
+func (c FfiConverterVerifyingKey) Read(reader io.Reader) *VerifyingKey {
+	return c.Lift(C.uint64_t(readUint64(reader)))
+}
+
+func (c FfiConverterVerifyingKey) Lower(value *VerifyingKey) C.uint64_t {
+	// TODO: this is bad - all synchronization from ObjectRuntime.go is discarded here,
+	// because the handle will be decremented immediately after this function returns,
+	// and someone will be left holding onto a non-locked handle.
+	handle := value.ffiObject.incrementPointer("*VerifyingKey")
+	defer value.ffiObject.decrementPointer()
+	return handle
+}
+
+func (c FfiConverterVerifyingKey) Write(writer io.Writer, value *VerifyingKey) {
+	writeUint64(writer, uint64(c.Lower(value)))
+}
+
+func LiftFromExternalVerifyingKey(handle uint64) *VerifyingKey {
+	return FfiConverterVerifyingKeyINSTANCE.Lift(C.uint64_t(handle))
+}
+
+func LowerToExternalVerifyingKey(value *VerifyingKey) uint64 {
+	return uint64(FfiConverterVerifyingKeyINSTANCE.Lower(value))
+}
+
+type FfiDestroyerVerifyingKey struct{}
+
+func (_ FfiDestroyerVerifyingKey) Destroy(value *VerifyingKey) {
+	value.Destroy()
 }
 
 type AckPolicy uint
@@ -5047,7 +5047,7 @@ type Source interface {
 	Destroy()
 }
 type SourceSyncSession struct {
-	RemoteNodeId            *PublicKey
+	RemoteNodeId            *VerifyingKey
 	SessionId               uint64
 	SentOperations          uint64
 	ReceivedOperations      uint64
@@ -5059,7 +5059,7 @@ type SourceSyncSession struct {
 }
 
 func (e SourceSyncSession) Destroy() {
-	FfiDestroyerPublicKey{}.Destroy(e.RemoteNodeId)
+	FfiDestroyerVerifyingKey{}.Destroy(e.RemoteNodeId)
 	FfiDestroyerUint64{}.Destroy(e.SessionId)
 	FfiDestroyerUint64{}.Destroy(e.SentOperations)
 	FfiDestroyerUint64{}.Destroy(e.ReceivedOperations)
@@ -5074,6 +5074,14 @@ type SourceLocalStore struct {
 }
 
 func (e SourceLocalStore) Destroy() {
+}
+
+type SourceExternalStream struct {
+	SessionId uint64
+}
+
+func (e SourceExternalStream) Destroy() {
+	FfiDestroyerUint64{}.Destroy(e.SessionId)
 }
 
 type FfiConverterSource struct{}
@@ -5096,7 +5104,7 @@ func (FfiConverterSource) Read(reader io.Reader) Source {
 	switch id {
 	case 1:
 		return SourceSyncSession{
-			FfiConverterPublicKeyINSTANCE.Read(reader),
+			FfiConverterVerifyingKeyINSTANCE.Read(reader),
 			FfiConverterUint64INSTANCE.Read(reader),
 			FfiConverterUint64INSTANCE.Read(reader),
 			FfiConverterUint64INSTANCE.Read(reader),
@@ -5108,6 +5116,10 @@ func (FfiConverterSource) Read(reader io.Reader) Source {
 		}
 	case 2:
 		return SourceLocalStore{}
+	case 3:
+		return SourceExternalStream{
+			FfiConverterUint64INSTANCE.Read(reader),
+		}
 	default:
 		panic(fmt.Sprintf("invalid enum value %v in FfiConverterSource.Read()", id))
 	}
@@ -5117,7 +5129,7 @@ func (FfiConverterSource) Write(writer io.Writer, value Source) {
 	switch variant_value := value.(type) {
 	case SourceSyncSession:
 		writeInt32(writer, 1)
-		FfiConverterPublicKeyINSTANCE.Write(writer, variant_value.RemoteNodeId)
+		FfiConverterVerifyingKeyINSTANCE.Write(writer, variant_value.RemoteNodeId)
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.SessionId)
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.SentOperations)
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.ReceivedOperations)
@@ -5128,6 +5140,9 @@ func (FfiConverterSource) Write(writer io.Writer, value Source) {
 		FfiConverterSessionPhaseINSTANCE.Write(writer, variant_value.Phase)
 	case SourceLocalStore:
 		writeInt32(writer, 2)
+	case SourceExternalStream:
+		writeInt32(writer, 3)
+		FfiConverterUint64INSTANCE.Write(writer, variant_value.SessionId)
 	default:
 		_ = variant_value
 		panic(fmt.Sprintf("invalid enum value `%v` in FfiConverterSource.Write", value))
@@ -5466,7 +5481,7 @@ type StreamEvent interface {
 	Destroy()
 }
 type StreamEventSyncStarted struct {
-	RemoteNodeId       *PublicKey
+	RemoteNodeId       *VerifyingKey
 	SessionId          uint64
 	IncomingOperations uint64
 	OutgoingOperations uint64
@@ -5476,7 +5491,7 @@ type StreamEventSyncStarted struct {
 }
 
 func (e StreamEventSyncStarted) Destroy() {
-	FfiDestroyerPublicKey{}.Destroy(e.RemoteNodeId)
+	FfiDestroyerVerifyingKey{}.Destroy(e.RemoteNodeId)
 	FfiDestroyerUint64{}.Destroy(e.SessionId)
 	FfiDestroyerUint64{}.Destroy(e.IncomingOperations)
 	FfiDestroyerUint64{}.Destroy(e.OutgoingOperations)
@@ -5486,7 +5501,7 @@ func (e StreamEventSyncStarted) Destroy() {
 }
 
 type StreamEventSyncEnded struct {
-	RemoteNodeId            *PublicKey
+	RemoteNodeId            *VerifyingKey
 	SessionId               uint64
 	SentOperations          uint64
 	ReceivedOperations      uint64
@@ -5498,7 +5513,7 @@ type StreamEventSyncEnded struct {
 }
 
 func (e StreamEventSyncEnded) Destroy() {
-	FfiDestroyerPublicKey{}.Destroy(e.RemoteNodeId)
+	FfiDestroyerVerifyingKey{}.Destroy(e.RemoteNodeId)
 	FfiDestroyerUint64{}.Destroy(e.SessionId)
 	FfiDestroyerUint64{}.Destroy(e.SentOperations)
 	FfiDestroyerUint64{}.Destroy(e.ReceivedOperations)
@@ -5507,6 +5522,22 @@ func (e StreamEventSyncEnded) Destroy() {
 	FfiDestroyerUint64{}.Destroy(e.SentBytesTopicTotal)
 	FfiDestroyerUint64{}.Destroy(e.ReceivedBytesTopicTotal)
 	FfiDestroyerOptionalSyncError{}.Destroy(e.Error)
+}
+
+type StreamEventImportStarted struct {
+	SessionId uint64
+}
+
+func (e StreamEventImportStarted) Destroy() {
+	FfiDestroyerUint64{}.Destroy(e.SessionId)
+}
+
+type StreamEventImportEnded struct {
+	SessionId uint64
+}
+
+func (e StreamEventImportEnded) Destroy() {
+	FfiDestroyerUint64{}.Destroy(e.SessionId)
 }
 
 type FfiConverterStreamEvent struct{}
@@ -5529,7 +5560,7 @@ func (FfiConverterStreamEvent) Read(reader io.Reader) StreamEvent {
 	switch id {
 	case 1:
 		return StreamEventSyncStarted{
-			FfiConverterPublicKeyINSTANCE.Read(reader),
+			FfiConverterVerifyingKeyINSTANCE.Read(reader),
 			FfiConverterUint64INSTANCE.Read(reader),
 			FfiConverterUint64INSTANCE.Read(reader),
 			FfiConverterUint64INSTANCE.Read(reader),
@@ -5539,7 +5570,7 @@ func (FfiConverterStreamEvent) Read(reader io.Reader) StreamEvent {
 		}
 	case 2:
 		return StreamEventSyncEnded{
-			FfiConverterPublicKeyINSTANCE.Read(reader),
+			FfiConverterVerifyingKeyINSTANCE.Read(reader),
 			FfiConverterUint64INSTANCE.Read(reader),
 			FfiConverterUint64INSTANCE.Read(reader),
 			FfiConverterUint64INSTANCE.Read(reader),
@@ -5548,6 +5579,14 @@ func (FfiConverterStreamEvent) Read(reader io.Reader) StreamEvent {
 			FfiConverterUint64INSTANCE.Read(reader),
 			FfiConverterUint64INSTANCE.Read(reader),
 			FfiConverterOptionalSyncErrorINSTANCE.Read(reader),
+		}
+	case 3:
+		return StreamEventImportStarted{
+			FfiConverterUint64INSTANCE.Read(reader),
+		}
+	case 4:
+		return StreamEventImportEnded{
+			FfiConverterUint64INSTANCE.Read(reader),
 		}
 	default:
 		panic(fmt.Sprintf("invalid enum value %v in FfiConverterStreamEvent.Read()", id))
@@ -5558,7 +5597,7 @@ func (FfiConverterStreamEvent) Write(writer io.Writer, value StreamEvent) {
 	switch variant_value := value.(type) {
 	case StreamEventSyncStarted:
 		writeInt32(writer, 1)
-		FfiConverterPublicKeyINSTANCE.Write(writer, variant_value.RemoteNodeId)
+		FfiConverterVerifyingKeyINSTANCE.Write(writer, variant_value.RemoteNodeId)
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.SessionId)
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.IncomingOperations)
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.OutgoingOperations)
@@ -5567,7 +5606,7 @@ func (FfiConverterStreamEvent) Write(writer io.Writer, value StreamEvent) {
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.TopicSessions)
 	case StreamEventSyncEnded:
 		writeInt32(writer, 2)
-		FfiConverterPublicKeyINSTANCE.Write(writer, variant_value.RemoteNodeId)
+		FfiConverterVerifyingKeyINSTANCE.Write(writer, variant_value.RemoteNodeId)
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.SessionId)
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.SentOperations)
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.ReceivedOperations)
@@ -5576,6 +5615,12 @@ func (FfiConverterStreamEvent) Write(writer io.Writer, value StreamEvent) {
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.SentBytesTopicTotal)
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.ReceivedBytesTopicTotal)
 		FfiConverterOptionalSyncErrorINSTANCE.Write(writer, variant_value.Error)
+	case StreamEventImportStarted:
+		writeInt32(writer, 3)
+		FfiConverterUint64INSTANCE.Write(writer, variant_value.SessionId)
+	case StreamEventImportEnded:
+		writeInt32(writer, 4)
+		FfiConverterUint64INSTANCE.Write(writer, variant_value.SessionId)
 	default:
 		_ = variant_value
 		panic(fmt.Sprintf("invalid enum value `%v` in FfiConverterStreamEvent.Write", value))
