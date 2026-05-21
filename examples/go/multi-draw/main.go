@@ -76,15 +76,19 @@ func (h ephemeralStreamHandler) OnMessage(e *p2panda.EphemeralMessage) {
 
 	p, ok := h.peers[peerId]
 	if !ok {
-		p = peer{id: peerId, cursorPosX: cursorPosX, cursorPosY: cursorPosY, cursorStyle: cursorStyle}
-		h.peers[peerId] = p
-	} else {
-		p.cursorPosX = cursorPosX
-		p.cursorPosY = cursorPosY
-		h.peers[peerId] = p
+		p = peer{id: peerId, cursorStyle: cursorStyle}
 	}
+	p.cursorPosX = cursorPosX
+	p.cursorPosY = cursorPosY
+	h.peers[peerId] = p
 
-	h.screen.Put(p.cursorPosX, p.cursorPosY, string(tcell.RuneBlock), p.cursorStyle)
+	h.screen.Put(
+		p.cursorPosX,
+		p.cursorPosY,
+		string(tcell.RuneBlock),
+		p.cursorStyle,
+	)
+
 	h.screen.Show()
 }
 
