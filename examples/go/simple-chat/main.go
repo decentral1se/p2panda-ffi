@@ -84,7 +84,7 @@ func main() {
 	}
 	defer ephemeralStream.Destroy()
 
-	slog.Info("🐼 stream is up 🐼")
+	slog.Info("🐼 ephemeral stream is up 🐼")
 	slog.Info("type messages and press enter to send")
 
 	go func() {

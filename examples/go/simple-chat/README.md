@@ -3,7 +3,8 @@
 This example implements a simple chat app inspired by
 [`p2pandaapp-cli-gomod`](https://codeberg.org/pojntfx/p2panda-gobject-go/src/branch/main/examples/p2pandaapp-cli-gomod).
 Peer discovery uses mDNS by default. It's also possible to connect to peers
-using a local or remote bootstrap node.
+using a local or remote bootstrap node. An ephemeral topic stream is used for
+message exchange.
 
 ## mDNS
 
