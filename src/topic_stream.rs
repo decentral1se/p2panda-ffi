@@ -97,6 +97,17 @@ impl TopicStream {
                             p2panda::streams::StreamEvent::ImportEnded { session_id } => {
                                 callback.on_event(StreamEvent::ImportEnded { session_id });
                             },
+                            p2panda::streams::StreamEvent::ReplayStarted { total_operations } => {
+                                callback.on_event(StreamEvent::ReplayStarted { total_operations });
+                            },
+                            p2panda::streams::StreamEvent::ReplayEnded => {
+                                callback.on_event(StreamEvent::ReplayEnded);
+                            },
+                            p2panda::streams::StreamEvent::ReplayFailed { error } => {
+                                callback.on_error(StreamError::ReplayFailed {
+                                    error: error.to_string(),
+                                });
+                            },
                             p2panda::streams::StreamEvent::ProcessingFailed { event, error, .. } => {
                                 callback.on_error(StreamError::ProcessingFailed {
                                     event: Arc::new((&event).into()),
@@ -106,11 +117,6 @@ impl TopicStream {
                             p2panda::streams::StreamEvent::DecodeFailed { event, error } => {
                                 callback.on_error(StreamError::DecodeFailed {
                                     event: Arc::new((&event).into()),
-                                    error: error.to_string(),
-                                });
-                            },
-                            p2panda::streams::StreamEvent::ReplayFailed { error } => {
-                                callback.on_error(StreamError::ReplayFailed {
                                     error: error.to_string(),
                                 });
                             },
@@ -420,6 +426,10 @@ pub enum StreamEvent {
     ImportEnded {
         session_id: u64,
     },
+    ReplayStarted {
+        total_operations: u64,
+    },
+    ReplayEnded,
 }
 
 #[derive(Debug, Error, uniffi::Error)]
