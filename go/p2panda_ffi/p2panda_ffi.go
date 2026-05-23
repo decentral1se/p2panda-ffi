@@ -5540,6 +5540,20 @@ func (e StreamEventImportEnded) Destroy() {
 	FfiDestroyerUint64{}.Destroy(e.SessionId)
 }
 
+type StreamEventReplayStarted struct {
+	TotalOperations uint64
+}
+
+func (e StreamEventReplayStarted) Destroy() {
+	FfiDestroyerUint64{}.Destroy(e.TotalOperations)
+}
+
+type StreamEventReplayEnded struct {
+}
+
+func (e StreamEventReplayEnded) Destroy() {
+}
+
 type FfiConverterStreamEvent struct{}
 
 var FfiConverterStreamEventINSTANCE = FfiConverterStreamEvent{}
@@ -5588,6 +5602,12 @@ func (FfiConverterStreamEvent) Read(reader io.Reader) StreamEvent {
 		return StreamEventImportEnded{
 			FfiConverterUint64INSTANCE.Read(reader),
 		}
+	case 5:
+		return StreamEventReplayStarted{
+			FfiConverterUint64INSTANCE.Read(reader),
+		}
+	case 6:
+		return StreamEventReplayEnded{}
 	default:
 		panic(fmt.Sprintf("invalid enum value %v in FfiConverterStreamEvent.Read()", id))
 	}
@@ -5621,6 +5641,11 @@ func (FfiConverterStreamEvent) Write(writer io.Writer, value StreamEvent) {
 	case StreamEventImportEnded:
 		writeInt32(writer, 4)
 		FfiConverterUint64INSTANCE.Write(writer, variant_value.SessionId)
+	case StreamEventReplayStarted:
+		writeInt32(writer, 5)
+		FfiConverterUint64INSTANCE.Write(writer, variant_value.TotalOperations)
+	case StreamEventReplayEnded:
+		writeInt32(writer, 6)
 	default:
 		_ = variant_value
 		panic(fmt.Sprintf("invalid enum value `%v` in FfiConverterStreamEvent.Write", value))
