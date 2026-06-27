@@ -1,9 +1,6 @@
 build:
 	cargo build --release
 
-ffi-go:
-	./scripts/generate-go-uniffi.sh
-
 ffi-python:
 	cargo run \
 		--bin uniffi-bindgen generate ./target/release/libp2panda_ffi.so \

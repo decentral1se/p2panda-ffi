@@ -51,21 +51,7 @@ python ./python/example.py
 
 ### Go
 
-`libp2panda` is currently built for the `x86_64-unknown-linux-musl` target. Other targets can be
-added on request.
-
-Make sure you have [uniffi-bindgen-go](https://github.com/NordSecurity/uniffi-bindgen-go) installed
-in your Rust toolbelt.
-
-See the examples in [`./examples/go`](./examples/go).
-
-```bash
-# Generate FFI bindings for Go
-make ffi-go
-
-# Run test bindings
-./scripts/test-go-uniffi.sh
-```
+See [`p2panda-go`](https://git.coopcloud.tech/decentral1se/p2panda-go).
 
 ### Node.js
 
