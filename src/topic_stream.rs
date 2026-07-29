@@ -310,22 +310,22 @@ pub enum Source {
         session_id: u64,
 
         /// Operation sent during this session.
-        sent_operations: u64,
+        sent_operations: u32,
 
         /// Operations received during this session.
-        received_operations: u64,
+        received_operations: u32,
 
         /// Bytes sent during this session.
-        sent_bytes: u64,
+        sent_bytes: u32,
 
         /// Bytes received during this session.
-        received_bytes: u64,
+        received_bytes: u32,
 
         /// Total bytes sent for this topic across all sessions.
-        sent_bytes_topic_total: u64,
+        sent_bytes_topic_total: u32,
 
         /// Total bytes received for this topic across all sessions.
-        received_bytes_topic_total: u64,
+        received_bytes_topic_total: u32,
 
         /// The session phase during which an operation arrived.
         phase: SessionPhase,
@@ -378,19 +378,19 @@ pub enum StreamEvent {
         session_id: u64,
 
         /// Total operations which will be received during this session.
-        incoming_operations: u64,
+        incoming_operations: u32,
 
         /// Total operations which will be sent during this session.
-        outgoing_operations: u64,
+        outgoing_operations: u32,
 
         /// Total bytes which will be received during this session.
-        incoming_bytes: u64,
+        incoming_bytes: u32,
 
         /// Total bytes which will be sent during this session.
-        outgoing_bytes: u64,
+        outgoing_bytes: u32,
 
         /// Total sessions currently running over the same topic.
-        topic_sessions: u64,
+        topic_sessions: u32,
     },
     SyncEnded {
         /// Id of the remote sending node.
@@ -400,22 +400,22 @@ pub enum StreamEvent {
         session_id: u64,
 
         /// Operation sent during this session.
-        sent_operations: u64,
+        sent_operations: u32,
 
         /// Operations received during this session.
-        received_operations: u64,
+        received_operations: u32,
 
         /// Bytes sent during this session.
-        sent_bytes: u64,
+        sent_bytes: u32,
 
         /// Bytes received during this session.
-        received_bytes: u64,
+        received_bytes: u32,
 
         /// Total bytes sent for this topic across all sessions.
-        sent_bytes_topic_total: u64,
+        sent_bytes_topic_total: u32,
 
         /// Total bytes received for this topic across all sessions.
-        received_bytes_topic_total: u64,
+        received_bytes_topic_total: u32,
 
         /// If the sync session ended with an error the reason is included here.
         error: Option<SyncError>,
@@ -427,7 +427,7 @@ pub enum StreamEvent {
         session_id: u64,
     },
     ReplayStarted {
-        total_operations: u64,
+        total_operations: u32,
     },
     ReplayEnded,
 }

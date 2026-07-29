@@ -381,7 +381,7 @@ pub struct Header(p2panda::operation::Header);
 
 #[uniffi::export]
 impl Header {
-    pub fn version(&self) -> u64 {
+    pub fn version(&self) -> u16 {
         self.0.version
     }
 
@@ -399,11 +399,7 @@ impl Header {
         ))
     }
 
-    pub fn timestamp(&self) -> u64 {
-        self.0.timestamp.into()
-    }
-
-    pub fn payload_size(&self) -> u64 {
+    pub fn payload_size(&self) -> u32 {
         self.0.payload_size
     }
 
@@ -416,7 +412,7 @@ impl Header {
         )
     }
 
-    pub fn seq_num(&self) -> u64 {
+    pub fn seq_num(&self) -> u32 {
         self.0.seq_num
     }
 
@@ -425,11 +421,11 @@ impl Header {
     }
 
     pub fn prune_flag(&self) -> bool {
-        self.0.extensions.prune_flag.is_set()
+        self.0.extensions.prune_flag().is_set()
     }
 
     pub fn log_id(&self) -> Arc<Hash> {
-        let hash = p2panda_core::Hash::from(self.0.extensions.log_id.as_bytes());
+        let hash = p2panda_core::Hash::from(self.0.extensions.log_id().as_bytes());
         Arc::new(hash.into())
     }
 }
